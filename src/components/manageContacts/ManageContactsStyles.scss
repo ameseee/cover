@@ -1,5 +1,8 @@
 $red-color: #dc0800;
+$red-hover: #E54640
+;
 $turq-color: #039fbe;
+$turq-hover: #42B7CE;
 $navy-color: #282a40;
 $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
@@ -52,6 +55,10 @@ $charcoal-color: #1b1b1b;
   font-size: 90%;
 }
 
+.edit-contact-btn:hover {
+  background-color: $turq-hover;
+}
+
 .remove-contact-btn {
   background-color: $red-color;
   outline: none;
@@ -59,6 +66,10 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   color: #fff;
   font-size: 90%;
+}
+
+.remove-contact-btn:hover {
+  background-color: $red-hover;
 }
 
 .create-contact-form {
@@ -89,4 +100,8 @@ $charcoal-color: #1b1b1b;
   margin-top: 4%;
   font-size: 100%;
   text-align: center;
+}
+
+.save-new-contact:hover {
+  background-color: $turq-hover;
 }

@@ -25,7 +25,7 @@ const router = (
             <Route path="/" component={SignInContainer} />
             {/* ^^change route to signin for SignInContainer */}
             <Route path="/" component={CreateAccountContainer} />
-            <Route path="/" component={ManageContacts} />
+            {/* <Route path="/" comatom ponent={ManageContacts} /> */}
           </div>
         </BrowserRouter>
     </Provider>

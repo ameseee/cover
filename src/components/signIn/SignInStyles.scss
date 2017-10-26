@@ -1,33 +1,28 @@
 $red-color: #dc0800;
 $turq-color: #039fbe;
+$turq-hover: #42B7CE;
 $navy-color: #282a40;
 $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
 $charcoal-color: #1b1b1b;
 
-.create-account-section {
+.sign-in-section {
   border: 1px solid $grey-color;
   border-radius: 3px;
-  
   width: 45%;
   margin: 0 auto;
   padding: 4%;
   background-color: #fff;
-
-  // take this out once rendering by itself properly
-  margin-top: 6%;
-  margin-bottom: 6%;
-  // take this out once rendering by itself properly
 }
 
-.create-account-title {
+.sign-in-title {
   color: $charcoal-color;
   text-align: center;
   font-size: 130%;
 }
 
-.create-account-name,
-.create-account-password {
+.sign-in-name,
+.sign-in-password {
   padding: 7.5px;
   width: 70%;
   display: block;
@@ -38,7 +33,7 @@ $charcoal-color: #1b1b1b;
   font-size: 100%;
 }
 
-.create-account-btn {
+.sign-in-btn {
   background-color: $turq-color;
   color: #fff;
   width: 70%;
@@ -49,4 +44,8 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   margin-top: 4%;
   font-size: 100%;
+}
+
+.sign-in-btn:hover {
+  background-color: $turq-hover;
 }

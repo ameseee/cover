@@ -6,9 +6,9 @@ import CreateAccount from '../components/createAccount/CreateAccount';
 // });
 
 const mapDispatchToProps = dispatch => ({
-  tryCreate: (newUserCredentials) => {
-    dispatch(tryCreate(newUserCredentials));
-  }
+  // tryCreate: (newUserCredentials) => {
+  //   dispatch(tryCreate(newUserCredentials));
+  // }
 });
 
 export default connect(undefined, mapDispatchToProps)(CreateAccount);
