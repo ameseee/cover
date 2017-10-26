@@ -1,35 +1,24 @@
-$red-color: #dc0800;
-$turq-color: #039fbe;
-$navy-color: #282a40;
-$lt-grey-color: #f5f5f7;
-$grey-color: #E6E6E8;
-$charcoal-color: #1b1b1b;
-
 .main {
-  background-color: $lt-grey-color;
-}
+  background-color: #f5f5f7; }
+
 .nav-bar {
-  background-color: $navy-color;
+  background-color: #282a40;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-}
+  justify-content: space-between; }
 
 .cover-title {
   font-size: 170%;
   color: #fff;
-  padding: 10px;
-}
+  padding: 10px; }
 
 .nav-menu {
-  margin-right: 10px;
-}
+  margin-right: 10px; }
 
 .nav-item {
   display: inline-block;
   color: #fff;
-  margin: 10px 15px;
-}
+  margin: 10px 15px; }
 
 .emergency-section {
   width: 50%;
@@ -41,29 +30,25 @@ $charcoal-color: #1b1b1b;
   padding: 2% 0;
   background-color: #fff;
   border: 1px solid #E6E6E8;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
 .emergency-title {
-  margin-left: 15%;
-}
+  margin-left: 15%; }
 
 .emergency-btn {
-  background-color: $red-color;
+  background-color: #dc0800;
   padding: 10px;
   width: 40%;
   margin: 0 auto;
   border: none;
   border-radius: 3px;
   color: #fff;
-  font-size: 120%;
-}
+  font-size: 120%; }
 
 .contacts-section {
   width: 50%;
   margin: 0 auto;
-  margin-bottom: 30px;
-}
+  margin-bottom: 30px; }
 
 .contact-card {
   display: grid;
@@ -73,30 +58,25 @@ $charcoal-color: #1b1b1b;
   margin: 2.5% 0;
   background-color: #fff;
   border: 1px solid #E6E6E8;
-  border-radius: 3px;
-}
+  border-radius: 3px; }
 
 .contact-card-name {
-  margin-left: 15%;
-}
+  margin-left: 15%; }
 
 .custom-text-btn {
-  background-color: $turq-color;
+  background-color: #039fbe;
   color: #fff;
   border: none;
   border-radius: 3px;
   font-size: 85%;
   padding: 10px;
-  width: 90%;
-}
+  width: 90%; }
 
 .location-now-btn {
-  background-color: $navy-color;
+  background-color: #282a40;
   color: #fff;
   border: none;
   border-radius: 3px;
   font-size: 85%;
   padding: 10px;
-  width: 90%;
-
-}
+  width: 90%; }
