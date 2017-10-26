@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from '../../firebase';
 
 class CreateAccount extends Component {
   constructor() {
@@ -12,6 +13,18 @@ class CreateAccount extends Component {
 
   handleChange(key, event) {
     this.setState({ [key]: event.target.value });
+  }
+
+  createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
+
+  componentDidMount() {
+    //
+    const itemsRef = firebase.database().ref('created');
+    itemsRef.on('value', (snapshot) => {
+      const newUser = snapshot.val();
+      let newState = newUser ? this.createAccount(newUser) : [];
+// put this in an action
+    });
   }
 
   handleClick(event) {

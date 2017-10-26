@@ -14,18 +14,33 @@ class ManageContacts extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value))
+  createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
     //
     const itemsRef = firebase.database().ref('contacts');
     itemsRef.on('value', (snapshot) => {
       const contacts = snapshot.val();
-      let newState = contacts ? this.createContact(contacts) : []
+      let newState = contacts ? this.createContact(contacts) : [];
 // put this in an action
       this.setState({
         contacts: newState
       });
+    });
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    const itemsRef = firebase.database().ref('contacts');
+    const item = {
+      contactName: this.state.contactName,
+      contactNumber: this.state.contactNumber
+    }
+    itemsRef.push(item);
+
+    this.setState({
+      contactName: '',
+      contactNumber: ''
     });
   }
 
@@ -35,27 +50,12 @@ class ManageContacts extends Component {
     });
   }
 
-  handleSubmit(e) {
-    e.preventDefault();
-    const itemsRef = firebase.database().ref('contacts');
-    const item = {
-      contactName: this.state.contactName,
-      contactNumber: this.state.contactNumber
-    }
-    itemsRef.push(item);
-    this.setState({
-      contactName: '',
-      contactNumber: ''
-    });
-  }
-
   handleEdit() {
     console.log('we are in handle Edit');
     // open up a form so they can edit.
   }
 
   handleRemove(contact) {
-    console.log('we are in handle remove', contact.id);
     const itemRef = firebase.database().ref(`/contacts/${contact.id}`);
     itemRef.remove();
   }
