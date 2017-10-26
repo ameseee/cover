@@ -6,10 +6,30 @@ class ManageContacts extends Component {
     super();
     this.state = {
       contactName: '',
-      contactNumber: ''
+      contactNumber: '',
+      contacts: []
     };
+
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+  }
+
+  componentDidMount() {
+    const itemsRef = firebase.database().ref('contacts');
+    itemsRef.on('value', (snapshot) => {
+      let contacts = snapshot.val();
+      let newState = [];
+      for (let contact in contacts) {
+        newState.push({
+          id: contact,
+          contactName: contacts[contact].contactName,
+          contactNumber: contacts[contact].contactNumber
+        });
+      }
+      this.setState({
+        contacts: newState
+      });
+    });
   }
 
   handleChange(event) {
@@ -59,28 +79,22 @@ class ManageContacts extends Component {
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
         <section className="current-contacts">
-            {/* {this.createContactCards} */}
             <article className="existing-contact-card">
-              <div>
-                <h4 className="existing-contact-name">Cindy</h4>
-                <p className="existing-contact-number">303-555-1234</p>
-              </div>
-              <button
-                className="edit-contact-btn"
-                onClick={this.handleEdit}>Edit</button>
-              <button
-                className="remove-contact-btn" onClick={this.handleRemove}>Remove</button>
-            </article>
-            <article className="existing-contact-card">
-              <div>
-                <h4 className="existing-contact-name">Tracey</h4>
-                <p className="existing-contact-number">303-555-2345</p>
-              </div>
-              <button
-                className="edit-contact-btn"
-                onClick={this.handleEdit}>Edit</button>
-              <button
-                className="remove-contact-btn" onClick={this.handleRemove}>Remove</button>
+              {this.state.contacts.map(contact => {
+                return (
+                  <article>
+                  <div>
+                    <h4 className="existing-contact-name">{contact.contactName}</h4>
+                    <p className="existing-contact-number">{contact.contactNumber}</p>
+                  </div>
+                  <button
+                    className="edit-contact-btn"
+                    onClick={this.handleEdit}>Edit</button>
+                    <button
+                      className="remove-contact-btn" onClick={this.handleRemove}>Remove</button>
+                  </article>
+                )
+              })}
             </article>
         </section>
 
