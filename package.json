@@ -4,8 +4,11 @@
   "description": "A good enough starter kit for a React project, I guess.",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "webpack.js",
+    "build-css": "node-sass-chokidar --include-path ./lib --include-path ./node_modules lib/ -o lib/",
+    "watch-css": "npm run build-css && node-sass-chokidar --include-path ./lib --include-path ./node_modules lib/ -o lib/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
     "test": "jest"
   },
   "repository": {
@@ -58,6 +61,8 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",

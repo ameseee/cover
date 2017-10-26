@@ -1,0 +1,14 @@
+@import url(./components/App/AppStyles.css);
+@import url(./components/contactCards/ContactCardsStyles.css);
+@import url(./components/createAccount/CreateAccountStyles.css);
+@import url(./components/main/MainStyles.css);
+@import url(./components/manageContacts/ManageContactsStyles.css);
+@import url(./components/signIn/SignInStyles.css);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif; }
+
+.entire-app {
+  background-color: #f5f5f7; }
