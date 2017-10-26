@@ -17,7 +17,8 @@ class ManageContacts extends Component {
   componentDidMount() {
     const itemsRef = firebase.database().ref('contacts');
     itemsRef.on('value', (snapshot) => {
-      let contacts = snapshot.val();
+      const contacts = snapshot.val();
+      debugger; 
       let newState = [];
       for (let contact in contacts) {
         newState.push({
@@ -63,6 +64,8 @@ class ManageContacts extends Component {
     itemRef.remove();
   }
 
+  //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
+
   render() {
     return (
       <div className="manage-contacts-section">
@@ -88,7 +91,7 @@ class ManageContacts extends Component {
         </section>
 
         <section className="create-contact-form">
-          <h3 className="title">Add Contacts</h3>
+          <h3 className="title add">Add Contacts</h3>
           <form>
             <input
               className="new-contact-name"

@@ -2,7 +2,7 @@
 .manage-contacts-section {
   border: 1px solid #E6E6E8;
   border-radius: 3px;
-  width: 45%;
+  width: 55%;
   margin: 0 auto;
   padding: 4%;
   background-color: #fff; }
@@ -10,6 +10,9 @@
 .title {
   color: #1b1b1b;
   text-align: center; }
+
+.add {
+  margin-top: 40px; }
 
 .existing-contact-card {
   border: 1px solid #E6E6E8;
@@ -68,3 +71,18 @@
 
 .save-new-contact:hover {
   background-color: #42B7CE; }
+
+@media (max-width: 900px) {
+  .manage-contacts-section {
+    width: 75%; } }
+
+@media (max-width: 650px) {
+  .manage-contacts-section {
+    width: 90%; }
+  .edit-contact-btn,
+  .remove-contact-btn {
+    font-size: 80%; }
+  .new-contact-name,
+  .new-contact-number,
+  .save-new-contact {
+    font-size: 80%; } }
