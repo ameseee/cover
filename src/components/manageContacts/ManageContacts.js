@@ -7,12 +7,14 @@ class ManageContacts extends Component {
       contactName: '',
       contactNumber: '',
     };
+    this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(key, event) {
-    this.setState({ [key]: event.target.value });
-    console.log('handle submit');
-  }
+  handleChange(event) {
+  this.setState({
+    [event.target.name]: event.target.value
+  });
+}
 
   handleSubmit() {
     console.log('handleClick');
@@ -76,12 +78,14 @@ class ManageContacts extends Component {
           <form>
             <input
               className="new-contact-name"
+              name="contactName"
               type="text"
               placeholder="Contact Name"
               onChange={this.handleChange}></input>
             <input
               className="new-contact-number"
               type="text"
+              name="contactNumber"
               placeholder="Phone Number"
               onChange={this.handleChange}></input>
             <buttom
