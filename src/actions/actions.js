@@ -35,3 +35,15 @@ export const createAccountFailure = status => ({
   type: 'CREATE_ACCOUNT_FAILURE',
   status
 });
+
+
+//ManageContacts
+export const createNewContact = contact => ({
+  type: 'CREATE_NEW_CONTACT',
+  contact
+});
+
+export const removeContact = contact => ({
+  type: 'REMOVE_CONTACT',
+  contact
+});
