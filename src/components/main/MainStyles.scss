@@ -37,6 +37,13 @@ $charcoal-color: #1b1b1b;
   color: #fff;
   margin: 10px 15px;
   font-family: Lato;
+  padding: 4px;
+  border-bottom: 2px solid $navy-color;
+}
+
+.nav-item:hover {
+  color: $grey-color;
+  border-bottom: 2px solid $turq-color;
 }
 
 .emergency-section {
