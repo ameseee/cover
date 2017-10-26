@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .manage-contacts-section {
   border: 1px solid #E6E6E8;
   border-radius: 3px;
@@ -27,6 +28,9 @@
   color: #fff;
   font-size: 90%; }
 
+.edit-contact-btn:hover {
+  background-color: #42B7CE; }
+
 .remove-contact-btn {
   background-color: #dc0800;
   outline: none;
@@ -34,6 +38,9 @@
   border-radius: 3px;
   color: #fff;
   font-size: 90%; }
+
+.remove-contact-btn:hover {
+  background-color: #E54640; }
 
 .new-contact-name,
 .new-contact-number {
@@ -58,3 +65,6 @@
   margin-top: 4%;
   font-size: 100%;
   text-align: center; }
+
+.save-new-contact:hover {
+  background-color: #42B7CE; }

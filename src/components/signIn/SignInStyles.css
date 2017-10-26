@@ -1,24 +1,17 @@
-$red-color: #dc0800;
-$turq-color: #039fbe;
-$navy-color: #282a40;
-$lt-grey-color: #f5f5f7;
-$grey-color: #E6E6E8;
-$charcoal-color: #1b1b1b;
-
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .sign-in-section {
-  border: 1px solid $grey-color;
+  border: 1px solid #E6E6E8;
   border-radius: 3px;
   width: 45%;
   margin: 0 auto;
   padding: 4%;
-  background-color: #fff;
-}
+  background-color: #fff; }
 
 .sign-in-title {
-  color: $charcoal-color;
+  color: #1b1b1b;
   text-align: center;
   font-size: 130%;
-}
+  font-family: Lato; }
 
 .sign-in-name,
 .sign-in-password {
@@ -27,13 +20,13 @@ $charcoal-color: #1b1b1b;
   display: block;
   margin: 0 auto;
   margin-top: 4%;
-  border: 1px solid $charcoal-color;
+  border: 1px solid #1b1b1b;
   border-radius: 3px;
   font-size: 100%;
-}
+  font-family: Lato; }
 
 .sign-in-btn {
-  background-color: $turq-color;
+  background-color: #039fbe;
   color: #fff;
   width: 70%;
   border: none;
@@ -43,4 +36,7 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   margin-top: 4%;
   font-size: 100%;
-}
+  font-family: Lato; }
+
+.sign-in-btn:hover {
+  background-color: #42B7CE; }

@@ -33,8 +33,8 @@ class ManageContacts extends Component {
     // map over contacts and for each return:
     return (
       <article className="maange-contact-card">
-        <h4>{contact.name}</h4>
-        <p>{contact.number}</p>
+        {/* <h4>{contact.name}</h4>
+        <p>{contact.number}</p> */}
         <button onClick={this.handleEdit}>Edit</button>
         <button onClick={this.handleRemove}>Remove</button>
       </article>

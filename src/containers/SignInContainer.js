@@ -6,9 +6,9 @@ import SignIn from '../components/signIn/SignIn';
 // });
 
 const mapDispatchToProps = dispatch => ({
-  trySignIn: (signInCredentials) => {
-    dispatch(trySignIn(signInCredentials));
-  }
+  // trySignIn: (signInCredentials) => {
+  //   dispatch(trySignIn(signInCredentials));
+  // }
 });
 
 export default connect(undefined, mapDispatchToProps)(SignIn);
