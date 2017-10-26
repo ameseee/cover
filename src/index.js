@@ -7,10 +7,7 @@ import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 import { BrowserRouter, Route } from 'react-router-dom';
 import CreateAccountContainer from './containers/CreateAccountContainer';
-import MainContainer from './containers/MainContainer';
-import ManageContactsContainer from './containers/ManageContactsContainer';
-import SignInContainer from './containers/SignInContainer';
-import ManageContacts from './components/manageContacts/ManageContacts';
+import Routes from './utils/Routes';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();
 
@@ -21,11 +18,7 @@ const router = (
         <BrowserRouter>
           <div className="entire-app">
             <App />
-            <Route exact path="/" component={MainContainer} />
-            <Route path="/" component={SignInContainer} />
-            {/* ^^change route to signin for SignInContainer */}
-            <Route path="/" component={CreateAccountContainer} />
-            {/* <Route path="/" comatom ponent={ManageContacts} /> */}
+            <Routes />
           </div>
         </BrowserRouter>
     </Provider>
