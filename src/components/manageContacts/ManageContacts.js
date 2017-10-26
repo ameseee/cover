@@ -33,10 +33,10 @@ class ManageContacts extends Component {
   }
 
   handleChange(event) {
-  this.setState({
-    [event.target.name]: event.target.value
-  });
-}
+    this.setState({
+      [event.target.name]: event.target.value
+    });
+  }
 
   handleSubmit(e) {
     e.preventDefault();
@@ -61,19 +61,6 @@ class ManageContacts extends Component {
     console.log('we are in handle remove', contact.id);
     const itemRef = firebase.database().ref(`/contacts/${contact.id}`);
     itemRef.remove();
-    // delete contact from db, re-render so their card is removed
-  }
-
-  createContactCards() {
-    // map over contacts and for each return:
-    return (
-      <article className="manage-contact-card">
-        {/* <h4>{contact.name}</h4>
-        <p>{contact.number}</p> */}
-        <button onClick={this.handleEdit}>Edit</button>
-        <button onClick={this.handleRemove}>Remove</button>
-      </article>
-    );
   }
 
   render() {
@@ -81,10 +68,10 @@ class ManageContacts extends Component {
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
         <section className="current-contacts">
-            <article className="existing-contact-card">
+            <article>
               {this.state.contacts.map(contact => {
                 return (
-                  <article>
+                  <article className="existing-contact-card">
                   <div>
                     <h4 className="existing-contact-name">{contact.contactName}</h4>
                     <p className="existing-contact-number">{contact.contactNumber}</p>
