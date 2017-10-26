@@ -14,19 +14,15 @@ class ManageContacts extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
+  createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value))
+
   componentDidMount() {
+    //
     const itemsRef = firebase.database().ref('contacts');
     itemsRef.on('value', (snapshot) => {
       const contacts = snapshot.val();
-      debugger; 
-      let newState = [];
-      for (let contact in contacts) {
-        newState.push({
-          id: contact,
-          contactName: contacts[contact].contactName,
-          contactNumber: contacts[contact].contactNumber
-        });
-      }
+      let newState = contacts ? this.createContact(contacts) : []
+// put this in an action
       this.setState({
         contacts: newState
       });

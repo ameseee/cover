@@ -11,12 +11,16 @@ class CreateAccount extends Component {
   }
 
   handleChange(key, event) {
-    console.log('key:', key, 'event.target.value:', event.target.value);
     this.setState({ [key]: event.target.value });
   }
 
-  handleClick() {
-    console.log('handleClick');
+  handleClick(event) {
+    event.preventDefault();
+    this.props.createAccountRequested(this.state);
+    this.setState({
+      username: '',
+      password: ''
+    });
     // call an action to store this as a new user, and log them in.
   };
 
@@ -28,11 +32,13 @@ class CreateAccount extends Component {
             <input
               className="create-account-name"
               type="text"
+              value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"></input>
             <input
               className="create-account-password"
               type="text"
+              value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"></input>
             <button
