@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
+import { Route, Redirect } from 'react-router'
 
 class CreateAccount extends Component {
   constructor() {
@@ -11,29 +12,34 @@ class CreateAccount extends Component {
     this.handleClick = this.handleClick.bind(this);
   }
 
-  handleChange(key, event) {
-    this.setState({ [key]: event.target.value });
-  }
-
   createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
     //
-    const itemsRef = firebase.database().ref('created');
-    itemsRef.on('value', (snapshot) => {
+    console.log(this.props);
+    const createRef = firebase.database().ref('created');
+    createRef.on('value', (snapshot) => {
       const newUser = snapshot.val();
       let newState = newUser ? this.createAccount(newUser) : [];
 // put this in an action
     });
   }
 
+  handleChange(key, event) {
+    this.setState({ [key]: event.target.value });
+  }
+
   handleClick(event) {
     event.preventDefault();
-    this.props.createAccountRequested(this.state);
-    this.setState({
-      username: '',
-      password: ''
-    });
+    const createRef = firebase.database().ref('create');
+    const create = {
+      username: this.state.username,
+      password: this.state.password
+    }
+    createRef.push(create);
+    this.props.newUser(this.state);
+    this.props.signInNewUser(this.state);
+    return <Redirect to="/"/>;
     // call an action to store this as a new user, and log them in.
   };
 
@@ -56,7 +62,8 @@ class CreateAccount extends Component {
               placeholder="Password"></input>
             <button
               className="create-account-btn"
-              onClick={this.handleClick}>Create Account</button>
+              onClick={this.handleClick}
+              >Create Account</button>
           </form>
         </div>
     );
