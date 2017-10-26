@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
+import firebase from '../../firebase';
 
 class ManageContacts extends Component {
   constructor() {
     super();
     this.state = {
       contactName: '',
-      contactNumber: '',
+      contactNumber: ''
     };
     this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange(event) {
@@ -16,9 +18,18 @@ class ManageContacts extends Component {
   });
 }
 
-  handleSubmit() {
-    console.log('handleClick');
-    // add contact to db, re-render so they show up on a card.
+  handleSubmit(e) {
+    e.preventDefault();
+    const itemsRef = firebase.database().ref('contacts');
+    const item = {
+      contactName: this.state.contactName,
+      contactNumber: this.state.contactNumber
+    }
+    itemsRef.push(item);
+    this.setState({
+      contactName: '',
+      contactNumber: ''
+    });
   }
 
   handleEdit() {
@@ -79,6 +90,7 @@ class ManageContacts extends Component {
             <input
               className="new-contact-name"
               name="contactName"
+              value={this.state.contactName}
               type="text"
               placeholder="Contact Name"
               onChange={this.handleChange}></input>
@@ -86,6 +98,7 @@ class ManageContacts extends Component {
               className="new-contact-number"
               type="text"
               name="contactNumber"
+              value={this.state.contactNumber}
               placeholder="Phone Number"
               onChange={this.handleChange}></input>
             <buttom
