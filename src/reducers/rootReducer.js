@@ -1,24 +1,14 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { getContactCards } from './mainReducer';
-import {
-  signInRequested,
-  signInSuccess,
-  signInFailed } from './signInReducer';
-  import {
-    createAccountRequested,
-    createAccountSuccess,
-    createAccountFailure } from './createAccountReducer';
+import { currentUser } from './signInReducer';
+import { newUser } from './createAccountReducer';
 
 
 const rootReducer = combineReducers({
   getContactCards,
-  signInRequested,
-  signInSuccess,
-  signInFailed,
-  createAccountRequested,
-  createAccountSuccess,
-  createAccountFailure
+  currentUser,
+  newUser
 });
 
 export default rootReducer;

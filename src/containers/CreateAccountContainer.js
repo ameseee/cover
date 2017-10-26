@@ -1,14 +1,17 @@
 import { connect } from 'react-redux';
 import CreateAccount from '../components/createAccount/CreateAccount';
-import {createAccountRequested} from '../actions/actions';
+import { signInNewUser, newUser } from '../actions/actions';
 
 // const mapStateToProps = store => ({
 //
 // });
 
 const mapDispatchToProps = dispatch => ({
-  createAccountRequested: (newUserCredentials) => {
-    dispatch(createAccountRequested(newUserCredentials));
+  newUser: (newUserCredentials) => {
+    dispatch(newUser(newUserCredentials));
+  },
+  signInNewUser: (newUserCredentials) => {
+    dispatch(signInNewUser(newUserCredentials));
   }
 });
 

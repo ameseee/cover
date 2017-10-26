@@ -5,38 +5,20 @@ export const getContactCards = cards => ({
 });
 
 //SignIn
-export const signInRequested = status => ({
-  type: 'SIGN_IN_REQUESTED',
-  status
-});
-
-export const signInSuccess = status => ({
-  type: 'SIGN_IN_SUCCESS',
-  status
-});
-
-export const signInFailed = status => ({
-  type: 'SIGN_IN_FAILED',
+export const currentUser = status => ({
+  type: 'CURRENT_USER',
   status
 });
 
 //CreateAccount
-export const createAccountRequested = status => ({
-  type: 'CREATE_ACCOUNT_REQUESTED',
-  status
+export const newUser = accountInfo => ({
+  type: 'CREATE_ACCOUNT',
+  accountInfo
 });
 
-export const createAccountSuccess = status => ({
-  type: 'CREATE_ACCOUNT_SUCCESS',
-  status
-});
-
-export const createAccountFailure = status => ({
-  type: 'CREATE_ACCOUNT_FAILURE',
-  status
-});
-
-
+export const signInNewUser = accountInfo => dispatch => {
+  dispatch(currentUser(accountInfo))
+}
 //ManageContacts
 export const createNewContact = contact => ({
   type: 'CREATE_NEW_CONTACT',
