@@ -30,7 +30,7 @@
   border-bottom: 2px solid #039fbe; }
 
 .emergency-section {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   margin-bottom: 30px;
   margin-top: 30px;
@@ -60,7 +60,7 @@
   background-color: #E54640; }
 
 .contacts-section {
-  width: 50%;
+  width: 55%;
   margin: 0 auto;
   margin-bottom: 30px; }
 
@@ -106,3 +106,34 @@
 
 .location-now-btn:hover {
   background-color: #434558; }
+
+@media (max-width: 900px) {
+  .contacts-section {
+    width: 75%; }
+  .emergency-section {
+    width: 75%; }
+  .nav-item {
+    font-size: 90%; } }
+
+@media (max-width: 650px) {
+  .contacts-section {
+    width: 90%; }
+  .emergency-section {
+    width: 90%; }
+  .cover-title {
+    font-size: 170%; }
+  .nav-item {
+    margin: 5px 10px;
+    padding: 4px;
+    font-size: 85%; }
+  .contact-card {
+    grid-column-gap: 5px; }
+  .contact-card-name {
+    font-size: 90%; }
+  .emergency-btn {
+    font-size: 100%;
+    padding: 7.5px 5px; }
+  .custom-text-btn,
+  .location-now-btn {
+    font-size: 70%;
+    padding: 7.5px 5px; } }
