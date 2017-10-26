@@ -21,7 +21,13 @@
   display: inline-block;
   color: #fff;
   margin: 10px 15px;
-  font-family: Lato; }
+  font-family: Lato;
+  padding: 4px;
+  border-bottom: 2px solid #282a40; }
+
+.nav-item:hover {
+  color: #E6E6E8;
+  border-bottom: 2px solid #039fbe; }
 
 .emergency-section {
   width: 50%;
