@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 $red-color: #dc0800;
 $red-hover: #E54640;
 $turq-color: #039fbe;
@@ -23,6 +25,7 @@ $charcoal-color: #1b1b1b;
   font-size: 170%;
   color: #fff;
   padding: 10px;
+  font-family: Lato;
 }
 
 .nav-menu {
@@ -33,6 +36,7 @@ $charcoal-color: #1b1b1b;
   display: inline-block;
   color: #fff;
   margin: 10px 15px;
+  font-family: Lato;
 }
 
 .emergency-section {
@@ -50,6 +54,7 @@ $charcoal-color: #1b1b1b;
 
 .emergency-title {
   margin-left: 15%;
+  font-family: Lato;
 }
 
 .emergency-btn {
@@ -61,6 +66,7 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   color: #fff;
   font-size: 120%;
+  font-family: Lato;
 }
 
 .emergency-btn:hover {
@@ -71,6 +77,10 @@ $charcoal-color: #1b1b1b;
   width: 50%;
   margin: 0 auto;
   margin-bottom: 30px;
+}
+
+.section-title {
+  font-family: Lato;
 }
 
 .contact-card {
@@ -86,6 +96,7 @@ $charcoal-color: #1b1b1b;
 
 .contact-card-name {
   margin-left: 15%;
+  font-family: Lato;
 }
 
 .custom-text-btn {
@@ -96,6 +107,7 @@ $charcoal-color: #1b1b1b;
   font-size: 85%;
   padding: 10px;
   width: 90%;
+  font-family: Lato;
 }
 
 .custom-text-btn:hover {
@@ -110,6 +122,7 @@ $charcoal-color: #1b1b1b;
   font-size: 85%;
   padding: 10px;
   width: 90%;
+  font-family: Lato;
 }
 
 .location-now-btn:hover {

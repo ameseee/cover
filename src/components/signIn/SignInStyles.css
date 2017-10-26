@@ -1,3 +1,4 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
 .sign-in-section {
   border: 1px solid #E6E6E8;
   border-radius: 3px;
@@ -9,7 +10,8 @@
 .sign-in-title {
   color: #1b1b1b;
   text-align: center;
-  font-size: 130%; }
+  font-size: 130%;
+  font-family: Lato; }
 
 .sign-in-name,
 .sign-in-password {
@@ -20,7 +22,8 @@
   margin-top: 4%;
   border: 1px solid #1b1b1b;
   border-radius: 3px;
-  font-size: 100%; }
+  font-size: 100%;
+  font-family: Lato; }
 
 .sign-in-btn {
   background-color: #039fbe;
@@ -32,7 +35,8 @@
   display: block;
   border-radius: 3px;
   margin-top: 4%;
-  font-size: 100%; }
+  font-size: 100%;
+  font-family: Lato; }
 
 .sign-in-btn:hover {
   background-color: #42B7CE; }

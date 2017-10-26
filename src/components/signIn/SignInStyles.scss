@@ -1,3 +1,5 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
 $red-color: #dc0800;
 $turq-color: #039fbe;
 $turq-hover: #42B7CE;
@@ -19,6 +21,7 @@ $charcoal-color: #1b1b1b;
   color: $charcoal-color;
   text-align: center;
   font-size: 130%;
+  font-family: Lato;
 }
 
 .sign-in-name,
@@ -31,6 +34,7 @@ $charcoal-color: #1b1b1b;
   border: 1px solid $charcoal-color;
   border-radius: 3px;
   font-size: 100%;
+  font-family: Lato;
 }
 
 .sign-in-btn {
@@ -44,6 +48,7 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   margin-top: 4%;
   font-size: 100%;
+  font-family: Lato;
 }
 
 .sign-in-btn:hover {
