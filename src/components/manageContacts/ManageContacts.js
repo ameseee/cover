@@ -57,15 +57,17 @@ class ManageContacts extends Component {
     // open up a form so they can edit.
   }
 
-  handleRemove() {
-    console.log('we are in handle remove');
+  handleRemove(contact) {
+    console.log('we are in handle remove', contact.id);
+    const itemRef = firebase.database().ref(`/contacts/${contact.id}`);
+    itemRef.remove();
     // delete contact from db, re-render so their card is removed
   }
 
   createContactCards() {
     // map over contacts and for each return:
     return (
-      <article className="maange-contact-card">
+      <article className="manage-contact-card">
         {/* <h4>{contact.name}</h4>
         <p>{contact.number}</p> */}
         <button onClick={this.handleEdit}>Edit</button>
@@ -91,7 +93,7 @@ class ManageContacts extends Component {
                     className="edit-contact-btn"
                     onClick={this.handleEdit}>Edit</button>
                     <button
-                      className="remove-contact-btn" onClick={this.handleRemove}>Remove</button>
+                      className="remove-contact-btn" onClick={() => this.handleRemove(contact)}>Remove</button>
                   </article>
                 )
               })}
