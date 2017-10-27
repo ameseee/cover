@@ -31,7 +31,8 @@
 
 .nav-item:hover {
   color: #E6E6E8;
-  border-bottom: 2px solid #039fbe; }
+  border-bottom: 2px solid #039fbe;
+  cursor: pointer; }
 
 .emergency-section {
   width: 55%;
@@ -61,7 +62,8 @@
   font-family: Lato; }
 
 .emergency-btn:hover {
-  background-color: #E54640; }
+  background-color: #E54640;
+  cursor: pointer; }
 
 .contacts-section {
   width: 55%;
@@ -96,7 +98,8 @@
   font-family: Lato; }
 
 .custom-text-btn:hover {
-  background-color: #42B7CE; }
+  background-color: #42B7CE;
+  cursor: pointer; }
 
 .location-now-btn {
   background-color: #282a40;
@@ -109,7 +112,8 @@
   font-family: Lato; }
 
 .location-now-btn:hover {
-  background-color: #434558; }
+  background-color: #434558;
+  cursor: pointer; }
 
 @media (max-width: 900px) {
   .contacts-section {

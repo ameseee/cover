@@ -46,4 +46,5 @@
   font-family: Lato; }
 
 .create-account-btn:hover {
-  background-color: #42B7CE; }
+  background-color: #42B7CE;
+  cursor: pointer; }
