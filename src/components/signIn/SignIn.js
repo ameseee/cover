@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import firebase from '../../firebase';
+import { Link } from 'react-router-dom';
 
 class SignIn extends Component {
   constructor() {
@@ -11,13 +13,38 @@ class SignIn extends Component {
   }
 
   handleChange(key, event) {
-    console.log('key:', key, 'event.target.value:', event.target.value);
     this.setState({ [key]: event.target.value });
   }
 
-  handleClick() {
-    console.log('handleClick');
-    //this.props.trySignIn();
+  signInUser = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
+
+  componentDidMount() {
+    // put this in an action
+    const createRef = firebase.database().ref('users');
+    createRef.on('value', (snapshot) => {
+      const currentUser = snapshot.val();
+      let newState = currentUser ? this.signInUser(currentUser) : [];
+    // put this in an action
+    });
+  }
+
+  handleClick(event) {
+    event.preventDefault();
+    const userRef = firebase.database().ref('users');
+    const users = {
+      username: this.state.username,
+      password: this.state.password,
+      currentUser: true,
+      contacts: {}
+    }
+    userRef.push(users);
+    // this.props.newUser(this.state);
+    // this.props.signInNewUser(this.state);
+    this.setState({
+      username: '',
+      password: '',
+    });
+
   };
 
   render() {
@@ -37,7 +64,11 @@ class SignIn extends Component {
               placeholder="Password" />
             <button
               className="sign-in-btn"
-              onClick={this.handleClick}>Sign In</button>
+              onClick={this.handleClick}>
+              <Link
+                to='/'
+                className="link-to-main" >Sign In</Link>
+              </button>
           </form>
         </section>
     );

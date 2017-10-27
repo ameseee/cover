@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -13,6 +12,7 @@ const Main = () => {
 
         <section className="contacts-section">
           <h3 className="section-title">Contacts</h3>
+
           <article className="contact-card">
             <h4 className="contact-card-name">Cindy</h4>
             <button className="custom-text-btn">send custom text</button>
@@ -24,7 +24,7 @@ const Main = () => {
             <button className="custom-text-btn">send custom text</button>
             <button className="location-now-btn">send my location NOW</button>
           </article>
-          {/*  render the mapped this.props.cards here */}
+          {/*  render the mapped this.props.contacts here */}
         </section>
       </main>
     </div>

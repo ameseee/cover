@@ -34,6 +34,7 @@ class CreateAccount extends Component {
     const users = {
       username: this.state.username,
       password: this.state.password,
+      currentUser: false,
       contacts: {}
     }
     userRef.push(users);
