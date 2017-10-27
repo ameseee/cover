@@ -32,7 +32,8 @@
   font-size: 90%; }
 
 .edit-contact-btn:hover {
-  background-color: #42B7CE; }
+  background-color: #42B7CE;
+  cursor: pointer; }
 
 .remove-contact-btn {
   background-color: #dc0800;
@@ -43,7 +44,8 @@
   font-size: 90%; }
 
 .remove-contact-btn:hover {
-  background-color: #E54640; }
+  background-color: #E54640;
+  cursor: pointer; }
 
 .new-contact-name,
 .new-contact-number {
@@ -70,7 +72,8 @@
   text-align: center; }
 
 .save-new-contact:hover {
-  background-color: #42B7CE; }
+  background-color: #42B7CE;
+  cursor: pointer; }
 
 @media (max-width: 900px) {
   .manage-contacts-section {

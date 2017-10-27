@@ -39,4 +39,5 @@
   font-family: Lato; }
 
 .sign-in-btn:hover {
-  background-color: #42B7CE; }
+  background-color: #42B7CE;
+  cursor: pointer; }
