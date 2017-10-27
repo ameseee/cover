@@ -66,7 +66,9 @@ class CreateAccount extends Component {
             <button
               className="create-account-btn"
               onClick={this.handleClick}>
-              <Link to='/' >Create Account</Link>
+              <Link
+                to='/'
+                className="link-to-main" >Create Account</Link>
             </button>
           </form>
         </div>
