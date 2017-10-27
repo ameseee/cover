@@ -5,27 +5,6 @@ const Main = () => {
 
   return (
     <div className="main">
-      <nav className="nav-bar">
-        <h1 className="cover-title">Cover</h1>
-        <ul className="nav-menu">
-          <li className="nav-item-li">
-            <Link
-              to="/contacts"
-              className="nav-item">
-            Manage Contacts
-          </Link>
-          </li>
-
-          <li className="nav-item-li">
-            <Link
-              to="/signin"
-              className="nav-item">
-            Log Out
-          </Link>
-          </li>
-
-        </ul>
-      </nav>
       <main>
         <section className="emergency-section">
           <h3 className="emergency-title">Emergency</h3>
