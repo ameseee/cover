@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
-import { Route, Redirect } from 'react-router'
+import { Link } from 'react-router-dom';
 
 class CreateAccount extends Component {
   constructor() {
@@ -15,13 +15,12 @@ class CreateAccount extends Component {
   createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
-    //
-    console.log(this.props);
-    const createRef = firebase.database().ref('created');
+    // put this in an action
+    const createRef = firebase.database().ref('users');
     createRef.on('value', (snapshot) => {
       const newUser = snapshot.val();
       let newState = newUser ? this.createAccount(newUser) : [];
-// put this in an action
+    // put this in an action
     });
   }
 
@@ -31,16 +30,20 @@ class CreateAccount extends Component {
 
   handleClick(event) {
     event.preventDefault();
-    const createRef = firebase.database().ref('create');
-    const create = {
+    const userRef = firebase.database().ref('users');
+    const users = {
       username: this.state.username,
-      password: this.state.password
+      password: this.state.password,
+      contacts: {}
     }
-    createRef.push(create);
+    userRef.push(users);
     this.props.newUser(this.state);
     this.props.signInNewUser(this.state);
-    return <Redirect to="/"/>;
-    // call an action to store this as a new user, and log them in.
+    this.setState({
+      username: '',
+      password: '',
+    });
+
   };
 
   render() {
@@ -62,8 +65,9 @@ class CreateAccount extends Component {
               placeholder="Password"></input>
             <button
               className="create-account-btn"
-              onClick={this.handleClick}
-              >Create Account</button>
+              onClick={this.handleClick}>
+              <Link to='/' >Create Account</Link>
+            </button>
           </form>
         </div>
     );
