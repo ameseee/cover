@@ -22,7 +22,7 @@ class App extends Component {
 
             <li className="nav-item-li">
               <Link
-                to="/signin"
+                to="/create"
                 className="nav-item">
               Log Out
             </Link>

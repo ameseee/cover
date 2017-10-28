@@ -1,7 +1,9 @@
-export const newUser = (state = {}, action) => {
+
+// from sign in:
+export const currentUser = (state = {}, action) => {
   switch (action.type) {
-    case 'CREATE_ACCOUNT':
-      return action.accountInfo;
+    case 'CURRENT_USER':
+      return action.username;
     default:
       return state;
   }

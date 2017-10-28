@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
 import { Link } from 'react-router-dom';
+import classnames from 'classnames'
 
 class CreateAccount extends Component {
   constructor() {
@@ -8,6 +9,7 @@ class CreateAccount extends Component {
     this.state = {
       username: '',
       password: '',
+      isSigningUp: true,
     };
     this.handleClick = this.handleClick.bind(this);
   }
@@ -15,6 +17,7 @@ class CreateAccount extends Component {
   createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
+    console.log('props in create:', this.props);
     // put this in an action
     const createRef = firebase.database().ref('users');
     createRef.on('value', (snapshot) => {
@@ -34,22 +37,29 @@ class CreateAccount extends Component {
     const users = {
       username: this.state.username,
       password: this.state.password,
-      currentUser: false,
       contacts: {}
     }
     userRef.push(users);
-    this.props.newUser(this.state);
     this.props.signInNewUser(this.state);
+    this.clearState();
+    this.props.history.push('/')
+  };
+
+  clearState() {
     this.setState({
       username: '',
       password: '',
     });
+  }
 
-  };
+  switchToOtherForm = () => {
+    this.setState({isSigningUp: !this.state.isSigningUp })
+  }
 
   render() {
     return (
-        <div className="create-account-section">
+      <div className="authentication-section">
+        <section className={classnames("create-account-section", this.state.isSigningUp ? '' : 'hidden')}>
           <h3 className="create-account-title">Create Your Account</h3>
           <form>
             <input
@@ -67,12 +77,36 @@ class CreateAccount extends Component {
             <button
               className="create-account-btn"
               onClick={this.handleClick}>
-              <Link
-                to='/'
-                className="link-to-main" >Create Account</Link>
+                Create Account
             </button>
           </form>
-        </div>
+        </section>
+        <section className={classnames("sign-in-section", this.state.isSigningUp ? 'hidden' : '')}>
+          <h3 className="sign-in-title">Sign In</h3>
+          <form>
+            <input
+              className="sign-in-name"
+              type="text"
+              value={this.state.username}
+              onChange={this.handleChange.bind(this, 'username')}
+              placeholder="Name/UserName" />
+            <input
+              className="sign-in-password"
+              type="text"
+              value={this.state.password}
+              onChange={this.handleChange.bind(this, 'password')}
+              placeholder="Password" />
+            <button
+              className="sign-in-btn"
+              onClick={this.handleClick}>
+              <Link
+                to='/'
+                className="link-to-main" >Sign In</Link>
+            </button>
+          </form>
+        </section>
+        <button onClick={this.switchToOtherForm}>{this.state.isSigningUp ? 'Switch to Login' : 'Switch to SignUp'}</button>
+      </div>
     );
   }
 }

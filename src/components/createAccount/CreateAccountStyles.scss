@@ -8,6 +8,11 @@ $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
 $charcoal-color: #1b1b1b;
 
+.authentication-section {
+  .hidden {
+    display: none;
+  }
+}
 .create-account-section {
   border: 1px solid $grey-color;
   border-radius: 3px;

@@ -4,21 +4,13 @@ export const getContactCards = cards => ({
   cards
 });
 
-//SignIn
-export const currentUser = status => ({
+//createAccount
+export const currentUser = username => ({
   type: 'CURRENT_USER',
-  status
+  username
 });
 
-//CreateAccount
-export const newUser = accountInfo => ({
-  type: 'CREATE_ACCOUNT',
-  accountInfo
-});
 
-export const signInNewUser = accountInfo => dispatch => {
-  dispatch(currentUser(accountInfo))
-}
 //ManageContacts
 export const createNewContact = contact => ({
   type: 'CREATE_NEW_CONTACT',
