@@ -10,6 +10,14 @@ export const currentUser = username => ({
   username
 });
 
+export const signedIn = boolean => ({
+  type: 'SIGNED_IN',
+  boolean
+});
+
+export const toggleSignIn = dispatch => ({
+  dispatch(signedIn(true))
+});
 
 //ManageContacts
 export const createNewContact = contact => ({
