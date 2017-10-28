@@ -3,7 +3,6 @@
 @import url(./components/createAccount/CreateAccountStyles.css);
 @import url(./components/main/MainStyles.css);
 @import url(./components/manageContacts/ManageContactsStyles.css);
-@import url(./components/signIn/SignInStyles.css);
 * {
   margin: 0;
   padding: 0;

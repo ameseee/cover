@@ -1,5 +1,4 @@
-
-export const currentUser = (state = {}, action) => {
+export const currentUser = (state = '', action) => {
   switch (action.type) {
     case 'CURRENT_USER':
       return action.username;
@@ -8,20 +7,13 @@ export const currentUser = (state = {}, action) => {
   }
 };
 
-export const signedIn = (state = false, action) => {
+export const signedInStatus = (state = 'hi', action) => {
   switch (action.type) {
-    case 'SIGNED_IN':
-      return action.boolean;
+    case 'TOGGLE_SIGN_IN':
+      return true;
+    case 'TOGGLE_SIGN_OUT':
+      return false;
     default:
       return state;
   }
 };
-// 
-// export const toggleSignIn = (state = {}, action) => {
-//   switch (action.type) {
-//     case 'TOGGLE_SIGN_IN':
-//       return state
-//     default:
-//       return state;
-//   }
-// };

@@ -1,17 +1,22 @@
 import { connect } from 'react-redux';
 import CreateAccount from '../components/createAccount/CreateAccount';
-import { currentUser, signedIn, toggleSignIn } from '../actions/actions';
+import { setCurrentUser, signIn, signOut } from '../actions/actions';
 
 const mapStateToProps = store => ({
   currentUser: store.currentUser,
-  signedIn: store.signedIn
+  signedInStatus: store.signedInStatus
 });
 
-// const mapDispatchToProps = dispatch => ({
-//   toggleSignIn: () => {
-//     dispatch(toggleSignIn());
-//   },
-//
-// });
+const mapDispatchToProps = dispatch => ({
+  signIn: boolean => {
+    dispatch(signIn(boolean))
+  },
+  signOut: boolean => {
+    dispatch(signOut(boolean))
+  },
+  setCurrentUser: username => {
+    dispatch(setCurrentUser(username))
+  }
+});
 
-export default connect(mapStateToProps, undefined)(CreateAccount);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateAccount);

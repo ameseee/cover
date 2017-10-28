@@ -5,18 +5,21 @@ export const getContactCards = cards => ({
 });
 
 //createAccount
-export const currentUser = username => ({
-  type: 'CURRENT_USER',
-  username
-});
+export const signIn = boolean => {
+  return {
+    type: 'TOGGLE_SIGN_IN',
+    boolean
+  }
+};
 
-export const signedIn = boolean => ({
-  type: 'SIGNED_IN',
+export const signOut = boolean => ({
+  type: 'TOGGLE_SIGN_OUT',
   boolean
 });
 
-export const toggleSignIn = dispatch => ({
-  dispatch(signedIn(true))
+export const setCurrentUser = username => ({
+  type: 'CURRENT_USER',
+  username
 });
 
 //ManageContacts

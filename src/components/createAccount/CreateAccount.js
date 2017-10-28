@@ -40,7 +40,8 @@ class CreateAccount extends Component {
       contacts: {}
     }
     userRef.push(users);
-    //use an action to change if logged in
+    this.props.signIn(true);
+    this.props.setCurrentUser(this.state.username);
     this.clearState();
     this.props.history.push('/')
     console.log('this props at end of button click function', this.props);
