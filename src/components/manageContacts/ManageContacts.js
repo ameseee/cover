@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
+import ContactCards from '../contactCards/ContactCards';
 
 class ManageContacts extends Component {
   constructor() {
@@ -64,27 +65,36 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    //map over contacts here so JSX is cleaner
+    //render a ContactCards container here to make this even cleaner
+    const mappedContacts = this.state.contacts.map(contact => {
+      return (
+        // <ContactCards
+        //   key={contact}
+        //   name={contact.contactName}
+        //   number={contact.contactNumber}
+        //   edit={this.handleEdit}
+        //   remove={this.handleRemove} />
+        <article className="existing-contact-card">
+
+          <div>
+            <h4 className="existing-contact-name">{contact.contactName}</h4>
+            <p className="existing-contact-number">{contact.contactNumber}</p>
+          </div>
+          <button
+            className="edit-contact-btn"
+            onClick={this.handleEdit}>Edit</button>
+            <button
+              className="remove-contact-btn" onClick={() => this.handleRemove(contact)}>Remove</button>
+        </article>
+      )
+    });
+
     return (
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
         <section className="current-contacts">
             <article>
-              {this.state.contacts.map(contact => {
-                return (
-                  <article className="existing-contact-card">
-                  <div>
-                    <h4 className="existing-contact-name">{contact.contactName}</h4>
-                    <p className="existing-contact-number">{contact.contactNumber}</p>
-                  </div>
-                  <button
-                    className="edit-contact-btn"
-                    onClick={this.handleEdit}>Edit</button>
-                    <button
-                      className="remove-contact-btn" onClick={() => this.handleRemove(contact)}>Remove</button>
-                  </article>
-                )
-              })}
+              { mappedContacts }
             </article>
         </section>
 
