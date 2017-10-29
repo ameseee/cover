@@ -11,7 +11,7 @@ class App extends Component {
   signOut() {
     console.log('sign out props1:', this.props);
     this.props.signOut(false);
-    //change currentUser to empty string
+    this.props.setCurrentUser('');
   }
 
   render() {

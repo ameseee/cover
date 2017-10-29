@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import App from '../components/App/App';
-import { signOut } from '../actions/actions';
+import { signOut, setCurrentUser } from '../actions/actions';
 
 const mapStateToProps = store => ({
   currentUser: store.currentUser
@@ -9,6 +9,9 @@ const mapStateToProps = store => ({
 const mapDispatchToProps = dispatch => ({
   signOut: boolean => {
     dispatch(signOut(boolean))
+  },
+  setCurrentUser: username => {
+    dispatch(setCurrentUser(username))
   }
 });
 
