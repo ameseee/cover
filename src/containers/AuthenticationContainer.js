@@ -9,13 +9,13 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => ({
   signIn: boolean => {
-    dispatch(signIn(boolean))
+    dispatch(signIn(boolean));
   },
   signOut: boolean => {
-    dispatch(signOut(boolean))
+    dispatch(signOut(boolean));
   },
   setCurrentUser: username => {
-    dispatch(setCurrentUser(username))
+    dispatch(setCurrentUser(username));
   }
 });
 

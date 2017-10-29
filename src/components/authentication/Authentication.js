@@ -16,6 +16,7 @@ class Authentication extends Component {
   createAccount = (newUser) => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
+    console.log(this.props);
     // put this in an action
     const createRef = firebase.database().ref('users');
     createRef.on('value', (snapshot) => {
@@ -43,19 +44,14 @@ class Authentication extends Component {
 
   signInClick = (email, password) => {
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(login => this.useUserId(login.uid))
+      .then(login => this.props.setCurrentUser(login.uid))
       .catch(error => {
         this.props.history.push('/auth');
         alert(error)});
     this.props.signIn(true);
-    this.props.setCurrentUser(this.state.username);
     this.clearState();
     this.props.history.push('/')
   };
-
-  useUserId = loginId => {
-    console.log('we are in useUserId function:', loginId);
-  }
 
   clearState() {
     this.setState({
