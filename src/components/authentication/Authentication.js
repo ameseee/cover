@@ -32,17 +32,9 @@ class Authentication extends Component {
   createAccountClick = (email, password) => {
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch( error => {
-        debugger
         const errorCode = error.code;
         const errorMsg = error.message;
-      })
-    // const userRef = firebase.database().ref('users');
-    // const users = {
-    //   username: this.state.username,
-    //   password: this.state.password,
-    //   contacts: {}
-    // }
-    // userRef.push(users);
+      });
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
     this.clearState();
@@ -50,16 +42,20 @@ class Authentication extends Component {
   };
 
   signInClick = (email, password) => {
-    console.log('we have what we want here!!', email, password);
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(login => this.props.history.push('/'))
+      .then(login => this.useUserId(login.uid))
       .catch(error => {
         this.props.history.push('/auth');
         alert(error)});
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
     this.clearState();
+    this.props.history.push('/')
   };
+
+  useUserId = loginId => {
+    console.log('we are in useUserId function:', loginId);
+  }
 
   clearState() {
     this.setState({
