@@ -9,24 +9,28 @@ class ManageContacts extends Component {
       contactNumber: '',
       contacts: []
     };
-
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value));
 
+//user: this.props.currentUser ADD THIS IN To object.assign above.
+
   componentDidMount() {
-    //
+    console.log('we are in CDM: ', this.props);
+
     const itemsRef = firebase.database().ref('contacts');
     itemsRef.on('value', (snapshot) => {
       const contacts = snapshot.val();
       let newState = contacts ? this.createContact(contacts) : [];
-// put this in an action
+      // put this in an action
       this.setState({
         contacts: newState
       });
     });
+
+    //
   }
 
   handleSubmit(event) {
@@ -34,7 +38,8 @@ class ManageContacts extends Component {
     const itemsRef = firebase.database().ref('contacts');
     const item = {
       contactName: this.state.contactName,
-      contactNumber: this.state.contactNumber
+      contactNumber: this.state.contactNumber,
+      userId: this.props.currentUser
     }
     itemsRef.push(item);
 
@@ -45,6 +50,7 @@ class ManageContacts extends Component {
   }
 
   handleChange(event) {
+    console.log(this.props);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -63,6 +69,8 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
+    //map over contacts here
+    console.log('in render of manage contacts comp:', this.props);
     return (
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
