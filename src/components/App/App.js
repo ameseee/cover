@@ -3,7 +3,16 @@ import styles from '../../index.css';
 import { Link } from 'react-router-dom';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.signOut = this.signOut.bind(this);
+  }
 
+  signOut() {
+    console.log('sign out props1:', this.props);
+    this.props.signOut(false);
+    this.props.setCurrentUser('');
+  }
 
   render() {
     return (
@@ -20,11 +29,13 @@ class App extends Component {
             </Link>
             </li>
 
-            <li className="nav-item-li">
+            <li
+              className="nav-item-li"
+              onClick={this.signOut}>
               <Link
-                to="/signin"
+                to="/create"
                 className="nav-item">
-              Log Out
+              Sign Out
             </Link>
             </li>
 

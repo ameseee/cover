@@ -14,13 +14,13 @@ const Main = () => {
           <h3 className="section-title">Contacts</h3>
 
           <article className="contact-card">
-            <h4 className="contact-card-name">Cindy</h4>
+            <h4 className="contact-card-name">hard coded friend1</h4>
             <button className="custom-text-btn">send custom text</button>
             <button className="location-now-btn">send my location NOW</button>
           </article>
 
           <article className="contact-card">
-            <h4 className="contact-card-name">Tracey</h4>
+            <h4 className="contact-card-name">hard coded friend2</h4>
             <button className="custom-text-btn">send custom text</button>
             <button className="location-now-btn">send my location NOW</button>
           </article>

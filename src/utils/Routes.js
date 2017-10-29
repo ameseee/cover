@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import { Route } from 'react-router-dom';
 import MainContainer from '../containers/MainContainer';
-import SignInContainer from '../containers/SignInContainer';
-import CreateAccountContainer from '../containers/CreateAccountContainer';
+import AuthenticationContainer from '../containers/AuthenticationContainer';
 import ManageContacts from '../components/manageContacts/ManageContacts';
 
 class Routes extends Component {
@@ -10,9 +9,8 @@ class Routes extends Component {
     return (
       <div className="routes">
         <Route exact path="/" component={ MainContainer }/>
-        <Route path="/signin" component={ SignInContainer } />
-        <Route path="/create" component={ CreateAccountContainer } />
-        <Route path="/contacts" component={ ManageContacts} />
+        <Route path="/auth" component={ AuthenticationContainer } />
+        <Route path="/contacts" component={ ManageContacts } />
       </div>
     );
   }

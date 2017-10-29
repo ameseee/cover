@@ -1,14 +1,12 @@
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux';
 import { getContactCards } from './mainReducer';
-import { currentUser } from './signInReducer';
-import { newUser } from './createAccountReducer';
-
+import { currentUser, signedInStatus } from './authenticationReducer';
 
 const rootReducer = combineReducers({
   getContactCards,
   currentUser,
-  newUser
+  signedInStatus
 });
 
 export default rootReducer;
