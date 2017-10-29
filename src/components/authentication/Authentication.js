@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
 import { Link } from 'react-router-dom';
-import classnames from 'classnames'
+import classnames from 'classnames';
 
 class Authentication extends Component {
   constructor() {
