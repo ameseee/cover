@@ -107,7 +107,11 @@ class Authentication extends Component {
             </button>
           </form>
         </section>
-        <button onClick={this.switchToOtherForm}>{this.state.isSigningUp ? 'Switch to Login' : 'Switch to SignUp'}</button>
+        <article className="other-card-section">
+          <h3 className="already" >{this.state.isSigningUp ? 'Already have an account?' : 'Don\'t have an accout yet?'}</h3>
+          <button
+            className="other-card-btn" onClick={this.switchToOtherForm}>{this.state.isSigningUp ? 'Sign In' : 'Sign Up'}</button>
+        </article>
       </div>
     );
   }
