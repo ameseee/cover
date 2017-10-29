@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import firebase from '../../firebase';
+import ContactCards from '../contactCards/ContactCards';
 
 class ManageContacts extends Component {
   constructor() {
@@ -67,7 +68,14 @@ class ManageContacts extends Component {
     //render a ContactCards container here to make this even cleaner
     const mappedContacts = this.state.contacts.map(contact => {
       return (
+        // <ContactCards
+        //   key={contact}
+        //   name={contact.contactName}
+        //   number={contact.contactNumber}
+        //   edit={this.handleEdit}
+        //   remove={this.handleRemove} />
         <article className="existing-contact-card">
+
           <div>
             <h4 className="existing-contact-name">{contact.contactName}</h4>
             <p className="existing-contact-number">{contact.contactNumber}</p>
@@ -80,7 +88,7 @@ class ManageContacts extends Component {
         </article>
       )
     });
-    
+
     return (
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
