@@ -11,13 +11,11 @@ class Authentication extends Component {
       password: '',
       isSigningUp: true,
     };
-    this.handleClick = this.handleClick.bind(this);
   }
 
-  createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
+  createAccount = (newUser) => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
-    console.log('in auth');
     // put this in an action
     const createRef = firebase.database().ref('users');
     createRef.on('value', (snapshot) => {
@@ -31,20 +29,41 @@ class Authentication extends Component {
     this.setState({ [key]: event.target.value });
   }
 
-  handleClick(event) {
-    event.preventDefault();
-    const userRef = firebase.database().ref('users');
-    const users = {
-      username: this.state.username,
-      password: this.state.password,
-      contacts: {}
-    }
-    userRef.push(users);
+  createAccountClick = (email, password) => {
+    // event.preventDefault();
+    firebase.auth().createUserWithEmailAndPassword(email, password)
+      .catch( error => {
+        const errorCode = error.code;
+        const errorMsg = error.message;
+      })
+    // const userRef = firebase.database().ref('users');
+    // const users = {
+    //   username: this.state.username,
+    //   password: this.state.password,
+    //   contacts: {}
+    // }
+    // userRef.push(users);
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
     this.clearState();
     this.props.history.push('/');
-    console.log('this props at end of button click function', this.props);
+  };
+
+  signInClick = (email, password) => {
+    console.log('we have what we want here!!', email, password);
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .catch(error => alert(error))
+      // const userRef = firebase.database().ref('users');
+    // const users = {
+    //   username: this.state.username,
+    //   password: this.state.password,
+    //   contacts: {}
+    // }
+    // userRef.push(users);
+    this.props.signIn(true);
+    this.props.setCurrentUser(this.state.username);
+    this.clearState();
+    this.props.history.push('/');
   };
 
   clearState() {
@@ -55,7 +74,7 @@ class Authentication extends Component {
   }
 
   switchToOtherForm = () => {
-    this.setState({isSigningUp: !this.state.isSigningUp })
+    this.setState({ isSigningUp: !this.state.isSigningUp })
   }
 
   render() {
@@ -63,7 +82,7 @@ class Authentication extends Component {
       <div className="authentication-section">
         <section className={classnames("create-account-section", this.state.isSigningUp ? '' : 'hidden')}>
           <h3 className="create-account-title">Create Your Account</h3>
-          <form>
+          <div>
             <input
               className="create-account-name"
               type="text"
@@ -78,14 +97,14 @@ class Authentication extends Component {
               placeholder="Password"></input>
             <button
               className="create-account-btn"
-              onClick={this.handleClick}>
+              onClick={() => this.createAccountClick(this.state.username, this.state.password)}>
                 Create Account
             </button>
-          </form>
+          </div>
         </section>
         <section className={classnames("sign-in-section", this.state.isSigningUp ? 'hidden' : '')}>
           <h3 className="sign-in-title">Sign In</h3>
-          <form>
+          <div>
             <input
               className="sign-in-name"
               type="text"
@@ -100,12 +119,12 @@ class Authentication extends Component {
               placeholder="Password" />
             <button
               className="sign-in-btn"
-              onClick={this.handleClick}>
+              onClick={() => this.signInClick(this.state.username, this.state.password)}>
               <Link
                 to='/'
                 className="link-to-main" >Sign In</Link>
             </button>
-          </form>
+          </div>
         </section>
         <article className="other-card-section">
           <h3 className="already" >{this.state.isSigningUp ? 'Already have an account?' : 'Don\'t have an accout yet?'}</h3>
