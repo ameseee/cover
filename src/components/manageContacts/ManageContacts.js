@@ -15,21 +15,16 @@ class ManageContacts extends Component {
 
   createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value));
 
-//user: this.props.currentUser ADD THIS IN To object.assign above.
-
   componentDidMount() {
-    console.log('we are in CDM: ', this.props);
-
+    // put this in an action
     const itemsRef = firebase.database().ref('contacts');
     itemsRef.on('value', (snapshot) => {
       const contacts = snapshot.val();
       let newState = contacts ? this.createContact(contacts) : [];
-      // put this in an action
       this.setState({
         contacts: newState
       });
     });
-
     //
   }
 
@@ -69,8 +64,7 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    //map over contacts here
-    console.log('in render of manage contacts comp:', this.props);
+    //map over contacts here so JSX is cleaner
     return (
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
