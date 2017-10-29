@@ -17,7 +17,6 @@ class CreateAccount extends Component {
   createAccount = (newUser)  => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
-    console.log('props in create:', this.props);
     // put this in an action
     const createRef = firebase.database().ref('users');
     createRef.on('value', (snapshot) => {
