@@ -1,5 +1,7 @@
 import firebase from 'firebase';
 
+// const firebase = require('firebase');
+
 const config = {
     apiKey: "AIzaSyAUsL4HHV8Ycdz1SShYTo765Okxk1M8fL4",
     authDomain: "cover-1508863282120.firebaseapp.com",
