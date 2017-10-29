@@ -30,9 +30,9 @@ class Authentication extends Component {
   }
 
   createAccountClick = (email, password) => {
-    // event.preventDefault();
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch( error => {
+        debugger
         const errorCode = error.code;
         const errorMsg = error.message;
       })
