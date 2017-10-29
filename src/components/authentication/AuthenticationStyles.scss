@@ -16,16 +16,11 @@ $charcoal-color: #1b1b1b;
 .create-account-section {
   border: 1px solid $grey-color;
   border-radius: 3px;
-
   width: 45%;
   margin: 0 auto;
   padding: 4%;
   background-color: #fff;
-
-  // take this out once rendering by itself properly
-  margin-top: 6%;
-  margin-bottom: 6%;
-  // take this out once rendering by itself properly
+  margin-top: 5%;
 }
 
 .create-account-title {
@@ -80,6 +75,7 @@ $charcoal-color: #1b1b1b;
   margin: 0 auto;
   padding: 4%;
   background-color: #fff;
+  margin-top: 5%;
 }
 
 .sign-in-title {
@@ -119,4 +115,34 @@ $charcoal-color: #1b1b1b;
 .sign-in-btn:hover {
   background-color: $turq-hover;
   cursor: pointer;
+}
+
+.other-card-section {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.already {
+  font-family: Lato;
+  color: $charcoal-color;
+  font-size: 90%;
+  margin-right: 10px;
+}
+
+.other-card-btn {
+  background-color: $navy-color;
+  color: #fff;
+  // width: 70%;
+  border: none;
+  padding: 5px 10px;
+  // margin: 0 auto;
+  // display: block;
+  border-radius: 3px;
+  font-size: 80%;
+  font-family: Lato;
 }
