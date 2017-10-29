@@ -103,9 +103,9 @@ class ManageContacts extends Component {
               value={this.state.contactNumber}
               placeholder="Phone Number"
               onChange={this.handleChange}></input>
-            <buttom
+            <button
               className="save-new-contact"
-              onClick={this.handleSubmit}>Save Contact</buttom>
+              onClick={this.handleSubmit}>Save Contact</button>
           </form>
         </section>
       </div>

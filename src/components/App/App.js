@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import styles from '../../index.css';
 import { Link } from 'react-router-dom';
+import firebase from '../../firebase';
 
 class App extends Component {
   constructor() {
@@ -10,6 +11,11 @@ class App extends Component {
 
   signOut() {
     console.log('sign out props1:', this.props);
+    firebase.auth().signOut().then( () => {
+      //signout successful - this is prob where I should call props
+    }).catch( error => {
+      alert('We experienced an error:', error)
+    });
     this.props.signOut(false);
     this.props.setCurrentUser('');
   }
