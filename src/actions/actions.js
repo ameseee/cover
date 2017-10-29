@@ -4,7 +4,7 @@ export const getContactCards = cards => ({
   cards
 });
 
-//createAccount
+//Authentication
 export const signIn = boolean => {
   return {
     type: 'TOGGLE_SIGN_IN',

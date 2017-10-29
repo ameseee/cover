@@ -1,6 +1,6 @@
 @import url(./components/App/AppStyles.css);
 @import url(./components/contactCards/ContactCardsStyles.css);
-@import url(./components/createAccount/CreateAccountStyles.css);
+@import url(./components/authentication/AuthenticationStyles.css);
 @import url(./components/main/MainStyles.css);
 @import url(./components/manageContacts/ManageContactsStyles.css);
 * {

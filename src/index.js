@@ -6,7 +6,6 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
 import { BrowserRouter, Route } from 'react-router-dom';
-import CreateAccountContainer from './containers/CreateAccountContainer';
 import Routes from './utils/Routes';
 
 const devTools = window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__();

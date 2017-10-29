@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import CreateAccount from '../components/createAccount/CreateAccount';
+import Authentication from '../components/authentication/Authentication';
 import { setCurrentUser, signIn, signOut } from '../actions/actions';
 
 const mapStateToProps = store => ({
@@ -19,4 +19,4 @@ const mapDispatchToProps = dispatch => ({
   }
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateAccount);
+export default connect(mapStateToProps, mapDispatchToProps)(Authentication);
