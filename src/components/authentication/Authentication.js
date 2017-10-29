@@ -52,18 +52,13 @@ class Authentication extends Component {
   signInClick = (email, password) => {
     console.log('we have what we want here!!', email, password);
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .catch(error => alert(error))
-      // const userRef = firebase.database().ref('users');
-    // const users = {
-    //   username: this.state.username,
-    //   password: this.state.password,
-    //   contacts: {}
-    // }
-    // userRef.push(users);
+      .then(login => this.props.history.push('/'))
+      .catch(error => {
+        this.props.history.push('/auth');
+        alert(error)});
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
     this.clearState();
-    this.props.history.push('/');
   };
 
   clearState() {
