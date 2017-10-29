@@ -33,7 +33,7 @@ class App extends Component {
               className="nav-item-li"
               onClick={this.signOut}>
               <Link
-                to="/create"
+                to="/auth"
                 className="nav-item">
               Sign Out
             </Link>
