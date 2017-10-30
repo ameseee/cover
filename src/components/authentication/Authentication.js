@@ -60,13 +60,20 @@ class Authentication extends Component {
 
   loadManagedUsers = () => {
     const contactsFromDB = firebase.database().ref('contacts');
-    const snapShotDb = contactsFromDB.on('value', (snapshot => {
-      console.log(snapshot.val());
+    const snapShotDb = contactsFromDB.on('value', snapshot => {
       const contactObjects = Object.values(snapshot.val());
-      const filteredContacts = contactObjects
-        .filter(contact => (contact.userId === this.props.currentUser));
-    }));
 
+      const { currentUser } = this.props;
+
+      const filteredContacts = contactObjects
+        .filter(contact => {
+          return (contact.userId === currentUser)
+        });
+
+      this.props.loadContacts(filteredContacts);
+    });
+
+    //update store.
     this.clearState();
     this.props.history.push('/');
   }

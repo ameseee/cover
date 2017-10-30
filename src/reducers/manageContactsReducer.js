@@ -15,3 +15,12 @@ export const removeContact = (state = [], action) => {
       return state;
   }
 };
+
+export const loadContacts = (state = [], action) => {
+  switch (action.type) {
+    case 'LOAD_CONTACTS':
+      return action.contacts;
+    default:
+      return state;
+  }
+};

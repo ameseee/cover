@@ -13,19 +13,9 @@ class ManageContacts extends Component {
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
-    // put this in an action
-    const itemsRef = firebase.database().ref('contacts');
-    itemsRef.on('value', (snapshot) => {
-      const contacts = snapshot.val();
-      let newState = contacts ? this.createContact(contacts) : [];
-      this.setState({
-        contacts: newState
-      });
-    });
-    // put this in an action
+    console.log(this.props.loadContacts);
   }
 
   handleSubmit(event) {
@@ -63,9 +53,9 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
+    console.log(this.props.loadedContacts);
 
-    //should be mapping over contacts from DB, not state, right??
-    const mappedContacts = this.state.contacts.map(contact => {
+    const mappedContacts = this.props.loadedContacts.map(contact => {
       return (
         <article className="existing-contact-card">
           <div>
