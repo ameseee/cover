@@ -27,8 +27,8 @@ class App extends Component {
         <nav className="nav-bar">
           <h1 className="cover-title">
             <Link
-              to="/"
               className="nav-bar-brand-link"
+              to="/"
             >
               Cover
             </Link>
@@ -36,8 +36,9 @@ class App extends Component {
           <ul className="nav-menu">
             <li className="nav-item-li">
               <Link
+                className="nav-item"
                 to="/contacts"
-                className="nav-item">
+              >
               Manage Contacts
             </Link>
             </li>
@@ -46,10 +47,11 @@ class App extends Component {
               className="nav-item-li"
               onClick={this.signOut}>
               <Link
+                className="nav-item"
                 to="/auth"
-                className="nav-item">
-              Sign Out
-            </Link>
+              >
+                Sign Out
+              </Link>
             </li>
 
           </ul>
