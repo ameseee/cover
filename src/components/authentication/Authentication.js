@@ -18,10 +18,11 @@ class Authentication extends Component {
   componentDidMount() {
     // put this in an action
     const createRef = firebase.database().ref('users');
+
     createRef.on('value', (snapshot) => {
       const newUser = snapshot.val();
-      let newState = newUser ? this.createAccount(newUser) : [];
-    // put this in an action
+
+      if (newUser) this.createAccount(newUser);
     });
   }
 
@@ -33,8 +34,7 @@ class Authentication extends Component {
     //can't this be an action too???
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch( error => {
-        const errorCode = error.code;
-        //const errorMsg = error.message;
+        throw new Error(error)
       });
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
@@ -50,33 +50,14 @@ class Authentication extends Component {
       .then(login => {
         this.props.setCurrentUser(login.uid)
         this.props.signIn(true)
-        this.loadManagedUsers();
+        this.clearState();
+        this.props.history.push('/');
       })
       .catch(error => {
         this.props.history.push('/auth');
         alert(error)
       });
   };
-
-  loadManagedUsers = () => {
-    const contactsFromDB = firebase.database().ref('contacts');
-    const snapShotDb = contactsFromDB.on('value', snapshot => {
-      const contactObjects = Object.values(snapshot.val());
-
-      const { currentUser } = this.props;
-
-      const filteredContacts = contactObjects
-        .filter(contact => {
-          return (contact.userId === currentUser)
-        });
-
-      this.props.loadContacts(filteredContacts);
-    });
-
-    //update store.
-    this.clearState();
-    this.props.history.push('/');
-  }
 
   clearState() {
     this.setState({

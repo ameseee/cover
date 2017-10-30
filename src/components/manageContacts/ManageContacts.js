@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import firebase from '../../firebase';
+import firebase from './../../firebase';
+import fetchScopedUsers from './../../utils/fetchScopedUsers';
 
 class ManageContacts extends Component {
   constructor() {
@@ -11,11 +12,11 @@ class ManageContacts extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.fetchScopedUsers = fetchScopedUsers.bind(this);
   }
 
-
   componentDidMount() {
-    console.log(this.props.loadContacts);
+    this.fetchScopedUsers(firebase);
   }
 
   handleSubmit(event) {
@@ -53,8 +54,6 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    console.log(this.props.loadedContacts);
-
     const mappedContacts = this.props.loadedContacts.map(contact => {
       return (
         <article className="existing-contact-card">

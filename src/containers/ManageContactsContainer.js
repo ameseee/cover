@@ -4,7 +4,7 @@ import { createNewContact, removeContact, loadContacts } from '../actions/action
 
 const mapStateToProps = store => ({
   loadedContacts: store.loadContacts,
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
