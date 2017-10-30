@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import firebase from '../../firebase';
-import ContactCards from '../contactCards/ContactCards';
+import firebase from './../../firebase';
+import fetchScopedUsers from './../../utils/fetchScopedUsers';
 
 class ManageContacts extends Component {
   constructor() {
@@ -12,21 +12,11 @@ class ManageContacts extends Component {
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.fetchScopedUsers = fetchScopedUsers.bind(this);
   }
 
-  createContact = (contacts)  => Object.entries(contacts).map(([key,value]) => Object.assign({id: key}, value));
-
   componentDidMount() {
-    // put this in an action
-    const itemsRef = firebase.database().ref('contacts');
-    itemsRef.on('value', (snapshot) => {
-      const contacts = snapshot.val();
-      let newState = contacts ? this.createContact(contacts) : [];
-      this.setState({
-        contacts: newState
-      });
-    });
-    //
+    this.fetchScopedUsers(firebase);
   }
 
   handleSubmit(event) {
@@ -36,7 +26,7 @@ class ManageContacts extends Component {
       contactName: this.state.contactName,
       contactNumber: this.state.contactNumber,
       userId: this.props.currentUser
-    }
+    };
     itemsRef.push(item);
 
     this.setState({
@@ -46,7 +36,6 @@ class ManageContacts extends Component {
   }
 
   handleChange(event) {
-    console.log(this.props);
     this.setState({
       [event.target.name]: event.target.value
     });
@@ -65,17 +54,12 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    //render a ContactCards container here to make this even cleaner
-    const mappedContacts = this.state.contacts.map(contact => {
+    const mappedContacts = this.props.loadedContacts.map((contact, index) => {
       return (
-        // <ContactCards
-        //   key={contact}
-        //   name={contact.contactName}
-        //   number={contact.contactNumber}
-        //   edit={this.handleEdit}
-        //   remove={this.handleRemove} />
-        <article className="existing-contact-card">
-
+        <article
+          key={index}
+          className="existing-contact-card"
+        >
           <div>
             <h4 className="existing-contact-name">{contact.contactName}</h4>
             <p className="existing-contact-number">{contact.contactNumber}</p>

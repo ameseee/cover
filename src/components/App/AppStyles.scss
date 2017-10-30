@@ -5,3 +5,13 @@ $turq-color: #039fbe;
 $navy-color: #282a40;
 $lt-grey-color: #f5f5f7;
 $charcoal-color: #1b1b1b;
+
+.nav-bar-brand-link {
+  text-decoration: none;
+  color: $lt-grey-color;
+  font-family: Lato;
+}
+
+.nav-bar-brand-link:hover {
+  color: $turq-color;
+}
