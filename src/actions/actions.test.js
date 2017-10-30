@@ -24,7 +24,7 @@ console.log(actions.signIn);
       type: 'CURRENT_USER',
       username: 'Amy'
     };
-
+np
     expect(actions.setCurrentUser('Amy')).toEqual(expectedAction);
   });
 
