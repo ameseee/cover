@@ -25,7 +25,13 @@ class App extends Component {
       <div className="app-container">
 
         <nav className="nav-bar">
-          <h1 className="cover-title">Cover</h1>
+          <h1 className="cover-title">
+            <Link
+              to="/"
+            >
+              Cover
+            </Link>
+          </h1>
           <ul className="nav-menu">
             <li className="nav-item-li">
               <Link
