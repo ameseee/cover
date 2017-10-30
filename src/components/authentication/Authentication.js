@@ -30,27 +30,46 @@ class Authentication extends Component {
   }
 
   createAccountClick = (email, password) => {
+    //can't this be an action too???
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch( error => {
         const errorCode = error.code;
-        const errorMsg = error.message;
+        //const errorMsg = error.message;
       });
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
+    //can't this be an action too???
     this.clearState();
     this.props.history.push('/');
+      //since this is a new user there should be no contacts to render.
   };
 
   signInClick = (email, password) => {
+    //can't this be an action too???
     firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(login => this.props.setCurrentUser(login.uid))
+      .then(login => {
+        this.props.setCurrentUser(login.uid)
+        this.props.signIn(true)
+        this.loadManagedUsers();
+      })
       .catch(error => {
         this.props.history.push('/auth');
-        alert(error)});
-    this.props.signIn(true);
-    this.clearState();
-    this.props.history.push('/')
+        alert(error)
+      });
   };
+
+  loadManagedUsers = () => {
+    const contactsFromDB = firebase.database().ref('contacts');
+    const snapShotDb = contactsFromDB.on('value', (snapshot => {
+      console.log(snapshot.val());
+      const contactObjects = Object.values(snapshot.val());
+      const filteredContacts = contactObjects
+        .filter(contact => (contact.userId === this.props.currentUser));
+    }));
+
+    this.clearState();
+    this.props.history.push('/');
+  }
 
   clearState() {
     this.setState({
@@ -74,17 +93,20 @@ class Authentication extends Component {
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
-              placeholder="Name/UserName"></input>
+              placeholder="Name/UserName"
+            />
             <input
               className="create-account-password"
               type="text"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
-              placeholder="Password"></input>
+              placeholder="Password"
+            />
             <button
               className="create-account-btn"
-              onClick={() => this.createAccountClick(this.state.username, this.state.password)}>
-                Create Account
+              onClick={() => this.createAccountClick(this.state.username, this.state.password)}
+            >
+              Create Account
             </button>
           </div>
         </section>
@@ -96,26 +118,34 @@ class Authentication extends Component {
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
-              placeholder="Name/UserName" />
+              placeholder="Name/UserName"
+            />
             <input
               className="sign-in-password"
               type="text"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
-              placeholder="Password" />
+              placeholder="Password"
+            />
             <button
               className="sign-in-btn"
               onClick={() => this.signInClick(this.state.username, this.state.password)}>
               <Link
                 to='/'
-                className="link-to-main" >Sign In</Link>
+                className="link-to-main"
+              >
+                Sign In
+              </Link>
             </button>
           </div>
         </section>
         <article className="other-card-section">
           <h3 className="already" >{this.state.isSigningUp ? 'Already have an account?' : 'Don\'t have an accout yet?'}</h3>
           <button
-            className="other-card-btn" onClick={this.switchToOtherForm}>{this.state.isSigningUp ? 'Sign In' : 'Sign Up'}</button>
+            className="other-card-btn" onClick={this.switchToOtherForm}
+          >
+            {this.state.isSigningUp ? 'Sign In' : 'Sign Up'}
+          </button>
         </article>
       </div>
     );

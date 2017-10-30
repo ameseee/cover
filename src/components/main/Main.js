@@ -1,7 +1,8 @@
 import React from 'react';
+// import ContactCards from '../contactCards/ContactCards';
 
-const Main = () => {
-
+const Main = (props) => {
+console.log(props);
   return (
     <div className="main">
       <main>
@@ -24,7 +25,9 @@ const Main = () => {
             <button className="custom-text-btn">send custom text</button>
             <button className="location-now-btn">send my location NOW</button>
           </article>
-          {/*  render the mapped this.props.contacts here */}
+
+{/* dont i want to go through all the contacts in firebase, filter out the ones who have the currentUserId === userId, then make a card for each other those? */}
+
         </section>
       </main>
     </div>
