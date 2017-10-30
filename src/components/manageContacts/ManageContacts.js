@@ -54,9 +54,12 @@ class ManageContacts extends Component {
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    const mappedContacts = this.props.loadedContacts.map(contact => {
+    const mappedContacts = this.props.loadedContacts.map((contact, index) => {
       return (
-        <article className="existing-contact-card">
+        <article
+          key={index}
+          className="existing-contact-card"
+        >
           <div>
             <h4 className="existing-contact-name">{contact.contactName}</h4>
             <p className="existing-contact-number">{contact.contactNumber}</p>

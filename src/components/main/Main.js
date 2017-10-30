@@ -14,9 +14,12 @@ class Main extends React.Component {
   }
 
   loadContacts() {
-    return this.props.loadedContacts.map((contact) => {
+    return this.props.loadedContacts.map((contact, index) => {
       return (
-        <article className="contact-card">
+        <article
+          key={index}
+          className="contact-card"
+        >
           <h4 className="contact-card-name">{contact.contactName}</h4>
           <button className="custom-text-btn">Send custom text</button>
           <button className="location-now-btn">Send my location NOW!!</button>

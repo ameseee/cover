@@ -31,26 +31,23 @@ class Authentication extends Component {
   }
 
   createAccountClick = (email, password) => {
-    //can't this be an action too???
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .catch( error => {
         throw new Error(error)
       });
     this.props.signIn(true);
     this.props.setCurrentUser(this.state.username);
-    //can't this be an action too???
     this.clearState();
     this.props.history.push('/');
-      //since this is a new user there should be no contacts to render.
   };
 
   signInClick = (email, password) => {
     //can't this be an action too???
+    this.clearState();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(login => {
         this.props.setCurrentUser(login.uid)
         this.props.signIn(true)
-        this.clearState();
         this.props.history.push('/');
       })
       .catch(error => {
