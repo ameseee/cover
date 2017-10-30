@@ -31,14 +31,16 @@ class Authentication extends Component {
   }
 
   createAccountClick = (email, password) => {
+    this.clearState();
     firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then(login => {
+        this.props.setCurrentUser(login.uid);
+        this.props.signIn(true);
+        this.props.history.push('/');
+      })
       .catch( error => {
         throw new Error(error)
       });
-    this.props.signIn(true);
-    this.props.setCurrentUser(this.state.username);
-    this.clearState();
-    this.props.history.push('/');
   };
 
   signInClick = (email, password) => {
