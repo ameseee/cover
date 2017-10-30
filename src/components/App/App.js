@@ -28,6 +28,7 @@ class App extends Component {
           <h1 className="cover-title">
             <Link
               to="/"
+              className="nav-bar-brand-link"
             >
               Cover
             </Link>
