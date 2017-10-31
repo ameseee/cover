@@ -48,22 +48,20 @@ class ManageContacts extends Component {
   }
 
   handleRemove(contact) {
-    //remove from firebase
+    //remove from firebase and store should update
     const contactRef = firebase.database().ref(`contacts/${contact.userId}`);
     contactRef.remove();
 
-    const { loadedContacts } = this.props;
-
-    //remove from store
-    const contactToDelete = loadedContacts.find(deleteContact => {
-      return deleteContact.contactNumber === contact.contactNumber;
-    });
-
-    this.props.removeContact(contactToDelete);
-    this.fetchScopedUsers(firebase);
+    // const { loadedContacts } = this.props;
+    //
+    // //remove from store
+    // const contactToDelete = loadedContacts.find(deleteContact => {
+    //   return deleteContact.contactNumber === contact.contactNumber;
+    // });
+    //
+    // this.props.removeContact(contactToDelete);
+    // this.fetchScopedUsers(firebase);
   }
-
-  //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
     const { loadedContacts } = this.props;

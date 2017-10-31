@@ -1,12 +1,13 @@
 import * as actions from './actions';
 
 describe('actions', () => {
+
   it('should create an action to sign user in', () => {
     const expectedAction = {
       type: 'TOGGLE_SIGN_IN',
       boolean: true
     };
-console.log(actions.signIn);
+
     expect(actions.signIn(true)).toEqual(expectedAction);
   });
 
@@ -24,7 +25,7 @@ console.log(actions.signIn);
       type: 'CURRENT_USER',
       username: 'Amy'
     };
-np
+
     expect(actions.setCurrentUser('Amy')).toEqual(expectedAction);
   });
 
@@ -44,6 +45,33 @@ np
     };
 
     expect(actions.removeContact({})).toEqual(expectedAction);
+  });
+
+  it('should create an action to load all contacts', () => {
+    const expectedAction = {
+      type: 'LOAD_CONTACTS',
+      contacts: [
+        { contactName: 'Amy',
+          contactNumber: '3035551234',
+          userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
+        },
+        { contactName: 'Francy',
+          contactNumber: '3035555678',
+          userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
+        }
+      ]
+    };
+
+    expect(actions.loadContacts([
+      { contactName: 'Amy',
+        contactNumber: '3035551234',
+        userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
+      },
+      { contactName: 'Francy',
+        contactNumber: '3035555678',
+        userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
+      }
+    ])).toEqual(expectedAction);
   });
 
 })
