@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import fetchScopedUsers from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
@@ -34,10 +35,16 @@ class Main extends React.Component {
 
   noContacts(){
     return (
-      <article className="contact-card">
+      <article className="no-contacts-card">
         <h4 className="no-contacts-text">You don't have any contacts saved yet!</h4>
-        <p className="add-contacts-text">Click the button below to add a contact.</p>
-        <button className="add-contacts-btn">Add Contacts</button>
+        <button className="add-contacts-btn">
+          <Link
+            className="add-contacts-link"
+            to="/contacts"
+          >
+            Add Contacts
+          </Link>
+        </button>
       </article>
     )
   }
@@ -57,7 +64,7 @@ class Main extends React.Component {
             <h3 className="hotline-title">NDV Hotline</h3>
             <button className="hotline-btn">Call Hotline</button>
           </section>
-          
+
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>
             {this.loadContacts()}
