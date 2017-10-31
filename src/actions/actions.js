@@ -1,10 +1,9 @@
-//MAIN
-export const getContactCards = cards => ({
-  type: 'GET_CONTACT_CARDS',
-  cards,
-});
+// //MAIN
+// export const getContactCards = cards => ({
+//   type: 'GET_CONTACT_CARDS',
+//   cards,
+// });
 
-//Authentication
 export const signIn = boolean => ({
   type: 'TOGGLE_SIGN_IN',
   boolean,
@@ -20,7 +19,6 @@ export const setCurrentUser = username => ({
   username,
 });
 
-//ManageContacts
 export const createNewContact = contact => ({
   type: 'CREATE_NEW_CONTACT',
   contact,
