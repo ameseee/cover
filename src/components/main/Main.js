@@ -24,8 +24,8 @@ class Main extends React.Component {
           <button className="custom-text-btn">Send custom text</button>
           <button className="location-now-btn">Send my location NOW!!</button>
         </article>
-      )
-    })
+      );
+    });
   }
 
   render() {

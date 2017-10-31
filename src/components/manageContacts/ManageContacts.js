@@ -8,7 +8,7 @@ class ManageContacts extends Component {
     this.state = {
       contactName: '',
       contactNumber: '',
-      contacts: []
+      contacts: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,39 +25,52 @@ class ManageContacts extends Component {
     const item = {
       contactName: this.state.contactName,
       contactNumber: this.state.contactNumber,
-      userId: this.props.currentUser
+      userId: this.props.currentUser,
     };
     itemsRef.push(item);
 
     this.setState({
       contactName: '',
-      contactNumber: ''
+      contactNumber: '',
     });
   }
 
   handleChange(event) {
     this.setState({
-      [event.target.name]: event.target.value
+      [event.target.name]: event.target.value,
     });
   }
 
   handleEdit() {
-    console.log('we are in handle Edit');
+    console.log('in handle Edit');
     // open up a form so they can edit.
   }
 
   handleRemove(contact) {
-    const itemRef = firebase.database().ref(`/contacts/${contact.id}`);
-    itemRef.remove();
+    //remove from firebase
+    const contactRef = firebase.database().ref(`contacts/${contact.userId}`);
+    contactRef.remove();
+
+    const { loadedContacts } = this.props;
+
+    //remove from store
+    const contactToDelete = loadedContacts.find(deleteContact => {
+      return deleteContact.contactNumber === contact.contactNumber;
+    });
+
+    this.props.removeContact(contactToDelete);
+    this.fetchScopedUsers(firebase);
   }
 
   //come up with a plan for if there are no contacts - message saying you currently have no contacts? have a div that holds some space.
 
   render() {
-    const mappedContacts = this.props.loadedContacts.map((contact, index) => {
+    const { loadedContacts } = this.props;
+
+    const mappedContacts = loadedContacts.map((contact) => {
       return (
         <article
-          key={index}
+          key={contact.contactNumber}
           className="existing-contact-card"
         >
           <div>
@@ -67,10 +80,13 @@ class ManageContacts extends Component {
           <button
             className="edit-contact-btn"
             onClick={this.handleEdit}>Edit</button>
-            <button
-              className="remove-contact-btn" onClick={() => this.handleRemove(contact)}>Remove</button>
+          <button
+            className="remove-contact-btn" onClick={() => this.handleRemove(contact)}
+          >
+            Remove
+          </button>
         </article>
-      )
+      );
     });
 
     return (
@@ -91,17 +107,22 @@ class ManageContacts extends Component {
               value={this.state.contactName}
               type="text"
               placeholder="Contact Name"
-              onChange={this.handleChange}></input>
+              onChange={this.handleChange}
+            />
             <input
               className="new-contact-number"
               type="text"
               name="contactNumber"
               value={this.state.contactNumber}
               placeholder="Phone Number"
-              onChange={this.handleChange}></input>
+              onChange={this.handleChange}
+            />
             <button
               className="save-new-contact"
-              onClick={this.handleSubmit}>Save Contact</button>
+              onClick={this.handleSubmit}
+            >
+              Save Contact
+            </button>
           </form>
         </section>
       </div>

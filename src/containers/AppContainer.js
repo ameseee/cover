@@ -12,7 +12,7 @@ const mapDispatchToProps = dispatch => ({
   },
   setCurrentUser: username => {
     dispatch(setCurrentUser(username))
-  }
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
