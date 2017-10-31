@@ -49,12 +49,24 @@ class ManageContacts extends Component {
   }
 
   handleRemove(contact) {
+    const contactsFromDB = firebase.database().ref('contacts');
 
-    // const contactRef = firebase.database().ref(`contacts/${contact.userId}`);
-    // contactRef.remove();
+    contactsFromDB.on('value', snapshot => {
+      const contactEntries = Object.entries(snapshot.val());
+
+      const removeContact = contactEntries.map(contact => {
+        return contact[0];
+      }).filter(contactId => {
+        return contactId === contact.id;
+      });
+      console.log(removeContact[0]);
+      const contactRef = firebase.database().ref(`contacts/${removeContact[0]}`);
+      console.log(contactRef);
+      contactRef.remove();
+      //this.props.removeFromFB(removeContact);
+    })
+//this deleted ALL the contacts.
   }
-  //
-
 
   render() {
     const { loadedContacts } = this.props;

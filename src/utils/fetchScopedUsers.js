@@ -12,8 +12,6 @@ export default function fetchScopedUsers(firebase) {
       return contact.userId === currentUser;
     });
 
-    console.log(contacts);
-
     this.props.loadContacts(contacts);
   });
 };

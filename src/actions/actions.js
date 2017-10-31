@@ -24,12 +24,14 @@ export const createNewContact = contact => ({
   contact,
 });
 
-export const removeFromFB = (id) => {
-  dispatch => {
+export const removeFromFB = (id) => ({
+  //dispatch => {
+    type: 'REMOVE_FROM_FB',
+    id
     // we'll pass in the id to the firebase function to remove the contact
     // once we've done that we should hopefully
-  }
-}
+  //}
+})
 
 export const loadContacts = (contacts) => ({
   type: 'LOAD_CONTACTS',
