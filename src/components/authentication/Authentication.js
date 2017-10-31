@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import firebase from '../../firebase';
-import { Link } from 'react-router-dom';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
+import firebase from '../../firebase';
 
 class Authentication extends Component {
   constructor() {
@@ -9,14 +9,13 @@ class Authentication extends Component {
     this.state = {
       username: '',
       password: '',
-      isSigningUp: true,
+      newUser: false,
     };
   }
 
   createAccount = (newUser) => Object.entries(newUser).map(([key,value]) => Object.assign({id: key}, value));
 
   componentDidMount() {
-    // put this in an action
     const createRef = firebase.database().ref('users');
 
     createRef.on('value', (snapshot) => {
@@ -36,7 +35,7 @@ class Authentication extends Component {
       .then(login => {
         this.props.setCurrentUser(login.uid);
         this.props.signIn(true);
-        this.props.history.push('/');
+        this.props.history.push('/main');
       })
       .catch( error => {
         throw new Error(error)
@@ -44,13 +43,12 @@ class Authentication extends Component {
   };
 
   signInClick = (email, password) => {
-    //can't this be an action too???
     this.clearState();
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(login => {
         this.props.setCurrentUser(login.uid)
         this.props.signIn(true)
-        this.props.history.push('/');
+        this.props.history.push('/main');
       })
       .catch(error => {
         this.props.history.push('/auth');
@@ -66,13 +64,13 @@ class Authentication extends Component {
   }
 
   switchToOtherForm = () => {
-    this.setState({ isSigningUp: !this.state.isSigningUp })
+    this.setState({ newUser: !this.state.newUser });
   }
 
   render() {
     return (
       <div className="authentication-section">
-        <section className={classnames("create-account-section", this.state.isSigningUp ? '' : 'hidden')}>
+        <section className={classnames('create-account-section', this.state.newUser ? '' : 'hidden')}>
           <h3 className="create-account-title">Create Your Account</h3>
           <div>
             <input
@@ -97,7 +95,7 @@ class Authentication extends Component {
             </button>
           </div>
         </section>
-        <section className={classnames("sign-in-section", this.state.isSigningUp ? 'hidden' : '')}>
+        <section className={classnames('sign-in-section', this.state.newUser ? 'hidden' : '')}>
           <h3 className="sign-in-title">Sign In</h3>
           <div>
             <input
@@ -127,11 +125,11 @@ class Authentication extends Component {
           </div>
         </section>
         <article className="other-card-section">
-          <h3 className="already" >{this.state.isSigningUp ? 'Already have an account?' : 'Don\'t have an accout yet?'}</h3>
+          <h3 className="already" >{this.state.newUser ? 'Already have an account?' : 'Don\'t have an accout yet?'}</h3>
           <button
             className="other-card-btn" onClick={this.switchToOtherForm}
           >
-            {this.state.isSigningUp ? 'Sign In' : 'Sign Up'}
+            {this.state.newUser ? 'Sign In' : 'Sign Up'}
           </button>
         </article>
       </div>
