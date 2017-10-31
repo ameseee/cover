@@ -66,6 +66,40 @@
   background-color: #E54640;
   cursor: pointer; }
 
+.hotline-section {
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 4.5fr;
+  padding: 2% 0;
+  background-color: #fff;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px; }
+
+.hotline-title {
+  margin-left: 15%;
+  font-family: Lato;
+  font-size: 100%;
+  width: 200%; }
+
+.hotline-btn {
+  background-color: #039fbe;
+  padding: 8px;
+  width: 40%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 120%;
+  font-family: Lato; }
+
+.hotline-btn:hover {
+  background-color: #42B7CE;
+  cursor: pointer; }
+
 .contacts-section {
   width: 55%;
   margin: 0 auto;
@@ -117,39 +151,32 @@
   background-color: #434558;
   cursor: pointer; }
 
-.hotline-section {
-  width: 55%;
-  margin: 0 auto;
-  margin-bottom: 30px;
-  margin-top: 30px;
-  display: grid;
-  align-items: center;
-  grid-template-columns: 1fr 4.5fr;
-  padding: 2% 0;
+.no-contacts-card {
+  padding: 4% 4%;
+  margin: 2.5% 0;
   background-color: #fff;
   border: 1px solid #E6E6E8;
-  border-radius: 3px; }
+  border-radius: 3px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
 
-.hotline-title {
-  margin-left: 15%;
-  font-family: Lato;
-  font-size: 100%;
-  width: 200%; }
+.no-contacts-text {
+  font-family: Lato, sans-serif; }
 
-.hotline-btn {
-  background-color: #039fbe;
-  padding: 8px;
-  width: 40%;
-  margin: 0 auto;
+.add-contacts-btn {
+  background-color: #282a40;
   border: none;
   border-radius: 3px;
-  color: #fff;
-  font-size: 120%;
-  font-family: Lato; }
+  font-size: 85%;
+  padding: 10px 15px;
+  margin: 0 auto;
+  display: block; }
 
-.hotline-btn:hover {
-  background-color: #42B7CE;
-  cursor: pointer; }
+.add-contacts-link {
+  color: #fff;
+  font-family: Lato;
+  text-decoration: none; }
 
 @media (max-width: 900px) {
   .contacts-section {
