@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import fetchScopedUsers from './../../utils/fetchScopedUsers';
+import {fetchScopedUsers} from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
 

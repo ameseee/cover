@@ -24,3 +24,12 @@ export const loadContacts = (state = [], action) => {
       return state;
   }
 };
+
+export const removeFromFB = (state = {}, action) => {
+  switch (action.type) {
+    case 'REMOVE_FROM_FB':
+      return action;
+    default:
+      return state;
+  }
+}

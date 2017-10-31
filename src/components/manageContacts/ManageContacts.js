@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
-import fetchScopedUsers from './../../utils/fetchScopedUsers';
+import {fetchScopedUsers, removeContact} from './../../utils/fetchScopedUsers';
 
 class ManageContacts extends Component {
   constructor() {
@@ -14,16 +14,17 @@ class ManageContacts extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.fetchScopedUsers = fetchScopedUsers.bind(this);
+    this.removeContact = removeContact.bind(this);
   }
 
   componentDidMount() {
     this.fetchScopedUsers(firebase);
+
   }
 
   handleSubmit(event) {
     event.preventDefault();
     const itemsRef = firebase.database().ref('contacts');
-
     const item = {
       contactName: this.state.contactName,
       contactNumber: this.state.contactNumber,
@@ -49,27 +50,12 @@ class ManageContacts extends Component {
   }
 
   handleRemove(contact) {
-    console.log(contact);
-    //remove from firebase and store should update
-    // const contactRef = firebase.database().ref(`contacts/${contact.userId}`);
-    // contactRef.remove();
-
-    const { loadedContacts } = this.props;
-    const contactToDelete = loadedContacts.find(deleteContact => {
-      console.log(deleteContact.contactNumber, contact.contactNumber);
-      return deleteContact.contactNumber === contact.contactNumber;
-    });
-    this.props.removeContact(contactToDelete);
-    console.log(loadedContacts);
-    this.fetchScopedUsers(firebase);
+    this.removeContact(contact, firebase)
   }
-  //
-
 
   render() {
     const { loadedContacts } = this.props;
 
-console.log(loadedContacts);
     const mappedContacts = loadedContacts.map((contact) => {
       return (
         <article

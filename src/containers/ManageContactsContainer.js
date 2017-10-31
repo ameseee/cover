@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import ManageContacts from '../components/manageContacts/ManageContacts';
-import { createNewContact, removeContact, loadContacts } from '../actions/actions';
+import { createNewContact, loadContacts, removeFromFB } from '../actions/actions';
 
 const mapStateToProps = store => ({
   loadedContacts: store.loadContacts,
@@ -11,11 +11,11 @@ const mapDispatchToProps = dispatch => ({
   createNewContact: contact => {
     dispatch(createNewContact(contact));
   },
-  removeContact: () => {
-    dispatch(removeContact());
-  },
   loadContacts: contacts => {
     dispatch(loadContacts(contacts));
+  },
+  removeFromFB: id => {
+    dispatch(removeFromFB(id));
   },
 });
 
