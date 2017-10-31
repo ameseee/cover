@@ -1,15 +1,19 @@
 export default function fetchScopedUsers(firebase) {
   const contactsFromDB = firebase.database().ref('contacts');
+
   contactsFromDB.on('value', snapshot => {
-    const contactObjects = Object.values(snapshot.val());
+    const contactEntries = Object.entries(snapshot.val());
 
     const { currentUser } = this.props;
 
-    const filteredContacts = contactObjects
-      .filter(contact => {
-        return (contact.userId === currentUser)
-      });
+    const contacts = contactEntries.map(([id, contact]) => {
+      return Object.assign({id}, contact)
+    }).filter(contact => {
+      return contact.userId === currentUser;
+    });
 
-    this.props.loadContacts(filteredContacts);
+    console.log(contacts);
+
+    this.props.loadContacts(contacts);
   });
 };

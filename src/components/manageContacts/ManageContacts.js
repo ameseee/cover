@@ -18,12 +18,12 @@ class ManageContacts extends Component {
 
   componentDidMount() {
     this.fetchScopedUsers(firebase);
+
   }
 
   handleSubmit(event) {
     event.preventDefault();
     const itemsRef = firebase.database().ref('contacts');
-
     const item = {
       contactName: this.state.contactName,
       contactNumber: this.state.contactNumber,
@@ -49,19 +49,9 @@ class ManageContacts extends Component {
   }
 
   handleRemove(contact) {
-    console.log(contact);
-    //remove from firebase and store should update
+
     // const contactRef = firebase.database().ref(`contacts/${contact.userId}`);
     // contactRef.remove();
-
-    const { loadedContacts } = this.props;
-    const contactToDelete = loadedContacts.find(deleteContact => {
-      console.log(deleteContact.contactNumber, contact.contactNumber);
-      return deleteContact.contactNumber === contact.contactNumber;
-    });
-    this.props.removeContact(contactToDelete);
-    console.log(loadedContacts);
-    this.fetchScopedUsers(firebase);
   }
   //
 
@@ -69,7 +59,6 @@ class ManageContacts extends Component {
   render() {
     const { loadedContacts } = this.props;
 
-console.log(loadedContacts);
     const mappedContacts = loadedContacts.map((contact) => {
       return (
         <article
