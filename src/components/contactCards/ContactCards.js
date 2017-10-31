@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const ContactCards = ({name, number, edit, remove, key}) => {
 
@@ -15,6 +16,13 @@ const ContactCards = ({name, number, edit, remove, key}) => {
           className="remove-contact-btn" onClick={() => remove(key)}>Remove</button> */}
     </article>
   );
+};
+
+ContactCards.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+  edit: PropTypes.func,
+  remove: PropTypes.func,
 };
 
 export default ContactCards;

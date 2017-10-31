@@ -3,7 +3,6 @@ import Main from '../components/main/Main';
 import { loadContacts } from '../actions/actions';
 
 const mapStateToProps = store => ({
-  cards: store.cards,
   loadedContacts: store.loadContacts,
   currentUser: store.currentUser,
 });

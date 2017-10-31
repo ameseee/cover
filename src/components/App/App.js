@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import '../../index.css';
 import { Link } from 'react-router-dom';
+import '../../index.css';
+import PropTypes from 'prop-types';
 import firebase from '../../firebase';
 
 class App extends Component {
@@ -10,7 +11,6 @@ class App extends Component {
   }
 
   signOut() {
-    console.log('sign out props1:', this.props);
     firebase.auth().signOut().then( () => {
       //signout successful - this is prob where I should call props
     }).catch( error => {
@@ -60,5 +60,11 @@ class App extends Component {
     );
   }
 }
+
+App.propTypes = {
+  signOut: PropTypes.func,
+  setCurrentUser: PropTypes.func,
+  currentUser: PropTypes.string,
+};
 
 export default App;

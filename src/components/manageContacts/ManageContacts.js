@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import firebase from './../../firebase';
 import fetchScopedUsers from './../../utils/fetchScopedUsers';
 
@@ -129,5 +130,13 @@ class ManageContacts extends Component {
     );
   }
 }
+
+ManageContacts.propTypes = {
+  currentUser: PropTypes.string,
+  loadContacts: PropTypes.func,
+  loadedContacts: PropTypes.array,
+  createNewContact: PropTypes.func,
+  removeConact: PropTypes.func,
+};
 
 export default ManageContacts;
