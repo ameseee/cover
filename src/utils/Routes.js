@@ -9,9 +9,9 @@ class Routes extends Component {
   render() {
     return (
       <div className="routes">
-        <Route exact path="/" component={ Landing }/>
+        {/* <Route exact path="/" component={ Landing }/> */}
         <Route path="/main" component={ MainContainer }/>
-        <Route path="/auth" component={ AuthenticationContainer } />
+        <Route exact path="/" component={ AuthenticationContainer } />
         <Route path="/contacts" component={ ManageContactsContainer } />
       </div>
     );
