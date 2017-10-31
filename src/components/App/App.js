@@ -28,7 +28,7 @@ class App extends Component {
           <h1 className="cover-title">
             <Link
               className="nav-bar-brand-link"
-              to="/"
+              to="/main"
             >
               Cover
             </Link>
@@ -56,7 +56,6 @@ class App extends Component {
 
           </ul>
         </nav>
-
       </div>
     );
   };
