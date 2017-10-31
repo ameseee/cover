@@ -47,7 +47,7 @@ class App extends Component {
                 className="nav-item"
                 to="/contacts"
               >
-              Manage Contacts
+              Contacts
             </Link>
             </li>
 
