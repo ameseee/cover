@@ -1,6 +1,8 @@
 import React from 'react';
 import fetchScopedUsers from './../../utils/fetchScopedUsers';
+import PropTypes from 'prop-types';
 import firebase from './../../firebase';
+
 // import ContactCards from '../contactCards/ContactCards';
 class Main extends React.Component {
   constructor() {
@@ -46,5 +48,11 @@ class Main extends React.Component {
     );
   }
 }
+
+Main.propTypes = {
+  currentUser: PropTypes.string,
+  loadContacts: PropTypes.func,
+  loadedContacts: PropTypes.array,
+};
 
 export default Main;
