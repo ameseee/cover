@@ -24,9 +24,8 @@ export const createNewContact = contact => ({
   contact,
 });
 
-export const removeContact = contact => ({
+export const removeContact = () => ({
   type: 'REMOVE_CONTACT',
-  contact,
 });
 
 export const loadContacts = (contacts) => ({

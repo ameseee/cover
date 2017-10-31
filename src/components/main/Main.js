@@ -43,6 +43,11 @@ class Main extends React.Component {
             <h3 className="section-title">Contacts</h3>
             {this.loadContacts()}
           </section>
+
+          <section className="hotline-section">
+            <h3 className="hotline-title">NDV Hotline</h3>
+            <button className="hotline-btn">Call Hotline</button>
+          </section>
         </main>
       </div>
     );

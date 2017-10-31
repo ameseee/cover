@@ -11,8 +11,8 @@ const mapDispatchToProps = dispatch => ({
   createNewContact: contact => {
     dispatch(createNewContact(contact));
   },
-  removeContact: contact => {
-    dispatch(removeContact(contact));
+  removeContact: () => {
+    dispatch(removeContact());
   },
   loadContacts: contacts => {
     dispatch(loadContacts(contacts));

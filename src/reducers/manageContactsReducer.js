@@ -10,7 +10,7 @@ export const createNewContact = (state = [], action) => {
 export const removeContact = (state = [], action) => {
   switch (action.type) {
     case 'REMOVE_CONTACT':
-      return action.contact;
+      return action;
     default:
       return state;
   }

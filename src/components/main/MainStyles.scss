@@ -58,6 +58,7 @@ $charcoal-color: #1b1b1b;
   margin-bottom: 30px;
   margin-top: 30px;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 4.5fr;
   padding: 2% 0;
   background-color: #fff;
@@ -101,6 +102,7 @@ $charcoal-color: #1b1b1b;
   display: grid;
   grid-template-columns: 1fr 2.25fr 2.25fr;
   grid-column-gap: 25px;
+  align-items: center;
   padding: 4% 0;
   margin: 2.5% 0;
   background-color: #fff;
@@ -145,13 +147,54 @@ $charcoal-color: #1b1b1b;
   cursor: pointer;
 }
 
+
+.hotline-section {
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 4.5fr;
+  padding: 2% 0;
+  background-color: #fff;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px;
+}
+
+.hotline-title {
+  margin-left: 15%;
+  font-family: Lato;
+  font-size: 100%;
+  width: 200%;
+}
+
+.hotline-btn {
+  background-color: $turq-color;
+  padding: 8px;
+  width: 40%;
+  margin: 0 auto;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 120%;
+  font-family: Lato;
+}
+
+.hotline-btn:hover {
+  background-color: $turq-hover;
+  cursor: pointer;
+}
+
+
 @media (max-width: 900px) {
 
   .contacts-section {
     width: 75%;
   }
 
-  .emergency-section {
+  .emergency-section,
+  .hotline-section {
     width: 75%;
   }
 
@@ -167,7 +210,8 @@ $charcoal-color: #1b1b1b;
     width: 90%;
   }
 
-  .emergency-section {
+  .emergency-section,
+  .hotline-section {
     width: 90%;
   }
 
@@ -189,7 +233,8 @@ $charcoal-color: #1b1b1b;
     font-size: 90%;
   }
 
-  .emergency-btn {
+  .emergency-btn,
+  .hotline-btn {
     font-size: 100%;
     padding: 7.5px 5px;
   }
