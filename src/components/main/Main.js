@@ -16,7 +16,9 @@ class Main extends React.Component {
   }
 
   loadContacts() {
-    return this.props.loadedContacts.map((contact, index) => {
+    const { loadedContacts } = this.props;
+
+    return loadedContacts.map((contact, index) => {
       return (
         <article
           key={index}
@@ -30,7 +32,19 @@ class Main extends React.Component {
     });
   }
 
+  noContacts(){
+    return (
+      <article className="contact-card">
+        <h4 className="no-contacts-text">You don't have any contacts saved yet!</h4>
+        <p className="add-contacts-text">Click the button below to add a contact.</p>
+        <button className="add-contacts-btn">Add Contacts</button>
+      </article>
+    )
+  }
+
   render() {
+    const { loadedContacts } = this.props;
+    console.log(loadedContacts);
     return (
       <div className="main">
         <main>
@@ -39,15 +53,17 @@ class Main extends React.Component {
             <button className="emergency-btn">TEXT 911</button>
           </section>
 
-          <section className="contacts-section">
-            <h3 className="section-title">Contacts</h3>
-            {this.loadContacts()}
-          </section>
-
           <section className="hotline-section">
             <h3 className="hotline-title">NDV Hotline</h3>
             <button className="hotline-btn">Call Hotline</button>
           </section>
+          
+          <section className="contacts-section">
+            <h3 className="section-title">Contacts</h3>
+            {this.loadContacts()}
+            {loadedContacts.length < 1 ? this.noContacts() : null }
+          </section>
+
         </main>
       </div>
     );
