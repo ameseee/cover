@@ -7,12 +7,12 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  signOut: boolean => ({
+  signOut: boolean => {
     dispatch(signOut(boolean))
-  }),
-  setCurrentUser: username => ({
+  },
+  setCurrentUser: username => {
     dispatch(setCurrentUser(username))
-  }),
+  },
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

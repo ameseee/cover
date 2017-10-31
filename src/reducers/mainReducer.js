@@ -1,4 +1,4 @@
-const getContactCards = (state = [], action) => {
+export const getContactCards = (state = [], action) => {
   switch (action.type) {
     case 'GET_CONTACT_CARDS':
       return action.cards;
@@ -6,5 +6,3 @@ const getContactCards = (state = [], action) => {
       return state;
   }
 };
-
-export default getContactCards;
