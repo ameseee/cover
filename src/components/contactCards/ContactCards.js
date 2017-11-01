@@ -11,10 +11,15 @@ class ContactCards extends Component {
   }
 
   openCustomForm = () => {
-    console.log(this.state);
     this.setState({
       sendingCustom: true
     });
+  }
+
+  neverMind = () => {
+      this.setState({
+        sendingCustom: false
+      });
   }
 
   render() {
@@ -22,6 +27,7 @@ class ContactCards extends Component {
       this.state.sendingCustom
       ? <CustomMessageForm
         sendCustom={this.props.sendCustom}
+        neverMind={this.neverMind}
       />
       : null;
 

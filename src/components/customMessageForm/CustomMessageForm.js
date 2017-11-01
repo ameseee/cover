@@ -22,11 +22,14 @@ class CustomMessageForm extends Component {
           className="custom-message-input"
           value={this.state.message} />
         <button
+          className="send-custom-btn"
           onClick={() => this.props.sendCustom}
         >
           Send
         </button>
-        <button>Never mind.</button>
+        <button
+          className="never-mind-btn"
+          onClick={() => this.props.neverMind()}>Never mind.</button>
       </div>
     )
   };
