@@ -73,7 +73,6 @@ class App extends Component {
                   </Link>
                 </li>
             }
-
           </ul>
         </nav>
       </div>
