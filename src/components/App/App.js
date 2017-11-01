@@ -12,9 +12,8 @@ class App extends Component {
 
   signOut() {
     firebase.auth().signOut().then( () => {
-      //signout successful - this is prob where I should call props
     }).catch( error => {
-      alert('We experienced an error:', error)
+      alert('We experienced an error:', error);
     });
     this.props.signOut(false);
     this.props.setCurrentUser('');
@@ -40,7 +39,7 @@ class App extends Component {
                 to="/main"
               >
               Home
-            </Link>
+              </Link>
             </li>
             <li className="nav-item-li">
               <Link
@@ -48,9 +47,8 @@ class App extends Component {
                 to="/contacts"
               >
               Manage Contacts
-            </Link>
+              </Link>
             </li>
-
             <li
               className="nav-item-li"
               onClick={this.signOut}>

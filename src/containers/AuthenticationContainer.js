@@ -1,6 +1,11 @@
 import { connect } from 'react-redux';
 import Authentication from '../components/authentication/Authentication';
-import { setCurrentUser, signIn, signOut, loadContacts } from '../actions/actions';
+import {
+  setCurrentUser,
+  signIn,
+  signOut, 
+  loadContacts
+} from '../actions/actions';
 
 const mapStateToProps = store => {
   const { currentUser, signedInStatus, managedContacts } = store;

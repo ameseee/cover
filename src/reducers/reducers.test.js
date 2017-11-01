@@ -14,7 +14,8 @@ describe('currentUser in authentication reducer', () => {
 
     expect(currentUser(undefined, action)).toEqual(mockUser);
   });
-})
+
+});
 
 describe('signedInStatus in authentication reducer', () => {
   it('should have a default state', () => {
@@ -32,7 +33,8 @@ describe('signedInStatus in authentication reducer', () => {
 
     expect(signedInStatus(undefined, action)).toEqual(true);
   });
-})
+
+});
 
 
 // describe('main reducer', () => {
@@ -62,7 +64,8 @@ describe('createNewContact in manage contacts reducer', () => {
 
     expect(createNewContact(undefined, action)).toEqual(mockContact);
   });
-})
+
+});
 
 describe('removeContact in manage contacts reducer', () => {
   it('should have a default state', () => {
@@ -72,7 +75,8 @@ describe('removeContact in manage contacts reducer', () => {
   it.skip('should remove a contact', () => {
 
   });
-})
+
+});
 
 describe('loadContacts in manage contacts reducer', () => {
   it('should have a default state', () => {
@@ -80,8 +84,9 @@ describe('loadContacts in manage contacts reducer', () => {
   });
 
   it('should load contact objects in array', () => {
-    const action = { type: 'LOAD_CONTACTS', contacts: mockContact }
+    const action = { type: 'LOAD_CONTACTS', contacts: mockContact };
 
-    expect(loadContacts(undefined, action)).toEqual(mockContact)
+    expect(loadContacts(undefined, action)).toEqual(mockContact);
   });
-})
+
+});

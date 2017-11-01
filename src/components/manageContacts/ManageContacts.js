@@ -45,12 +45,11 @@ class ManageContacts extends Component {
   }
 
   handleEdit() {
-    console.log('in handle Edit');
     // open up a form so they can edit.
   }
 
   handleRemove(contact) {
-    this.removeContact(contact, firebase)
+    this.removeContact(contact, firebase);
   }
 
   render() {
@@ -70,7 +69,8 @@ class ManageContacts extends Component {
             className="edit-contact-btn"
             onClick={this.handleEdit}>Edit</button>
           <button
-            className="remove-contact-btn" onClick={() => this.handleRemove(contact)}
+            className="remove-contact-btn"
+            onClick={() => this.handleRemove(contact)}
           >
             Remove
           </button>
@@ -82,9 +82,9 @@ class ManageContacts extends Component {
       <div className="manage-contacts-section">
         <h3 className="title">Manage Contacts</h3>
         <section className="current-contacts">
-            <article>
-              { mappedContacts }
-            </article>
+          <article>
+            { mappedContacts }
+          </article>
         </section>
 
         <section className="create-contact-form">
