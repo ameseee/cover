@@ -20,6 +20,7 @@ class App extends Component {
   }
 
   render() {
+    const { currentUser } = this.props;
     return (
       <div className="app-container">
 
@@ -57,16 +58,21 @@ class App extends Component {
               Contacts
               </Link>
             </li>
-            <li
-              className="nav-item-li"
-              onClick={this.signOut}>
-              <Link
-                className="nav-item"
-                to="/"
-              >
-                Sign Out
-              </Link>
-            </li>
+            {
+              currentUser === ''
+                ? null
+                :
+                <li
+                  className="nav-item-li"
+                  onClick={this.signOut}>
+                  <Link
+                    className="nav-item"
+                    to="/"
+                  >
+                    Sign Out
+                  </Link>
+                </li>
+            }
 
           </ul>
         </nav>
