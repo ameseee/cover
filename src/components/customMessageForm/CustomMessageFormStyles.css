@@ -1,4 +1,26 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .custom-message-form {
-  background-color: red;
-  border: 1px solid magenta; }
+  background-color: red; }
+
+.custom-form-heading {
+  font-family: Lato, sans-serif; }
+
+.send-custom-btn,
+.never-mind-btn {
+  border: none;
+  font-family: Lato, sans-serif;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff; }
+
+.send-custom-btn {
+  background-color: #039fbe; }
+
+.never-mind-btn {
+  background-color: #282a40; }
+
+.send-custom-btn:hover {
+  background-color: #42B7CE; }
+
+.never-mind-btn:hover {
+  background-color: #434558; }

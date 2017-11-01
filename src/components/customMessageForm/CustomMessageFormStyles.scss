@@ -12,5 +12,37 @@ $charcoal-color: #1b1b1b;
 
 .custom-message-form {
   background-color: red;
-  border: 1px solid magenta;
+}
+
+.custom-message-input {
+
+}
+
+.custom-form-heading {
+  font-family: Lato, sans-serif;
+}
+
+.send-custom-btn,
+.never-mind-btn {
+  border: none;
+  font-family: Lato, sans-serif;
+  border-radius: 3px;
+  padding: 5px;
+  color: #fff;
+}
+
+.send-custom-btn {
+  background-color: $turq-color;
+}
+
+.never-mind-btn {
+  background-color: $navy-color;
+}
+
+.send-custom-btn:hover {
+  background-color: $turq-hover;
+}
+
+.never-mind-btn:hover {
+  background-color: $navy-hover;
 }

@@ -16,7 +16,7 @@ class CustomMessageForm extends Component {
   render() {
     return (
       <div className="custom-message-form">
-        <h2>Message to (NAME)</h2>
+        <h2 className="custom-form-heading">Message to (NAME)</h2>
         <textarea
           onChange={this.handleChange}
           className="custom-message-input"
@@ -29,7 +29,10 @@ class CustomMessageForm extends Component {
         </button>
         <button
           className="never-mind-btn"
-          onClick={() => this.props.neverMind()}>Never mind.</button>
+          onClick={() => this.props.neverMind()}
+        >
+          Never mind.
+        </button>
       </div>
     )
   };

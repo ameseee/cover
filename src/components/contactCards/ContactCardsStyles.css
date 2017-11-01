@@ -1,1 +1,57 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-column-gap: 25px;
+  align-items: center;
+  padding: 4% 0;
+  margin: 2.5% 0;
+  background-color: #fff;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px; }
+
+.contact-card-name {
+  margin-left: 15%;
+  font-family: Lato; }
+
+.custom-text-btn {
+  background-color: #039fbe;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 10px;
+  width: 90%;
+  font-family: Lato; }
+
+.custom-text-btn:hover {
+  background-color: #42B7CE;
+  cursor: pointer; }
+
+.location-now-btn {
+  background-color: #282a40;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 10px;
+  width: 90%;
+  font-family: Lato; }
+
+.location-now-btn:hover {
+  background-color: #434558;
+  cursor: pointer; }
+
+@media (max-width: 650px) {
+  .contact-card {
+    grid-column-gap: 5px; }
+  .contact-card-name {
+    font-size: 90%; }
+  .emergency-btn,
+  .hotline-btn {
+    font-size: 100%;
+    padding: 7.5px 5px; }
+  .custom-text-btn,
+  .location-now-btn {
+    font-size: 70%;
+    padding: 7.5px 5px; } }

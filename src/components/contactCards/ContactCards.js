@@ -31,7 +31,6 @@ class ContactCards extends Component {
       />
       : null;
 
-    console.log('renderCustomForm', renderCustomForm);
     return (
       <article className="contact-card">
         <h4 className="contact-card-name">{this.props.name}</h4>
