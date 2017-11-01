@@ -16,6 +16,6 @@ export function fetchScopedUsers(firebase) {
   });
 }
 
-export const removeContact = (contact, firebase) => {
-  const contactsFromDB = firebase.database().ref(`contacts/${contact.id}`);
+export const removeContact = ({id}, firebase) => {
+  firebase.database().ref(`contacts/${id}`).remove();
 };
