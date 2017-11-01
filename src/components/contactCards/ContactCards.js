@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CustomMessageForm from '../customMessageForm/CustomMessageForm';
+import CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
 
 class ContactCards extends Component {
   constructor() {
@@ -25,7 +25,7 @@ class ContactCards extends Component {
   render() {
     const renderCustomForm =
       this.state.sendingCustom
-      ? <CustomMessageForm
+      ? <CustomMessageFormContainer
         sendCustom={this.props.sendCustom}
         neverMind={this.neverMind}
       />
