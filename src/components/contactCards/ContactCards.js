@@ -17,9 +17,9 @@ class ContactCards extends Component {
   }
 
   neverMind = () => {
-      this.setState({
-        sendingCustom: false
-      });
+    this.setState({
+      sendingCustom: false
+    });
   }
 
   render() {
@@ -44,15 +44,12 @@ class ContactCards extends Component {
         >
           Send my location NOW!!
         </button>
-        <section>
           {renderCustomForm}
-        </section>
       </article>
     );
   }
 
 };
-
 
 ContactCards.propTypes = {
   name: PropTypes.string,
@@ -60,7 +57,3 @@ ContactCards.propTypes = {
 };
 
 export default ContactCards;
-
-{/* <CustomMessageForm
-  sendCustom={this.props.sendCustom}
-/> */}

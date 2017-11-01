@@ -13,6 +13,7 @@ $charcoal-color: #1b1b1b;
 .contact-card {
   display: grid;
   grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-template-areas: "contactName customBtn locationBtn" "form form form";
   grid-column-gap: 25px;
   align-items: center;
   padding: 4% 0;
@@ -23,11 +24,13 @@ $charcoal-color: #1b1b1b;
 }
 
 .contact-card-name {
+  grid-area: contactName;
   margin-left: 15%;
   font-family: Lato;
 }
 
 .custom-text-btn {
+  grid-area: customBtn;
   background-color: $turq-color;
   color: #fff;
   border: none;
@@ -44,6 +47,7 @@ $charcoal-color: #1b1b1b;
 }
 
 .location-now-btn {
+  grid-area: locationBtn;
   background-color: $navy-color;
   color: #fff;
   border: none;

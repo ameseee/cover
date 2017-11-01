@@ -1,23 +1,44 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .custom-message-form {
-  background-color: red; }
+  border-radius: 3px;
+  width: 70%;
+  grid-area: form;
+  background-color: #E6E6E8;
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-end;
+  margin: 2.5% auto; }
+
+.custom-message-input {
+  width: 80%;
+  height: 55px;
+  margin-right: 5%;
+  border-radius: 3px; }
 
 .custom-form-heading {
   font-family: Lato, sans-serif; }
 
-.send-custom-btn,
+.send-custom-btn {
+  background-color: #039fbe;
+  border: none;
+  font-family: Lato, sans-serif;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #fff;
+  height: 26px; }
+
 .never-mind-btn {
+  background-color: #E6E6E8;
   border: none;
   font-family: Lato, sans-serif;
   border-radius: 3px;
   padding: 5px;
-  color: #fff; }
-
-.send-custom-btn {
-  background-color: #039fbe; }
-
-.never-mind-btn {
-  background-color: #282a40; }
+  color: #dc0800;
+  position: absolute;
+  top: 5px;
+  right: 5px; }
 
 .send-custom-btn:hover {
   background-color: #42B7CE; }

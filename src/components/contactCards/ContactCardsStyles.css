@@ -2,6 +2,7 @@
 .contact-card {
   display: grid;
   grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-template-areas: "contactName customBtn locationBtn" "form form form";
   grid-column-gap: 25px;
   align-items: center;
   padding: 4% 0;
@@ -11,10 +12,12 @@
   border-radius: 3px; }
 
 .contact-card-name {
+  grid-area: contactName;
   margin-left: 15%;
   font-family: Lato; }
 
 .custom-text-btn {
+  grid-area: customBtn;
   background-color: #039fbe;
   color: #fff;
   border: none;
@@ -29,6 +32,7 @@
   cursor: pointer; }
 
 .location-now-btn {
+  grid-area: locationBtn;
   background-color: #282a40;
   color: #fff;
   border: none;
