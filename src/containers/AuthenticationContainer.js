@@ -3,7 +3,7 @@ import Authentication from '../components/authentication/Authentication';
 import {
   setCurrentUser,
   signIn,
-  signOut, 
+  signOut,
   loadContacts
 } from '../actions/actions';
 

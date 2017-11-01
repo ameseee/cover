@@ -1,0 +1,66 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+$red-color: #dc0800;
+$red-hover: #E54640;
+$turq-color: #039fbe;
+$turq-hover: #42B7CE;
+$navy-color: #282a40;
+$navy-hover: #434558;
+$lt-grey-color: #f5f5f7;
+$grey-color: #E6E6E8;
+$charcoal-color: #1b1b1b;
+
+.custom-message-form {
+  border-radius: 3px;
+  width: 70%;
+  grid-area: form;
+  background-color: $grey-color;
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-end;
+  margin: 2.5% auto;
+
+}
+
+.custom-message-input {
+  width: 80%;
+  height: 55px;
+  margin-right: 5%;
+  border-radius: 3px;
+}
+
+.custom-form-heading {
+  font-family: Lato, sans-serif;
+}
+
+.send-custom-btn {
+  background-color: $turq-color;
+  border: none;
+  font-family: Lato, sans-serif;
+  border-radius: 3px;
+  padding: 5px 10px;
+  color: #fff;
+  height: 26px;
+}
+
+.never-mind-btn {
+  background-color: $grey-color;
+  border: none;
+  font-family: Lato, sans-serif;
+  border-radius: 3px;
+  padding: 5px;
+  color: $red-color;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.send-custom-btn:hover {
+  background-color: $turq-hover;
+}
+
+.never-mind-btn:hover {
+  background-color: $navy-hover;
+}

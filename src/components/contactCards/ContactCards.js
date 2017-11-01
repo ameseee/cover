@@ -1,20 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import CustomMessageForm from '../customMessageForm/CustomMessageForm';
 
-const ContactCards = ({ name, sendCustom }) => {
-  return (
-    <article className="contact-card">
-      <h4 className="contact-card-name">{name}</h4>
-      <button
-        className="custom-text-btn"
-        onClick={() => sendCustom('HI FRANCY', '5756441355')}>
-        Send custom text
-      </button>
-      <button className="location-now-btn">Send my location NOW!!</button>
-    </article>
-  );
+class ContactCards extends Component {
+  constructor() {
+    super();
+    this.state = {
+      sendingCustom: false
+    }
+  }
+
+  openCustomForm = () => {
+    this.setState({
+      sendingCustom: true
+    });
+  }
+
+  neverMind = () => {
+    this.setState({
+      sendingCustom: false
+    });
+  }
+
+  render() {
+    const renderCustomForm =
+      this.state.sendingCustom
+      ? <CustomMessageForm
+        sendCustom={this.props.sendCustom}
+        neverMind={this.neverMind}
+      />
+      : null;
+
+    return (
+      <article className="contact-card">
+        <h4 className="contact-card-name">{this.props.name}</h4>
+        <button
+          className="custom-text-btn"
+          onClick={() => this.openCustomForm()}>
+          Send custom text
+        </button>
+        <button
+          className="location-now-btn"
+        >
+          Send my location NOW!!
+        </button>
+          {renderCustomForm}
+      </article>
+    );
+  }
+
 };
-
 
 ContactCards.propTypes = {
   name: PropTypes.string,

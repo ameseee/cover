@@ -1,1 +1,89 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+
+$red-color: #dc0800;
+$red-hover: #E54640;
+$turq-color: #039fbe;
+$turq-hover: #42B7CE;
+$navy-color: #282a40;
+$navy-hover: #434558;
+$lt-grey-color: #f5f5f7;
+$grey-color: #E6E6E8;
+$charcoal-color: #1b1b1b;
+
+.contact-card {
+  display: grid;
+  grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-template-areas: "contactName customBtn locationBtn" "form form form";
+  grid-column-gap: 25px;
+  align-items: center;
+  padding: 4% 0;
+  margin: 2.5% 0;
+  background-color: #fff;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px;
+}
+
+.contact-card-name {
+  grid-area: contactName;
+  margin-left: 15%;
+  font-family: Lato;
+}
+
+.custom-text-btn {
+  grid-area: customBtn;
+  background-color: $turq-color;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 10px;
+  width: 90%;
+  font-family: Lato;
+}
+
+.custom-text-btn:hover {
+  background-color: $turq-hover;
+  cursor: pointer;
+}
+
+.location-now-btn {
+  grid-area: locationBtn;
+  background-color: $navy-color;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 85%;
+  padding: 10px;
+  width: 90%;
+  font-family: Lato;
+}
+
+.location-now-btn:hover {
+  background-color: $navy-hover;
+  cursor: pointer;
+}
+
+
+@media (max-width: 650px) {
+
+  .contact-card {
+    grid-column-gap: 5px;
+  }
+
+  .contact-card-name {
+    font-size: 90%;
+  }
+
+  .emergency-btn,
+  .hotline-btn {
+    font-size: 100%;
+    padding: 7.5px 5px;
+  }
+
+  .custom-text-btn,
+  .location-now-btn {
+    font-size: 70%;
+    padding: 7.5px 5px;
+  }
+
+}
