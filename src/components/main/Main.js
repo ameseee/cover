@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {fetchScopedUsers} from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
-import ContactCards from '../contactCards/ContactCards';
+import ContactCardsContainer from '../../containers/ContactCardsContainer';
 
 class Main extends React.Component {
   constructor() {
@@ -21,14 +21,10 @@ class Main extends React.Component {
 
     return loadedContacts.map((contact, index) => {
       return (
-        <article
+        <ContactCardsContainer
           key={index}
-          className="contact-card"
-        >
-          <h4 className="contact-card-name">{contact.contactName}</h4>
-          <button className="custom-text-btn">Send custom text</button>
-          <button className="location-now-btn">Send my location NOW!!</button>
-        </article>
+          name={contact.contactName}
+        />
       );
     });
   }
@@ -48,7 +44,6 @@ class Main extends React.Component {
             Add Contacts
           </Link>
         </button>
-        <ContactCards />
       </article>
     );
   }
