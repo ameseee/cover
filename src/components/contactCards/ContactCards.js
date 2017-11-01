@@ -1,18 +1,51 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import CustomMessageForm from '../customMessageForm/CustomMessageForm';
 
-const ContactCards = ({ name, sendCustom }) => {
-  return (
-    <article className="contact-card">
-      <h4 className="contact-card-name">{name}</h4>
-      <button
-        className="custom-text-btn"
-        onClick={() => sendCustom('HI FRANCY', '5756441355')}>
-        Send custom text
-      </button>
-      <button className="location-now-btn">Send my location NOW!!</button>
-    </article>
-  );
+class ContactCards extends Component {
+  constructor() {
+    super();
+    this.state = {
+      sendingCustom: false
+    }
+  }
+
+  openCustomForm = () => {
+    console.log(this.state);
+    this.setState({
+      sendingCustom: true
+    });
+  }
+
+  render() {
+    const renderCustomForm =
+      this.state.sendingCustom
+      ? <CustomMessageForm
+        sendCustom={this.props.sendCustom}
+      />
+      : null;
+
+    console.log('renderCustomForm', renderCustomForm);
+    return (
+      <article className="contact-card">
+        <h4 className="contact-card-name">{this.props.name}</h4>
+        <button
+          className="custom-text-btn"
+          onClick={() => this.openCustomForm()}>
+          Send custom text
+        </button>
+        <button
+          className="location-now-btn"
+        >
+          Send my location NOW!!
+        </button>
+        <section>
+          {renderCustomForm}
+        </section>
+      </article>
+    );
+  }
+
 };
 
 
@@ -22,3 +55,7 @@ ContactCards.propTypes = {
 };
 
 export default ContactCards;
+
+{/* <CustomMessageForm
+  sendCustom={this.props.sendCustom}
+/> */}
