@@ -9,16 +9,20 @@ class CustomMessageForm extends Component {
     }
   }
 
-  handleChange = () => {
-    console.log('handle change');
+  handleChange = (event) => {
+    this.setState({
+      message: event.target.value
+    });
   }
 
   render() {
+    console.log(this.props);
     return (
       <div className="custom-message-form">
         <textarea
-          onChange={this.handleChange}
+          onChange={(event) => this.handleChange(event)}
           className="custom-message-input"
+          value={this.state.message}
         />
           <button
             className="never-mind-btn"
@@ -28,7 +32,7 @@ class CustomMessageForm extends Component {
           </button>
           <button
             className="send-custom-btn"
-            onClick={() => this.props.sendCustom}
+            onClick={() => this.props.sendCustom(this.state.message, '5756441355')}
           >
             Send
           </button>
