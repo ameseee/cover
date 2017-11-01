@@ -35,7 +35,8 @@ describe('actions', () => {
       contact: {name: 'Cindy', number: '3035551234'}
     };
 
-    expect(actions.createNewContact({name: 'Cindy', number: '3035551234'})).toEqual(expectedAction);
+    expect(actions.createNewContact({name: 'Cindy', number: '3035551234'}))
+      .toEqual(expectedAction);
   });
 
   it('should create an action to remove an existing contact', () => {
@@ -74,4 +75,4 @@ describe('actions', () => {
     ])).toEqual(expectedAction);
   });
 
-})
+});

@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import { Route } from 'react-router-dom';
 import MainContainer from '../containers/MainContainer';
 import Landing from '../components/landing/Landing';
