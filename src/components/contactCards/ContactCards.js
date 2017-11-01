@@ -16,7 +16,7 @@ class ContactCards extends Component {
     });
   }
 
-  neverMind = () => {
+  closeCustomForm = () => {
     this.setState({
       sendingCustom: false
     });
@@ -27,7 +27,7 @@ class ContactCards extends Component {
       this.state.sendingCustom
       ? <CustomMessageFormContainer
         sendCustom={this.props.sendCustom}
-        neverMind={this.neverMind}
+        closeCustomForm={this.closeCustomForm}
       />
       : null;
 
