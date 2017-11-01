@@ -1,28 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const ContactCards = ({name, number, edit, remove, key}) => {
-
+const ContactCards = ({ name, sendCustom }) => {
   return (
-    <article className="existing-contact-card">HELLLOo
-      {/* <div>
-        <h4 className="existing-contact-name">{name}</h4>
-        <p className="existing-contact-number">{number}</p>
-      </div>
+    <article className="contact-card">
+      <h4 className="contact-card-name">{name}</h4>
       <button
-        className="edit-contact-btn"
-        onClick={edit}>Edit</button>
-        <button
-          className="remove-contact-btn" onClick={() => remove(key)}>Remove</button> */}
+        className="custom-text-btn"
+        onClick={() => sendCustom('HI FRANCY', '5756441355')}>
+        Send custom text
+      </button>
+      <button className="location-now-btn">Send my location NOW!!</button>
     </article>
   );
 };
 
+
 ContactCards.propTypes = {
   name: PropTypes.string,
-  number: PropTypes.string,
-  edit: PropTypes.func,
-  remove: PropTypes.func,
+  sendCustom: PropTypes.func,
 };
 
 export default ContactCards;

@@ -25,15 +25,25 @@ export const createNewContact = contact => ({
 });
 
 export const removeFromFB = (id) => ({
-  //dispatch => {
-    type: 'REMOVE_FROM_FB',
-    id
-    // we'll pass in the id to the firebase function to remove the contact
-    // once we've done that we should hopefully
-  //}
-})
+  type: 'REMOVE_FROM_FB',
+  id,
+});
 
 export const loadContacts = (contacts) => ({
   type: 'LOAD_CONTACTS',
   contacts,
 });
+
+export const sendCustom = (message, phone) => {
+  return dispatch => {
+    fetch('http://localhost:3000/api/message', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json'},
+      body: JSON.stringify({ message, phone })
+    })
+    //catch errors !== 200
+      .then(response => response.json())
+      .catch(error => alert(error));
+  };
+
+};
