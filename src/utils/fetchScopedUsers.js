@@ -7,14 +7,14 @@ export function fetchScopedUsers(firebase) {
     const { currentUser } = this.props;
 
     const contacts = contactEntries.map(([id, contact]) => {
-      return Object.assign({id}, contact)
+      return Object.assign({id}, contact);
     }).filter(contact => {
       return contact.userId === currentUser;
     });
 
     this.props.loadContacts(contacts);
   });
-};
+}
 
 export const removeContact = (contact, firebase) => {
   const contactsFromDB = firebase.database().ref('contacts');
@@ -32,4 +32,4 @@ export const removeContact = (contact, firebase) => {
 
     contactRef.remove();
   });
-}
+};

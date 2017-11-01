@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 import {fetchScopedUsers} from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
+import ContactCards from '../contactCards/ContactCards';
 
-// import ContactCards from '../contactCards/ContactCards';
 class Main extends React.Component {
   constructor() {
     super();
@@ -45,6 +45,7 @@ class Main extends React.Component {
             Add Contacts
           </Link>
         </button>
+        <ContactCards />
       </article>
     )
   }
