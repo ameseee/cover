@@ -14,44 +14,6 @@ $charcoal-color: #1b1b1b;
   background-color: $lt-grey-color;
 }
 
-.nav-bar {
-  background-color: $navy-color;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.cover-title {
-  font-size: 170%;
-  color: #fff;
-  padding: 10px;
-  font-family: Lato;
-}
-
-.nav-menu {
-  margin-right: 10px;
-}
-
-.nav-item {
-  color: #fff;
-  margin: 10px 15px;
-  font-family: Lato;
-  padding: 4px;
-  border-bottom: 2px solid $navy-color;
-  text-decoration: none;
-}
-
-.nav-item-li {
-  display: inline-block;
-  list-style-type: none;
-}
-
-.nav-item:hover {
-  color: $grey-color;
-  border-bottom: 2px solid $turq-color;
-  cursor: pointer;
-}
-
 .emergency-section {
   width: 55%;
   margin: 0 auto;

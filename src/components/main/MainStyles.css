@@ -2,38 +2,6 @@
 .main {
   background-color: #f5f5f7; }
 
-.nav-bar {
-  background-color: #282a40;
-  display: flex;
-  align-items: center;
-  justify-content: space-between; }
-
-.cover-title {
-  font-size: 170%;
-  color: #fff;
-  padding: 10px;
-  font-family: Lato; }
-
-.nav-menu {
-  margin-right: 10px; }
-
-.nav-item {
-  color: #fff;
-  margin: 10px 15px;
-  font-family: Lato;
-  padding: 4px;
-  border-bottom: 2px solid #282a40;
-  text-decoration: none; }
-
-.nav-item-li {
-  display: inline-block;
-  list-style-type: none; }
-
-.nav-item:hover {
-  color: #E6E6E8;
-  border-bottom: 2px solid #039fbe;
-  cursor: pointer; }
-
 .emergency-section {
   width: 55%;
   margin: 0 auto;
