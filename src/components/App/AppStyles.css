@@ -1,9 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .hamburger {
   display: none;
-  color: #fff; }
-
-.hamburger {
   background-image: url("../../assets/hamburger.svg");
   background-size: cover;
   height: 25px;

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import classnames from 'classnames';
+import { Link, Route } from 'react-router-dom';
 import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
@@ -7,6 +8,9 @@ import firebase from '../../firebase';
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      mobileNav: false
+    };
     this.signOut = this.signOut.bind(this);
   }
 
@@ -17,6 +21,16 @@ class App extends Component {
     });
     this.props.signOut(false);
     this.props.setCurrentUser('');
+  }
+
+  hideHamburger = () => {
+    this.setState({ mobileNav: true });
+    debugger
+    this.props.history.push('/nav');
+  }
+
+  showHamburger = () => {
+    this.setState({ mobileNav: false });
   }
 
   render() {
@@ -35,12 +49,16 @@ class App extends Component {
           </h1>
 
           <ul className="nav-menu">
-            <Link
+
+            {/* <Link
               to="/nav"
-              className="hamburger-link">
-              <button className="hamburger">
+              className="hamburger-link"> */}
+              <button
+                className={classnames(this.state.mobileNav ? 'hidden' : 'hamburger')}
+                onClick={() => this.hideHamburger()}>
               </button>
-            </Link>
+            {/* </Link> */}
+
             <li className="nav-item-li">
               <Link
                 className="nav-item"
@@ -91,6 +109,7 @@ App.propTypes = {
   signOut: PropTypes.func,
   setCurrentUser: PropTypes.func,
   currentUser: PropTypes.string,
+  history: PropTypes.object,
 };
 
 export default App;

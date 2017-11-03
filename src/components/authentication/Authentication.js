@@ -19,6 +19,7 @@ class Authentication extends Component {
   });
 
   componentDidMount() {
+    console.log(this.props);
     const createRef = firebase.database().ref('users');
 
     createRef.on('value', (snapshot) => {
