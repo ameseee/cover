@@ -3,12 +3,13 @@ import { Link } from 'react-router-dom';
 import '../../index.css';
 import PropTypes from 'prop-types';
 
-const MobileNav = () => {
-
+const MobileNav = ({ history }) => {
   return (
     <section className="drop-down">
 
-      <h3>X</h3>
+      <h3 onClick={() => history.goBack()}>
+        X
+      </h3>
       <div>
         <Link
           to="/main"
