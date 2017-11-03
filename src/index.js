@@ -5,7 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from './reducers/rootReducer';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import Routes from './utils/Routes';
 
 const devTools =
@@ -18,7 +18,7 @@ const router = (
   <Provider store={store}>
     <BrowserRouter>
       <div className="entire-app">
-        <AppContainer />
+        <Route path="/" component={ AppContainer }/>
         <Routes />
       </div>
     </BrowserRouter>

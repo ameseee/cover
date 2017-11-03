@@ -10,6 +10,16 @@ $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
 $charcoal-color: #1b1b1b;
 
+.hamburger {
+  display: none;
+  background-image: url('../../assets/hamburger.svg');
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: $navy-color;
+}
+
 .nav-bar-brand-link {
   text-decoration: none;
   color: $lt-grey-color;
@@ -58,6 +68,18 @@ $charcoal-color: #1b1b1b;
   cursor: pointer;
 }
 
-@media (min-width: 670px) {
-  //change the nav bar
+
+@media (max-width: 670px) {
+  .nav-item-li {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hidden {
+    display: none;
+  }
+
 }

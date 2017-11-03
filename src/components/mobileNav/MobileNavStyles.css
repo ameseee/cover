@@ -1,0 +1,23 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+.drop-down {
+  margin-top: 5%; }
+
+.drop-down-option {
+  text-decoration: none;
+  color: #1b1b1b;
+  display: block;
+  text-align: center;
+  margin: 045px 0;
+  padding: 5%;
+  font-size: 150%;
+  font-family: Lato, sans-serif; }
+
+.go-back {
+  background-image: url("../../assets/cancel.svg");
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: #fff;
+  margin-left: 89%;
+  opacity: 0.75; }

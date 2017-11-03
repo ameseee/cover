@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import classnames from 'classnames';
+import { Link, Route } from 'react-router-dom';
+import MobileNav from '../mobileNav/MobileNav';
 import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
@@ -7,6 +9,9 @@ import firebase from '../../firebase';
 class App extends Component {
   constructor() {
     super();
+    this.state = {
+      mobileNav: false
+    };
     this.signOut = this.signOut.bind(this);
   }
 
@@ -17,6 +22,16 @@ class App extends Component {
     });
     this.props.signOut(false);
     this.props.setCurrentUser('');
+  }
+
+  hideHamburger = () => {
+    this.setState({ mobileNav: true });
+    this.props.history.push('/nav');
+  }
+
+  //how do i pass this function to mobilenav component???
+  showHamburger = () => {
+    this.setState({ mobileNav: false });
   }
 
   render() {
@@ -33,7 +48,20 @@ class App extends Component {
               Cover
             </Link>
           </h1>
+
           <ul className="nav-menu">
+
+            <button
+              // className={classnames(
+              //   this.state.mobileNav
+              //     ? 'hidden'
+              //     : 'hamburger')}
+              // onClick={() => this.hideHamburger()}
+              className="hamburger"
+              onClick={() => this.hideHamburger()}
+            >
+            </button>
+
             <li className="nav-item-li">
               <Link
                 className="nav-item"
@@ -75,6 +103,7 @@ class App extends Component {
             }
           </ul>
         </nav>
+
       </div>
     );
   }
@@ -84,6 +113,7 @@ App.propTypes = {
   signOut: PropTypes.func,
   setCurrentUser: PropTypes.func,
   currentUser: PropTypes.string,
+  history: PropTypes.object,
 };
 
 export default App;
