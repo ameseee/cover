@@ -15,10 +15,6 @@ $charcoal-color: #1b1b1b;
   color: #fff;
 }
 
-.drop-down {
-  display: none;
-}
-
 .nav-bar-brand-link {
   text-decoration: none;
   color: $lt-grey-color;
@@ -73,17 +69,8 @@ $charcoal-color: #1b1b1b;
     display: none;
   }
 
-  .hamburger,
-  .drop-down {
+  .hamburger {
     display: block;
   }
-
-  .drop-down {
-    outline: 1px solid $turq-color;
-  }
-
-  .drop-down-option {
-    color: #fff;
-    outline: 1px solid $red-color;
-  }
+  
 }

@@ -3,9 +3,6 @@
   display: none;
   color: #fff; }
 
-.drop-down {
-  display: none; }
-
 .nav-bar-brand-link {
   text-decoration: none;
   color: #f5f5f7;
@@ -49,11 +46,5 @@
 @media (max-width: 670px) {
   .nav-item-li {
     display: none; }
-  .hamburger,
-  .drop-down {
-    display: block; }
-  .drop-down {
-    outline: 1px solid #039fbe; }
-  .drop-down-option {
-    color: #fff;
-    outline: 1px solid #dc0800; } }
+  .hamburger {
+    display: block; } }

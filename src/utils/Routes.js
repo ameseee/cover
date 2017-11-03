@@ -3,6 +3,7 @@ import { Route } from 'react-router-dom';
 import MainContainer from '../containers/MainContainer';
 import AuthenticationContainer from '../containers/AuthenticationContainer';
 import ManageContactsContainer from '../containers/ManageContactsContainer';
+import MobileNav from '../components/mobileNav/MobileNav';
 
 class Routes extends Component {
   render() {
@@ -11,6 +12,7 @@ class Routes extends Component {
         <Route path="/main" component={ MainContainer }/>
         <Route exact path="/" component={ AuthenticationContainer } />
         <Route path="/contacts" component={ ManageContactsContainer } />
+        <Route path="/nav" component={ MobileNav } />
       </div>
     );
   }

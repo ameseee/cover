@@ -36,7 +36,6 @@ class App extends Component {
 
           <ul className="nav-menu">
             <h2 className="hamburger">HAM</h2>
-
             <li className="nav-item-li">
               <Link
                 className="nav-item"
