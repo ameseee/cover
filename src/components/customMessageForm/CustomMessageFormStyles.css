@@ -48,17 +48,18 @@
 .never-mind-btn:hover {
   background-color: #434558; }
 
+.send-sent {
+  outline: 1px magenta;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
+
 .sent-icon-hidden {
   display: none; }
 
 .sent-icon-displayed {
-  position: absolute;
-  bottom: 8px;
-  right: 8px;
+  margin-left: 10px;
   background-image: url("../../assets/green-check.svg");
   background-size: cover;
   height: 17px;
   width: 17px; }
-
-.send-sent {
-  outline: 1px magenta; }
