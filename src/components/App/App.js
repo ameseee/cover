@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link, Route } from 'react-router-dom';
+import MobileNav from '../mobileNav/MobileNav';
 import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
@@ -25,10 +26,10 @@ class App extends Component {
 
   hideHamburger = () => {
     this.setState({ mobileNav: true });
-    debugger
     this.props.history.push('/nav');
   }
 
+  //how do i pass this function to mobilenav component???
   showHamburger = () => {
     this.setState({ mobileNav: false });
   }
@@ -50,14 +51,16 @@ class App extends Component {
 
           <ul className="nav-menu">
 
-            {/* <Link
-              to="/nav"
-              className="hamburger-link"> */}
-              <button
-                className={classnames(this.state.mobileNav ? 'hidden' : 'hamburger')}
-                onClick={() => this.hideHamburger()}>
-              </button>
-            {/* </Link> */}
+            <button
+              // className={classnames(
+              //   this.state.mobileNav
+              //     ? 'hidden'
+              //     : 'hamburger')}
+              // onClick={() => this.hideHamburger()}
+              className="hamburger"
+              onClick={() => this.hideHamburger()}
+            >
+            </button>
 
             <li className="nav-item-li">
               <Link
@@ -100,6 +103,7 @@ class App extends Component {
             }
           </ul>
         </nav>
+
       </div>
     );
   }

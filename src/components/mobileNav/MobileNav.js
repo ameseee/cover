@@ -4,12 +4,18 @@ import '../../index.css';
 import PropTypes from 'prop-types';
 
 const MobileNav = ({ history }) => {
+
+  const closeMobileNav = () => {
+    //show the hamburger!!!
+    history.goBack();
+  };
+
   return (
     <section className="drop-down">
 
       <button
         className="go-back"
-        onClick={() => history.goBack()}>
+        onClick={() => closeMobileNav()}>
       </button>
       <div>
         <Link
@@ -46,6 +52,7 @@ const MobileNav = ({ history }) => {
 
 MobileNav.propTypes = {
   history: PropTypes.object,
+  showHamburger: PropTypes.func,
 };
 
 export default MobileNav;

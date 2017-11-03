@@ -52,4 +52,6 @@
   .nav-item-li {
     display: none; }
   .hamburger {
-    display: block; } }
+    display: block; }
+  .hidden {
+    display: none; } }
