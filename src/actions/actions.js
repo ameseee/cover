@@ -42,7 +42,7 @@ export const sendCustom = (message, phone) => {
       body: JSON.stringify({ message, phone })
     })
       .then(response => response.json())
-      .catch(error => alert('THIS IS THE ALERT', error));
+      .catch(error => console.log('THIS IS THE ALERT', error));
   };
 
 };
