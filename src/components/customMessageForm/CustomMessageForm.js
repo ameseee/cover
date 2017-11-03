@@ -7,7 +7,7 @@ class CustomMessageForm extends Component {
     this.state = {
       message: '',
       sent: false
-    }
+    };
   }
 
   handleChange = (event) => {
@@ -17,22 +17,19 @@ class CustomMessageForm extends Component {
   }
 
   handleSend() {
-    this.props.sendCustom(this.state.message, '5756441355');
+    //this.props.sendCustom(this.state.message, '5756441355');
     //i need to verify the next has actually been sent before doing this... :
     this.setState({
       sent: true
-    })
+    });
 
   }
 
   render() {
     const sentNotification = this.state.sent
-    ? <p className="sent-icon-displayed">
-        ck
-      </p>
-    : <p className="sent-icon-hidden"></p>
+      ? <div className="sent-icon-displayed"></div>
+      : <p className="sent-icon-hidden"></p>;
 
-    console.log(this.props);
     return (
       <div className="custom-message-form">
         <textarea
@@ -40,12 +37,13 @@ class CustomMessageForm extends Component {
           className="custom-message-input"
           value={this.state.message}
         />
-          <button
-            className="close-form-btn"
-            onClick={() => this.props.closeCustomForm()}
-          >
-            X
-          </button>
+        <button
+          className="close-form-btn"
+          onClick={() => this.props.closeCustomForm()}
+        >
+
+        </button>
+        <article className="send-sent">
           <button
             className="send-custom-btn"
             onClick={() => this.handleSend()}
@@ -53,9 +51,16 @@ class CustomMessageForm extends Component {
             Send
           </button>
           {sentNotification}
+        </article>
       </div>
-    )
-  };
+    );
+  }
 }
+
+CustomMessageForm.propTypes = {
+  sendCustom: PropTypes.func,
+  closeCustomForm: PropTypes.func,
+};
+
 
 export default CustomMessageForm;
