@@ -7,7 +7,7 @@ class ContactCards extends Component {
     super();
     this.state = {
       sendingCustom: false
-    }
+    };
   }
 
   openCustomForm = () => {
