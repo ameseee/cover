@@ -10,6 +10,15 @@ $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
 $charcoal-color: #1b1b1b;
 
+.hamburger {
+  display: none;
+  color: #fff;
+}
+
+.drop-down {
+  display: none;
+}
+
 .nav-bar-brand-link {
   text-decoration: none;
   color: $lt-grey-color;
@@ -58,6 +67,23 @@ $charcoal-color: #1b1b1b;
   cursor: pointer;
 }
 
-@media (min-width: 670px) {
-  //change the nav bar
+
+@media (max-width: 670px) {
+  .nav-item-li {
+    display: none;
+  }
+
+  .hamburger,
+  .drop-down {
+    display: block;
+  }
+
+  .drop-down {
+    outline: 1px solid $turq-color;
+  }
+
+  .drop-down-option {
+    color: #fff;
+    outline: 1px solid $red-color;
+  }
 }
