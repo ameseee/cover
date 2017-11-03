@@ -7,9 +7,10 @@ const MobileNav = ({ history }) => {
   return (
     <section className="drop-down">
 
-      <h3 onClick={() => history.goBack()}>
-        X
-      </h3>
+      <button
+        className="go-back"
+        onClick={() => history.goBack()}>
+      </button>
       <div>
         <Link
           to="/main"

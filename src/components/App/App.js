@@ -35,13 +35,12 @@ class App extends Component {
           </h1>
 
           <ul className="nav-menu">
-            <h2 className="hamburger">
-              <Link
-                to="/nav"
-                className="hamburger-link">
-              HAM
+            <Link
+              to="/nav"
+              className="hamburger-link">
+              <button className="hamburger">
+              </button>
             </Link>
-            </h2>
             <li className="nav-item-li">
               <Link
                 className="nav-item"

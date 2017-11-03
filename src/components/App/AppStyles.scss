@@ -15,6 +15,15 @@ $charcoal-color: #1b1b1b;
   color: #fff;
 }
 
+.hamburger {
+  background-image: url('../../assets/hamburger.svg');
+  background-size: cover;
+  height: 25px;
+  width: 25px;
+  border: none;
+  background-color: $navy-color;
+}
+
 .nav-bar-brand-link {
   text-decoration: none;
   color: $lt-grey-color;
@@ -72,5 +81,5 @@ $charcoal-color: #1b1b1b;
   .hamburger {
     display: block;
   }
-  
+
 }
