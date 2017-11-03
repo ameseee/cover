@@ -41,9 +41,8 @@ export const sendCustom = (message, phone) => {
       headers: { 'Content-Type': 'application/json'},
       body: JSON.stringify({ message, phone })
     })
-    //catch errors !== 200
       .then(response => response.json())
-      .catch(error => alert(error));
+      .catch(error => alert('THIS IS THE ALERT', error));
   };
 
 };

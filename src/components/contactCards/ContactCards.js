@@ -26,7 +26,6 @@ class ContactCards extends Component {
     const renderCustomForm =
       this.state.sendingCustom
       ? <CustomMessageFormContainer
-        sendCustom={this.props.sendCustom}
         closeCustomForm={this.closeCustomForm}
       />
       : null;
@@ -53,7 +52,6 @@ class ContactCards extends Component {
 
 ContactCards.propTypes = {
   name: PropTypes.string,
-  sendCustom: PropTypes.func,
 };
 
 export default ContactCards;

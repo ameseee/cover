@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {fetchScopedUsers} from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
-import ContactCardsContainer from '../../containers/ContactCardsContainer';
+import ContactCards from '../../components/contactCards/ContactCards';
 
 class Main extends React.Component {
   constructor() {
@@ -21,7 +21,7 @@ class Main extends React.Component {
 
     return loadedContacts.map((contact, index) => {
       return (
-        <ContactCardsContainer
+        <ContactCards
           key={index}
           name={contact.contactName}
         />
@@ -34,7 +34,7 @@ class Main extends React.Component {
       <article className="no-contacts-card">
         <h4
           className="no-contacts-text">
-          You don\'t have any contacts saved yet!
+          You don't have any contacts saved yet!
         </h4>
         <button className="add-contacts-btn">
           <Link
