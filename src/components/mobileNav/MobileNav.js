@@ -44,7 +44,7 @@ const MobileNav = ({ history }) => {
 };
 
 MobileNav.propTypes = {
-
+  history: PropTypes.object,
 };
 
 export default MobileNav;
