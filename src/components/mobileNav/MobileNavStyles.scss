@@ -1,0 +1,26 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+
+$red-color: #dc0800;
+$red-hover: #E54640;
+$turq-color: #039fbe;
+$turq-hover: #42B7CE;
+$navy-color: #282a40;
+$navy-hover: #434558;
+$lt-grey-color: #f5f5f7;
+$grey-color: #E6E6E8;
+$charcoal-color: #1b1b1b;
+
+.drop-down {
+  margin-top: 5%;
+}
+
+.drop-down-option {
+  text-decoration: none;
+  color: $charcoal-color;
+  display: block;
+  text-align: center;
+  margin: 045px 0;
+  padding: 5%;
+  font-size: 150%;
+  font-family: Lato, sans-serif;
+}
