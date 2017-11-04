@@ -12,7 +12,7 @@ $charcoal-color: #1b1b1b;
 
 .contact-card {
   display: grid;
-  grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-template-columns: 1.75fr 2.25fr 2.25fr;
   grid-template-areas: "contactName customBtn locationBtn" "form form form";
   grid-column-gap: 25px;
   align-items: center;

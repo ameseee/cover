@@ -135,4 +135,5 @@
   .custom-text-btn,
   .location-now-btn {
     font-size: 70%;
-    padding: 7.5px 5px; } }
+    padding: 7.5px 5px;
+    height: 42px; } }
