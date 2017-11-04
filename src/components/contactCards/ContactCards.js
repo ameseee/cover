@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
+import { getLatLng } from '../../utils/location';
+import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
   constructor() {
@@ -23,6 +25,10 @@ class ContactCards extends Component {
     });
   }
 
+  getLocation() {
+    getLatLng();
+  }
+
   render() {
     const renderCustomForm =
       this.state.sendingCustom
@@ -41,6 +47,7 @@ class ContactCards extends Component {
         </button>
         <button
           className="location-now-btn"
+          onClick={() => this.getLocation()}
         >
           Send my location NOW!!
         </button>
