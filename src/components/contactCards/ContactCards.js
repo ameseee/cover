@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
+import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
   constructor() {
@@ -23,6 +24,30 @@ class ContactCards extends Component {
     });
   }
 
+  locationSuccess(pos) {
+    var crd = pos.coords;
+
+    console.log(`Your current position is: Lat: ${crd.latitude}, Lng: ${crd.longitude}, More or less ${crd.accuracy} meters.`);
+  }
+
+  locationError(error) {
+    alert(`ERROR(${error.code}): ${error.message}`);
+  }
+
+  getLocation() {
+    const options = {
+      enableHighAccuracy: true,
+      timeout: 5000,
+      maximumAge: 0
+    };
+
+    navigator.geolocation.getCurrentPosition(
+      this.locationSuccess,
+      this.locationError,
+      options
+    );
+  }
+
   render() {
     const renderCustomForm =
       this.state.sendingCustom
@@ -41,6 +66,7 @@ class ContactCards extends Component {
         </button>
         <button
           className="location-now-btn"
+          onClick={() => this.getLocation()}
         >
           Send my location NOW!!
         </button>
