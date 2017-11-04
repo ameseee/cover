@@ -64,4 +64,9 @@ describe('<Main />', () => {
 
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
+
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+  
 });

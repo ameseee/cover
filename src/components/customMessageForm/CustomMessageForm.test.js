@@ -67,4 +67,8 @@ describe('<CustomMessageForm />', () => {
     expect(sendIcon.length).toEqual(1);
   });
 
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+
 });
