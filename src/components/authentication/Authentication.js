@@ -90,7 +90,7 @@ class Authentication extends Component {
             />
             <input
               className="password"
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
@@ -121,7 +121,7 @@ class Authentication extends Component {
             />
             <input
               className="password"
-              type="text"
+              type="password"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"

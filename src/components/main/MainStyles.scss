@@ -10,10 +10,6 @@ $lt-grey-color: #f5f5f7;
 $grey-color: #E6E6E8;
 $charcoal-color: #1b1b1b;
 
-.main {
-  background-color: $lt-grey-color;
-}
-
 .emergency-section {
   width: 55%;
   margin: 0 auto;
@@ -31,6 +27,7 @@ $charcoal-color: #1b1b1b;
 .emergency-title {
   margin-left: 15%;
   font-family: Lato;
+  color: $charcoal-color;
 }
 
 .emergency-btn {
@@ -69,6 +66,7 @@ $charcoal-color: #1b1b1b;
   font-family: Lato;
   font-size: 100%;
   width: 200%;
+  color: $charcoal-color;
 }
 
 .hotline-btn {
@@ -96,6 +94,7 @@ $charcoal-color: #1b1b1b;
 
 .section-title {
   font-family: Lato;
+  color: $charcoal-color;
 }
 
 .no-contacts-card {
@@ -122,6 +121,7 @@ $charcoal-color: #1b1b1b;
   margin: 0 auto;
   display: block;
 }
+
 .add-contacts-link {
   color: #fff;
   font-family: Lato;
@@ -184,8 +184,7 @@ $charcoal-color: #1b1b1b;
   .location-now-btn {
     font-size: 70%;
     padding: 7.5px 5px;
+    height: 42px;
   }
-// this looks good until 575
 
-// maybe put in icons for log out, settings, and contacts? to save room on nav bar?
 }

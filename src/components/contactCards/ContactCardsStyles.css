@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .contact-card {
   display: grid;
-  grid-template-columns: 1fr 2.25fr 2.25fr;
+  grid-template-columns: 1.75fr 2.25fr 2.25fr;
   grid-template-areas: "contactName customBtn locationBtn" "form form form";
   grid-column-gap: 25px;
   align-items: center;
@@ -14,7 +14,8 @@
 .contact-card-name {
   grid-area: contactName;
   margin-left: 15%;
-  font-family: Lato; }
+  font-family: Lato;
+  color: #1b1b1b; }
 
 .custom-text-btn {
   grid-area: customBtn;
