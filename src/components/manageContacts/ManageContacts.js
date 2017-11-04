@@ -9,7 +9,6 @@ class ManageContacts extends Component {
     this.state = {
       contactName: '',
       contactNumber: '',
-      contacts: [],
     };
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -80,9 +79,9 @@ class ManageContacts extends Component {
 
     return (
       <div className="manage-contacts-section">
-        <h3 className="title">Manage Contacts</h3>
+        <h3 className="section-title">Manage Contacts</h3>
         <section className="current-contacts">
-          <article>
+          <article className="all-contacts">
             { mappedContacts }
           </article>
         </section>
