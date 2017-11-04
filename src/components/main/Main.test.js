@@ -1,13 +1,14 @@
 import React from 'react';
 import Main from './Main';
 import { shallow } from 'enzyme';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('<Main />', () => {
   let wrapper;
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    const wrapper = shallow(<Main loadedContacts={[]}/>);
+    wrapper = shallow(<Main loadedContacts={[]}/>);
   });
 
   it('should exist', () => {
@@ -68,5 +69,5 @@ describe('<Main />', () => {
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  
+
 });
