@@ -1,17 +1,17 @@
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
-import AppContainer from '../AppContainer';
-import App from '../../components/App/App';
+import CustomMessageFormContainer from '../CustomMessageFormContainer';
+import CustomMessageForm from '../../components/customMessageForm/CustomMessageForm';
 import React from 'react';
 
-describe('App Container', () => {
+describe('Custom Message Form Container', () => {
   const mockStore = configureStore();
   const initialState = {
     contacts: [],
   };
   const mockSendCustom = jest.fn();
   const store = mockStore(initialState);
-  const wrapper = mount(<App
+  const wrapper = mount(<CustomMessageForm
     store={store}
     contacts={initialState.contacts}
     sendCustom={mockSendCustom}/>);
@@ -21,13 +21,15 @@ describe('App Container', () => {
   });
 
   it('should fire actions', () => {
-    const actionWrapper = mount(<App
+    const actionWrapper = mount(<CustomMessageForm
       store={store}
       contacts={initialState.contacts}
       sendCustom={mockSendCustom}/>);
 
-  
-    button.simulate('click');
+    const sendCustomBtn = actionWrapper.find('.send-custom-btn');
+
+    sendCustomBtn.simulate('click');
     expect(mockSendCustom).toHaveBeenCalledTimes(1);
   });
+  
 });
