@@ -19,7 +19,6 @@ class Authentication extends Component {
   });
 
   componentDidMount() {
-    console.log(this.props);
     const createRef = firebase.database().ref('users');
 
     createRef.on('value', (snapshot) => {
@@ -81,21 +80,21 @@ class Authentication extends Component {
           <h3 className="create-account-title">Create Your Account</h3>
           <div>
             <input
-              className="create-account-name"
+              className="name"
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
             />
             <input
-              className="create-account-password"
+              className="password"
               type="text"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
             />
             <button
-              className="create-account-btn"
+              className="btn"
               onClick={() => this.createAccountClick(
                 this.state.username,
                 this.state.password)}
@@ -112,21 +111,21 @@ class Authentication extends Component {
           <h3 className="sign-in-title">Sign In</h3>
           <div>
             <input
-              className="sign-in-name"
+              className="name"
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
             />
             <input
-              className="sign-in-password"
+              className="password"
               type="text"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
             />
             <button
-              className="sign-in-btn"
+              className="btn"
               onClick={() => this.signInClick(
                 this.state.username,
                 this.state.password)}>
@@ -140,12 +139,12 @@ class Authentication extends Component {
           </div>
         </section>
         <article className="other-card-section">
-          <h3
+          <h4
             className="already">{
               this.state.newUser
                 ? 'Already have an account?'
                 : 'Don\'t have an accout yet?'}
-          </h3>
+          </h4>
           <button
             className="other-card-btn" onClick={this.switchToOtherForm}
           >

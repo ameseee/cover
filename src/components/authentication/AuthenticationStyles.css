@@ -17,8 +17,8 @@
   font-size: 130%;
   font-family: Lato; }
 
-.create-account-name,
-.create-account-password {
+.name,
+.password {
   padding: 7.5px;
   width: 70%;
   display: block;
@@ -29,7 +29,7 @@
   font-size: 100%;
   font-family: Lato; }
 
-.create-account-btn {
+.btn {
   background-color: #039fbe;
   color: #fff;
   width: 70%;
@@ -47,7 +47,7 @@
   text-decoration: none;
   font-family: Lato; }
 
-.create-account-btn:hover {
+.btn:hover {
   background-color: #42B7CE;
   cursor: pointer; }
 
@@ -66,8 +66,8 @@
   font-size: 130%;
   font-family: Lato; }
 
-.sign-in-name,
-.sign-in-password {
+.name,
+.password {
   padding: 7.5px;
   width: 70%;
   display: block;
@@ -78,7 +78,7 @@
   font-size: 100%;
   font-family: Lato; }
 
-.sign-in-btn {
+.btn {
   background-color: #039fbe;
   color: #fff;
   width: 70%;
@@ -91,7 +91,7 @@
   font-size: 100%;
   font-family: Lato; }
 
-.sign-in-btn:hover {
+.btn:hover {
   background-color: #42B7CE;
   cursor: pointer; }
 
