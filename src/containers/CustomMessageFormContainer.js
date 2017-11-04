@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import
 CustomMessageForm from '../components/customMessageForm/CustomMessageForm';
-import { loadContacts, sendCustom } from '../actions/actions';
+import { sendCustom } from '../actions/actions';
 
 const mapStateToProps = store => ({
   contacts: store.loadContacts,

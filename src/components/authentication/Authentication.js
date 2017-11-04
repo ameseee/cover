@@ -160,11 +160,8 @@ class Authentication extends Component {
 
 Authentication.propTypes = {
   currentUser: PropTypes.string,
-  loadContacts: PropTypes.func,
-  managedContacts: PropTypes.array,
   setCurrentUser: PropTypes.func,
   signIn: PropTypes.func,
-  signOut: PropTypes.func,
   history: PropTypes.object,
 };
 
