@@ -1,0 +1,163 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ContactCards /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <ContactCards />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <h4
+          className="contact-card-name"
+        />,
+        <button
+          className="custom-text-btn"
+          onClick={[Function]}
+        >
+          Send custom text
+        </button>,
+        <button
+          className="location-now-btn"
+          onClick={[Function]}
+        >
+          Send my location NOW!!
+        </button>,
+        null,
+      ],
+      "className": "contact-card",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": undefined,
+          "className": "contact-card-name",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "h4",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Send custom text",
+          "className": "custom-text-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Send custom text",
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "Send my location NOW!!",
+          "className": "location-now-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": "Send my location NOW!!",
+        "type": "button",
+      },
+      null,
+    ],
+    "type": "article",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <h4
+            className="contact-card-name"
+          />,
+          <button
+            className="custom-text-btn"
+            onClick={[Function]}
+          >
+            Send custom text
+          </button>,
+          <button
+            className="location-now-btn"
+            onClick={[Function]}
+          >
+            Send my location NOW!!
+          </button>,
+          null,
+        ],
+        "className": "contact-card",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": undefined,
+            "className": "contact-card-name",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "h4",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Send custom text",
+            "className": "custom-text-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Send custom text",
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "Send my location NOW!!",
+            "className": "location-now-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": "Send my location NOW!!",
+          "type": "button",
+        },
+        null,
+      ],
+      "type": "article",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
