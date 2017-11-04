@@ -1,6 +1,10 @@
 import { currentUser, signedInStatus } from './authenticationReducer';
 // import { getContactCards } from './mainReducer';
-import { createNewContact, removeContact, loadContacts } from './manageContactsReducer';
+import {
+  createNewContact,
+  removeContact, 
+  loadContacts
+} from './manageContactsReducer';
 
 const mockUser = '3kyjFZgtlzNMLlpIDELYKNFrGn22';
 
