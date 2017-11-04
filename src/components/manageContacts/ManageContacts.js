@@ -18,7 +18,6 @@ class ManageContacts extends Component {
 
   componentDidMount() {
     this.fetchScopedUsers(firebase);
-
   }
 
   handleSubmit(event) {
@@ -44,6 +43,7 @@ class ManageContacts extends Component {
   }
 
   handleEdit() {
+    //not in MVP
     // open up a form so they can edit.
   }
 

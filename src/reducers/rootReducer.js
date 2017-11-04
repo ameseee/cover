@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-import { getContactCards } from './mainReducer';
 import { currentUser, signedInStatus } from './authenticationReducer';
-import { createNewContact, removeContact, loadContacts } from './manageContactsReducer';
+import {
+  createNewContact,
+  removeContact,
+  loadContacts
+} from './manageContactsReducer';
 
 const rootReducer = combineReducers({
-  getContactCards,
   currentUser,
   signedInStatus,
   createNewContact,

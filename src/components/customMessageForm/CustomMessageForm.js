@@ -22,7 +22,6 @@ class CustomMessageForm extends Component {
     this.setState({
       sent: true
     });
-
   }
 
   render() {

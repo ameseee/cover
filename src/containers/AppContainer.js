@@ -3,7 +3,7 @@ import App from '../components/App/App';
 import { signOut, setCurrentUser } from '../actions/actions';
 
 const mapStateToProps = store => ({
-  currentUser: store.currentUser
+  currentUser: store.currentUser,
 });
 
 const mapDispatchToProps = dispatch => ({
