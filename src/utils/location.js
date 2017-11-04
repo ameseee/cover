@@ -21,22 +21,4 @@ export const getLatLng = () => {
   );
 };
 
-
-
-
-
-
-//
-// initialize() {
-//   const geocoder = new google.maps.Geocoder();
-// }
-//
-// findAddress(geocoder) {
-//   const coordinates = this.locationSuccess();
-// geocoder.geocode( { 'location': coordinates}, (results, status) => {
-//   if (status === 'OK') {
-//     const address = results[0].formatted_address;
-//     console.log('address in geo function', address);
-//   }
-// });
-//}
+// (`https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&callback=initMap`)
