@@ -113,7 +113,7 @@ App.propTypes = {
   signOut: PropTypes.func,
   setCurrentUser: PropTypes.func,
   currentUser: PropTypes.string,
-  history: PropTypes.object,
+  history: PropTypes.array,
 };
 
 export default App;

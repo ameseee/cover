@@ -1,0 +1,353 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<MobileNav /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <MobileNav />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="go-back"
+          onClick={[Function]}
+        />,
+        <div>
+          <Link
+            className="drop-down-option"
+            replace={false}
+            to="/main"
+          >
+            Home
+          </Link>
+        </div>,
+        <div
+          className="drop-down-option"
+        >
+          About
+        </div>,
+        <div>
+          <Link
+            className="drop-down-option"
+            replace={false}
+            to="/contacts"
+          >
+            Contacts
+          </Link>
+        </div>,
+        <div>
+          <Link
+            className="drop-down-option"
+            replace={false}
+            to="/"
+          >
+            Sign Out
+          </Link>
+        </div>,
+      ],
+      "className": "drop-down",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "go-back",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="drop-down-option"
+            replace={false}
+            to="/main"
+          >
+            Home
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Home",
+            "className": "drop-down-option",
+            "replace": false,
+            "to": "/main",
+          },
+          "ref": null,
+          "rendered": "Home",
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": "About",
+          "className": "drop-down-option",
+        },
+        "ref": null,
+        "rendered": "About",
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="drop-down-option"
+            replace={false}
+            to="/contacts"
+          >
+            Contacts
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Contacts",
+            "className": "drop-down-option",
+            "replace": false,
+            "to": "/contacts",
+          },
+          "ref": null,
+          "rendered": "Contacts",
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="drop-down-option"
+            replace={false}
+            to="/"
+          >
+            Sign Out
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "Sign Out",
+            "className": "drop-down-option",
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": "Sign Out",
+          "type": [Function],
+        },
+        "type": "div",
+      },
+    ],
+    "type": "section",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="go-back"
+            onClick={[Function]}
+          />,
+          <div>
+            <Link
+              className="drop-down-option"
+              replace={false}
+              to="/main"
+            >
+              Home
+            </Link>
+          </div>,
+          <div
+            className="drop-down-option"
+          >
+            About
+          </div>,
+          <div>
+            <Link
+              className="drop-down-option"
+              replace={false}
+              to="/contacts"
+            >
+              Contacts
+            </Link>
+          </div>,
+          <div>
+            <Link
+              className="drop-down-option"
+              replace={false}
+              to="/"
+            >
+              Sign Out
+            </Link>
+          </div>,
+        ],
+        "className": "drop-down",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "go-back",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              className="drop-down-option"
+              replace={false}
+              to="/main"
+            >
+              Home
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Home",
+              "className": "drop-down-option",
+              "replace": false,
+              "to": "/main",
+            },
+            "ref": null,
+            "rendered": "Home",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": "About",
+            "className": "drop-down-option",
+          },
+          "ref": null,
+          "rendered": "About",
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              className="drop-down-option"
+              replace={false}
+              to="/contacts"
+            >
+              Contacts
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Contacts",
+              "className": "drop-down-option",
+              "replace": false,
+              "to": "/contacts",
+            },
+            "ref": null,
+            "rendered": "Contacts",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              className="drop-down-option"
+              replace={false}
+              to="/"
+            >
+              Sign Out
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "Sign Out",
+              "className": "drop-down-option",
+              "replace": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": "Sign Out",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+      ],
+      "type": "section",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

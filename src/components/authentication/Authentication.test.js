@@ -1,38 +1,41 @@
 import React from 'react';
 import Authentication from './Authentication';
 import { shallow } from 'enzyme';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('<Authentication />', () => {
   let wrapper;
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    const wrapper = shallow(<Authentication />);
+    wrapper = shallow(<Authentication />);
   });
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should have a empty default state of username', () => {
+  it.only('should have a empty default state of username', () => {
     expect(wrapper.state().username).toEqual('');
   });
 
-  it.skip('should have a empty default state of password', () => {
+  it('should have a empty default state of password', () => {
     expect(wrapper.state().password).toEqual('');
   });
 
-  it.skip('should have a false default state of newUser', () => {
+  it('should have a false default state of newUser', () => {
     expect(wrapper.state().newUser).toEqual(false);
   });
 
-  it.skip('should render a title', () => {
+
+  it('should render a title', () => {
     const title = wrapper.find('h3');
 
+    //it wants 2 bc of conditional rendering
     expect(title.length).toEqual(1);
   });
 
-  it.skip('should render two inputs', () => {
+  it('should render two inputs', () => {
     const input = wrapper.find('input');
 
     expect(input.length).toEqual(2);
@@ -57,6 +60,7 @@ describe('<Authentication />', () => {
   it.skip('should run a function to sign up/in', () => {
     const button = wrapper.find('btn');
 
+    wrapper.instance().signInClick = mockFn;
     button.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
@@ -84,6 +88,7 @@ describe('<Authentication />', () => {
   it.skip('should run a function to switch forms', () => {
     const button = wrapper.find('other-card-btn');
 
+    wrapper.instance().switchToOtherForm = mockFn;
     button.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
@@ -96,8 +101,8 @@ describe('<Authentication />', () => {
     expect(wrapper.state().newUser).toEqual(true);
   });
 
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
-  
+
 });

@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import CustomMessageFormContainer from '../CustomMessageFormContainer';
 import CustomMessageForm from '../../components/customMessageForm/CustomMessageForm';
 import React from 'react';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('Custom Message Form Container', () => {
   const mockStore = configureStore();
@@ -31,5 +32,5 @@ describe('Custom Message Form Container', () => {
     sendCustomBtn.simulate('click');
     expect(mockSendCustom).toHaveBeenCalledTimes(1);
   });
-  
+
 });

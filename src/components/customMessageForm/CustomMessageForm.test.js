@@ -1,68 +1,71 @@
 import React from 'react';
 import CustomMessageForm from './CustomMessageForm';
 import { shallow } from 'enzyme';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('<CustomMessageForm />', () => {
   let wrapper;
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    const wrapper = shallow(<CustomMessageForm />);
+    wrapper = shallow(<CustomMessageForm closeCustomForm={mockFn}/>);
   });
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should have a false default state of message', () => {
+  it('should have a false default state of message', () => {
     expect(wrapper.state().message).toEqual('');
   });
 
-  it.skip('should have a false default state of sent', () => {
+  it('should have a false default state of sent', () => {
     expect(wrapper.state().sent).toEqual(false);
   });
 
-  it.skip('should render a text area', () => {
+  it('should render a text area', () => {
     const text = wrapper.find('textarea');
 
     expect(text.length).toEqual(1);
   });
 
-  it.skip('should change state on input', () => {
-    const message = wrapper.find('.custom-message-form');
+  it('should change state on input', () => {
+    const message = wrapper.find('.custom-message-input');
 
     message.simulate('change', { target: { value: 'hello friend' } });
     expect(wrapper.state().message).toEqual('hello friend');
   });
 
-  it.skip('should render a button to send text', () => {
-    const sendBtn = wrapper.find('send-custom-btn');
+  it('should render a button to send text', () => {
+    const sendBtn = wrapper.find('.send-custom-btn');
 
     expect(sendBtn.length).toEqual(1);
   });
 
-  it.skip('should run a function to sign up/in', () => {
-    const sendBtn = wrapper.find('send-custom-btn');
+  it('should run a function to send a text', () => {
+    const sendBtn = wrapper.find('.send-custom-btn');
 
+    wrapper.instance().handleSend = mockFn;
     sendBtn.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
-  it.skip('should render a button to close form', () => {
-    const closeBtn = wrapper.find('close-form-btn');
+  it('should render a button to close form', () => {
+    const closeBtn = wrapper.find('.close-form-btn');
 
     expect(closeBtn.length).toEqual(1);
   });
 
-  it.skip('should run a function to sign up/in', () => {
-    const closeBtn = wrapper.find('close-form-btn');
+  it('should run a function to close button form', () => {
+    const closeBtn = wrapper.find('.close-form-btn');
 
+    wrapper.instance().closeCustomForm = mockFn;
     closeBtn.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(1);
+    expect(mockFn).toHaveBeenCalledTimes(2);
   });
 
-  it.skip('should render a div with a sent icon', () => {
-    const sendIcon = wrapper.find('sent-icon');
+  it('should render a div with a sent icon', () => {
+    const sendIcon = wrapper.find('.sent-icon');
 
     expect(sendIcon.length).toEqual(1);
   });
