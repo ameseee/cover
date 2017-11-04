@@ -136,7 +136,7 @@ describe('<ManageContacts />', () => {
   });
 
 //not passing - mad about firebase shit
-  it.only('should change state when a new user is added', () => {
+  it('should change state when a new user is added', () => {
     const nameInput = wrapper.find('.new-contact-name');
     const numberInput = wrapper.find('.new-contact-number');
     const saveBtn = wrapper.find('.save-new-contact');
