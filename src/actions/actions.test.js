@@ -39,14 +39,17 @@ describe('actions', () => {
       .toEqual(expectedAction);
   });
 
-  it('should create an action to remove an existing contact', () => {
-    const expectedAction = {
-      type: 'REMOVE_CONTACT',
-      contact: {}
-    };
+  it('should create an action to remove an existing contact from firebase',
+    () => {
+      const expectedAction = {
+        type: 'REMOVE_FROM_FB',
+        id: '123'
+      };
 
-    expect(actions.removeContact({})).toEqual(expectedAction);
-  });
+      expect(actions.removeFromFB('123')).toEqual(expectedAction);
+    });
+
+  //loadContacts
 
   it('should create an action to load all contacts', () => {
     const expectedAction = {
