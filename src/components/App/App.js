@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import classnames from 'classnames';
 import { Link, Route } from 'react-router-dom';
 import MobileNav from '../mobileNav/MobileNav';
-import '../../index.css';
+// import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
 
@@ -24,13 +24,13 @@ class App extends Component {
     this.props.setCurrentUser('');
   }
 
-  hideHamburger = () => {
+  hideHamburger() {
     this.setState({ mobileNav: true });
     this.props.history.push('/nav');
   }
 
   //how do i pass this function to mobilenav component???
-  showHamburger = () => {
+  showHamburger() {
     this.setState({ mobileNav: false });
   }
 
