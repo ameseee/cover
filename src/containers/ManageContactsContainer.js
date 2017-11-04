@@ -1,6 +1,10 @@
 import { connect } from 'react-redux';
 import ManageContacts from '../components/manageContacts/ManageContacts';
-import { createNewContact, loadContacts, removeFromFB } from '../actions/actions';
+import {
+  createNewContact,
+  loadContacts,
+  removeFromFB
+} from '../actions/actions';
 
 const mapStateToProps = store => ({
   loadedContacts: store.loadContacts,
