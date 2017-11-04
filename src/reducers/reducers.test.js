@@ -1,8 +1,7 @@
 import { currentUser, signedInStatus } from './authenticationReducer';
-// import { getContactCards } from './mainReducer';
 import {
   createNewContact,
-  removeContact, 
+  removeContact,
   loadContacts
 } from './manageContactsReducer';
 
@@ -39,18 +38,6 @@ describe('signedInStatus in authentication reducer', () => {
   });
 
 });
-
-
-// describe('main reducer', () => {
-//   it('should have a default state', () => {
-//     expect(getContactCards(undefined, [])).toEqual([]);
-//   });
-//
-//   it.skip('should', () => {
-//
-//   });
-// })
-
 
 const mockContact = {
   contactName: 'Amy',

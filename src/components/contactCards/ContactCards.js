@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
 import { getLatLng } from '../../utils/location';
-import geoTools from 'geo-tools';
+//import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
   constructor() {
@@ -55,7 +55,6 @@ class ContactCards extends Component {
       </article>
     );
   }
-
 }
 
 ContactCards.propTypes = {

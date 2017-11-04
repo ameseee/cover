@@ -1,9 +1,6 @@
 import { connect } from 'react-redux';
 import ManageContacts from '../components/manageContacts/ManageContacts';
-import {
-  createNewContact,
-  loadContacts,
-} from '../actions/actions';
+import { loadContacts } from '../actions/actions';
 
 const mapStateToProps = store => ({
   loadedContacts: store.loadContacts,
