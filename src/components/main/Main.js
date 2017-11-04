@@ -8,7 +8,6 @@ import ContactCards from '../../components/contactCards/ContactCards';
 class Main extends React.Component {
   constructor() {
     super();
-
     this.fetchScopedUsers = fetchScopedUsers.bind(this);
   }
 
@@ -63,8 +62,10 @@ class Main extends React.Component {
           </section>
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>
-            {this.loadContacts()}
-            {loadedContacts.length < 1 ? this.noContacts() : null }
+            { this.loadContacts() }
+            { loadedContacts.length < 1
+              ? this.noContacts()
+              : null }
           </section>
         </main>
       </div>
