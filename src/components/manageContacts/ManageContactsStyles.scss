@@ -31,6 +31,11 @@ $charcoal-color: #1b1b1b;
   text-align: center;
 }
 
+.existing-contact-name,
+.existing-contact-number {
+  color: $charcoal-color;
+}
+
 .add {
   margin-top: 40px;
 }

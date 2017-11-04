@@ -14,7 +14,8 @@
 
 .emergency-title {
   margin-left: 15%;
-  font-family: Lato; }
+  font-family: Lato;
+  color: #1b1b1b; }
 
 .emergency-btn {
   background-color: #dc0800;
@@ -48,7 +49,8 @@
   margin-left: 15%;
   font-family: Lato;
   font-size: 100%;
-  width: 200%; }
+  width: 200%;
+  color: #1b1b1b; }
 
 .hotline-btn {
   background-color: #039fbe;
@@ -71,7 +73,8 @@
   margin-bottom: 30px; }
 
 .section-title {
-  font-family: Lato; }
+  font-family: Lato;
+  color: #1b1b1b; }
 
 .no-contacts-card {
   padding: 4% 4%;

@@ -14,7 +14,8 @@
 .contact-card-name {
   grid-area: contactName;
   margin-left: 15%;
-  font-family: Lato; }
+  font-family: Lato;
+  color: #1b1b1b; }
 
 .custom-text-btn {
   grid-area: customBtn;

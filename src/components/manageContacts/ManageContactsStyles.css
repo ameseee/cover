@@ -18,6 +18,10 @@
   color: #1b1b1b;
   text-align: center; }
 
+.existing-contact-name,
+.existing-contact-number {
+  color: #1b1b1b; }
+
 .add {
   margin-top: 40px; }
 
