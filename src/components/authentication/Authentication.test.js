@@ -69,6 +69,12 @@ describe('<Authentication />', () => {
     expect(wrapper.state().password).toEqual('');
   });
 
+  it.skip('should render a prompt to toggle forms', () => {
+    const prompt = wrapper.find('h4');
+
+    expect(prompt.length).toEqual(1);
+  });
+
   it.skip('should render a button to toggle sign in/up', () => {
     const button = wrapper.find('other-card-btn');
 
@@ -90,9 +96,7 @@ describe('<Authentication />', () => {
     expect(wrapper.state().newUser).toEqual(true);
   });
 
-  it.skip('should render a prompt to toggle forms', () => {
-    const prompt = wrapper.find('h4');
-
-    expect(prompt.length).toEqual(1);
+  it('should match snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 });
