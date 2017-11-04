@@ -122,8 +122,7 @@ ManageContacts.propTypes = {
   currentUser: PropTypes.string,
   loadContacts: PropTypes.func,
   loadedContacts: PropTypes.array,
-  createNewContact: PropTypes.func,
-  removeConact: PropTypes.func,
+  removeContact: PropTypes.func,
 };
 
 export default ManageContacts;
