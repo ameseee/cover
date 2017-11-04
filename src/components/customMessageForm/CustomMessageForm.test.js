@@ -61,7 +61,7 @@ describe('<CustomMessageForm />', () => {
 
     wrapper.instance().closeCustomForm = mockFn;
     closeBtn.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(1);
+    expect(mockFn).toHaveBeenCalledTimes(2);
   });
 
   it('should render a div with a sent icon', () => {
@@ -70,7 +70,7 @@ describe('<CustomMessageForm />', () => {
     expect(sendIcon.length).toEqual(1);
   });
 
-  it.skip('should match snapshot', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 

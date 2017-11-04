@@ -1,3 +1,243 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<CustomMessageForm /> should match snapshot 1`] = `undefined`;
+exports[`<CustomMessageForm /> should match snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <CustomMessageForm
+    closeCustomForm={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": null,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <textarea
+          className="custom-message-input"
+          onChange={[Function]}
+          value=""
+        />,
+        <button
+          className="close-form-btn"
+          onClick={[Function]}
+        />,
+        <article
+          className="send-sent"
+        >
+          <button
+            className="send-custom-btn"
+            onClick={[Function]}
+          >
+            Send
+          </button>
+          <div
+            className="sent-icon-hidden sent-icon"
+          />
+        </article>,
+      ],
+      "className": "custom-message-form",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "custom-message-input",
+          "onChange": [Function],
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "textarea",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "className": "close-form-btn",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": null,
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <button
+              className="send-custom-btn"
+              onClick={[Function]}
+            >
+              Send
+            </button>,
+            <div
+              className="sent-icon-hidden sent-icon"
+            />,
+          ],
+          "className": "send-sent",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Send",
+              "className": "send-custom-btn",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": "Send",
+            "type": "button",
+          },
+          Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "host",
+            "props": Object {
+              "className": "sent-icon-hidden sent-icon",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "article",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": null,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <textarea
+            className="custom-message-input"
+            onChange={[Function]}
+            value=""
+          />,
+          <button
+            className="close-form-btn"
+            onClick={[Function]}
+          />,
+          <article
+            className="send-sent"
+          >
+            <button
+              className="send-custom-btn"
+              onClick={[Function]}
+            >
+              Send
+            </button>
+            <div
+              className="sent-icon-hidden sent-icon"
+            />
+          </article>,
+        ],
+        "className": "custom-message-form",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "custom-message-input",
+            "onChange": [Function],
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "textarea",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "className": "close-form-btn",
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <button
+                className="send-custom-btn"
+                onClick={[Function]}
+              >
+                Send
+              </button>,
+              <div
+                className="sent-icon-hidden sent-icon"
+              />,
+            ],
+            "className": "send-sent",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Send",
+                "className": "send-custom-btn",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": "Send",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": null,
+              "nodeType": "host",
+              "props": Object {
+                "className": "sent-icon-hidden sent-icon",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "article",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

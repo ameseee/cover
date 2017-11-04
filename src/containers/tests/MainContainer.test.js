@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import MainContainer from '../MainContainer';
 import Main from '../../components/main/Main';
 import React from 'react';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('Custom Message Form Container', () => {
   const mockStore = configureStore();
