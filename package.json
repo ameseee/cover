@@ -26,9 +26,7 @@
       "shared"
     ],
     "moduleNameMapper": {
-      "^react(.*)$": "<rootDir>/vendor/react-master$1",
-      "^config$": "<rootDir>/configs/app-config.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js",
+      "\\.(css|scss)$": "identity-obj-proxy",
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
     }
   },
@@ -51,6 +49,7 @@
     "chai": "^4.1.2",
     "css-loader": "^0.28.7",
     "enzyme": "^3.1.0",
+    "enzyme-adapter-react-16": "^1.0.3",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.8.0",
@@ -59,7 +58,7 @@
     "file-loader": "^1.1.5",
     "firebase": "^4.6.0",
     "identity-obj-proxy": "^3.0.0",
-    "jest": "^20.0.1",
+    "jest": "21.2.1",
     "mocha": "^4.0.1",
     "mocha-loader": "^1.1.1",
     "node-libs-browser": "^2.0.0",

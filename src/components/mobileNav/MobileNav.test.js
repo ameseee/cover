@@ -7,7 +7,7 @@ describe('<MobileNav />', () => {
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    const wrapper = shallow(<MobileNav />);
+    wrapper = shallow(<MobileNav />);
   });
 
   it('should exist', () => {

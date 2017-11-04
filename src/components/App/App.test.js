@@ -1,6 +1,7 @@
 import React from 'react';
 import App from './App';
 import { shallow } from 'enzyme';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('<App />', () => {
   let wrapper;
@@ -8,69 +9,74 @@ describe('<App />', () => {
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    const wrapper = shallow(<App currentUser="Amy"/>);
+    wrapper = shallow(<App currentUser="Amy"/>);
   });
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.skip('should have a false default state of mobileNav', () => {
+  it('should have a false default state of mobileNav', () => {
     expect(wrapper.state().mobileNav).toEqual(false);
   });
 
-  it.skip('should render a nav bar', () => {
+  it('should render a nav bar', () => {
     const nav = wrapper.find('nav');
 
     expect(nav.length).toEqual(1);
   });
 
-  it.skip('should render a brand title', () => {
+  it('should render a brand title', () => {
     const title = wrapper.find('h1');
 
     expect(title.length).toEqual(1);
   });
 
-  it.skip('should render a nav bar list', () => {
+  it('should render a nav bar list', () => {
     const navList = wrapper.find('ul');
 
     expect(navList.length).toEqual(1);
   });
 
-  it.skip('should render four options on nav bar if user is signed in', () => {
+  it('should render four options on nav bar if user is signed in', () => {
     const navItems = wrapper.find('li');
 
     expect(navItems.length).toEqual(4);
   });
 
-  it.skip('should render three options on nav bar if no user', () => {
+  it('should render three options on nav bar if no user', () => {
     const noUserWrapper = shallow(<App currentUser=""/>);
     const navItems = noUserWrapper.find('li');
 
     expect(navItems.length).toEqual(3);
   });
 
-  it.skip('should render a sign out link if user is signed in', () => {
-    const signOut = noUserWrapper.find('.sign-out');
+  it('should render a sign out link if user is signed in', () => {
+    const signOut = wrapper.find('.sign-out');
 
     expect(signOut.length).toEqual(1);
   });
 
-  it.skip('should change state on click of the hamburger', () => {
+  it('should change state on click of the hamburger', () => {
+    const props = { history: [] };
+    const wrapper = shallow(<App {...props}/>);
     const hamburger = wrapper.find('.hamburger');
 
     hamburger.simulate('click');
     expect(wrapper.state().mobileNav).toEqual(true);
   });
 
-  it.skip('should run a function on click ', () => {
+  it('should run a function on click ', () => {
+    const props = { history: [],  };
+    const wrapper = shallow(<App {...props}/>);
     const hamburger = wrapper.find('.hamburger');
 
+    wrapper.instance().hideHamburger = mockFn;
     hamburger.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
-  it.skip('should match snapshot', () => {
+  it('should match snapshot', () => {
 
     expect(wrapper).toMatchSnapshot();
   });
