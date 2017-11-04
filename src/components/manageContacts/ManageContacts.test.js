@@ -63,7 +63,7 @@ describe('<ManageContacts />', () => {
   });
 
 //prob take out for MVP monday
-  it.skip('should render two edit buttons', () => {
+  it('should render two edit buttons', () => {
     const editBtn = wrapper.find('.edit-contact-btn');
 
     expect(editBtn.length).toEqual(2);
