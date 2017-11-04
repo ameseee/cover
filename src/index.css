@@ -6,6 +6,7 @@
 @import url(./components/customMessageForm/CustomMessageFormStyles.css);
 @import url(./components/contactCards/ContactCardsStyles.css);
 @import url(./components/mobileNav/MobileNavStyles.css);
+
 * {
   margin: 0;
   padding: 0;
