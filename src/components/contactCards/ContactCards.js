@@ -25,7 +25,7 @@ class ContactCards extends Component {
   }
 
   locationSuccess(pos) {
-    var crd = pos.coords;
+    let crd = pos.coords;
 
     console.log(`Your current position is: Lat: ${crd.latitude}, Lng: ${crd.longitude}, More or less ${crd.accuracy} meters.`);
   }
