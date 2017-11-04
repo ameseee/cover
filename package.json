@@ -18,7 +18,7 @@
   "jest": {
     "moduleNameMapper": {
       "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js",
-      "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
+      "\\.(css|less)$": "identity-obj-proxy"
     }
   },
   "author": "Steve Kinney",
@@ -47,7 +47,8 @@
     "eslint-plugin-react": "^7.4.0",
     "file-loader": "^1.1.5",
     "firebase": "^4.6.0",
-    "jest": "^21.2.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^20.0.1",
     "mocha": "^4.0.1",
     "mocha-loader": "^1.1.1",
     "node-libs-browser": "^2.0.0",

@@ -24,13 +24,13 @@ class App extends Component {
     this.props.setCurrentUser('');
   }
 
-  hideHamburger = () => {
+  hideHamburger() {
     this.setState({ mobileNav: true });
     this.props.history.push('/nav');
   }
 
   //how do i pass this function to mobilenav component???
-  showHamburger = () => {
+  showHamburger() {
     this.setState({ mobileNav: false });
   }
 
@@ -91,7 +91,7 @@ class App extends Component {
                 ? null
                 :
                 <li
-                  className="nav-item-li"
+                  className="nav-item-li sign-out"
                   onClick={this.signOut}>
                   <Link
                     className="nav-item"

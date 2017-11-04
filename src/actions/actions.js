@@ -1,9 +1,3 @@
-// //MAIN
-// export const getContactCards = cards => ({
-//   type: 'GET_CONTACT_CARDS',
-//   cards,
-// });
-
 export const signIn = boolean => ({
   type: 'TOGGLE_SIGN_IN',
   boolean,
