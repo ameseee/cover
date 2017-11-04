@@ -3,8 +3,13 @@ import App from './App';
 import { shallow } from 'enzyme';
 
 describe('<App />', () => {
+  let wrapper;
+  let noUserWrapper;
+  let mockFn = jest.fn();
 
-  const wrapper = shallow(<App />);
+  beforeEach( () => {
+    const wrapper = shallow(<App currentUser="Amy"/>);
+  });
 
   it('should exist', () => {
     expect(wrapper).toBeDefined();
@@ -30,6 +35,25 @@ describe('<App />', () => {
     const navList = wrapper.find('ul');
 
     expect(navList.length).toEqual(1);
+  });
+
+  it.skip('should render four options on nav bar if user is signed in', () => {
+    const navItems = wrapper.find('li');
+
+    expect(navItems.length).toEqual(4);
+  });
+
+  it.skip('should render three options on nav bar if no user', () => {
+    const noUserWrapper = shallow(<App currentUser=""/>);
+    const navItems = noUserWrapper.find('li');
+
+    expect(navItems.length).toEqual(3);
+  });
+
+  it.skip('should render a sign out link if user is signed in', () => {
+    const signOut = noUserWrapper.find('.sign-out');
+
+    expect(signOut.length).toEqual(1);
   });
 
   it.skip('should change state on click of the hamburger', () => {

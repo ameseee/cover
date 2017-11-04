@@ -91,7 +91,7 @@ class App extends Component {
                 ? null
                 :
                 <li
-                  className="nav-item-li"
+                  className="nav-item-li sign-out"
                   onClick={this.signOut}>
                   <Link
                     className="nav-item"
