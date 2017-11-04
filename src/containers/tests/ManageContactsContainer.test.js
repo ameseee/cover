@@ -4,7 +4,6 @@ import ManageContactsContainer from '../ManageContactsContainer';
 import ManageContacts from '../../components/manageContacts/ManageContacts';
 import React from 'react';
 import testSetup from '../../../__mock__/testSetup';
-import testSetup from '../../../__mock__/testSetup';
 
 describe('Custom Message Form Container', () => {
   const mockStore = configureStore();
