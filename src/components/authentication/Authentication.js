@@ -14,9 +14,11 @@ class Authentication extends Component {
     };
   }
 
-  createAccount = (newUser) => Object.entries(newUser).map(([key, value]) => {
-    Object.assign({id: key}, value);
-  });
+  createAccount = (newUser) => {
+    Object.entries(newUser).map(([key, value]) => {
+      Object.assign({id: key}, value);
+    });
+  }
 
   componentDidMount() {
     const createRef = firebase.database().ref('users');

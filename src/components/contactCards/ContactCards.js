@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
+import
+CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
 
 class ContactCards extends Component {
   constructor() {
@@ -25,10 +26,10 @@ class ContactCards extends Component {
   render() {
     const renderCustomForm =
       this.state.sendingCustom
-      ? <CustomMessageFormContainer
-        closeCustomForm={this.closeCustomForm}
-      />
-      : null;
+        ? <CustomMessageFormContainer
+          closeCustomForm={this.closeCustomForm}
+        />
+        : null;
 
     return (
       <article className="contact-card">
@@ -43,12 +44,12 @@ class ContactCards extends Component {
         >
           Send my location NOW!!
         </button>
-          {renderCustomForm}
+        {renderCustomForm}
       </article>
     );
   }
 
-};
+}
 
 ContactCards.propTypes = {
   name: PropTypes.string,
