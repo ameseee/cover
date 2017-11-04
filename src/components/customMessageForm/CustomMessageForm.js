@@ -18,7 +18,7 @@ class CustomMessageForm extends Component {
 
   handleSend() {
     this.props.sendCustom(this.state.message, '5756441355');
-    //i need to verify the next has actually been sent before doing this... :
+    //i need to verify the next has actually been sent before doing this :
     this.setState({
       sent: true
     });
@@ -27,8 +27,8 @@ class CustomMessageForm extends Component {
 
   render() {
     const sentNotification = this.state.sent
-      ? <div className="sent-icon-displayed"></div>
-      : <p className="sent-icon-hidden"></p>;
+      ? <div className="sent-icon-displayed sent-icon"></div>
+      : <div className="sent-icon-hidden sent-icon"></div>;
 
     return (
       <div className="custom-message-form">
