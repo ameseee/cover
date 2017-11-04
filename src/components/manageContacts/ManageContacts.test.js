@@ -33,7 +33,54 @@ describe('<ManageContacts />', () => {
 
     expect(allContacts.length).toEqual(1);
   });
-  //figure out how to give props to the component, give a fake contact
+
+  //figure out how to give props to the component, give 2 fake contacts
+
+  it.skip('should render two contact cards', () => {
+    const cards = wrapper.find('.existing-contact-card');
+
+    expect(cards.length).toEqual(2);
+  });
+
+  it.skip('should render two contact names', () => {
+    const names = wrapper.find('.existing-contact-name');
+
+    expect(names.length).toEqual(2);
+  });
+
+  it.skip('should render two contact numbers', () => {
+    const numbers = wrapper.find('.existing-contact-name');
+
+    expect(numbers.length).toEqual(2);
+  });
+
+//prob take out for MVP monday
+  it.skip('should render two edit buttons', () => {
+    const editBtn = wrapper.find('.edit-contact-btn');
+
+    expect(editBtn.length).toEqual(2);
+  });
+
+//prob take out for MVP monday
+  it.skip('should run a function to edit a contact', () => {
+    const editBtn = wrapper.find('.edit-contact-btn');
+
+    editBtn.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
+
+  it.skip('should render two remove buttons', () => {
+    const removeBtn = wrapper.find('.remove-contact-btn');
+
+    expect(removeBtn.length).toEqual(2);
+  });
+
+  it.skip('should run a function to remove a contact', () => {
+    const removeBtn = wrapper.find('.remove-contact-btn');
+
+    removeBtn.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
 
   it.skip('should render a section to add new contacts', () => {
     const formSection = wrapper.find('.create-contact-form');
@@ -76,7 +123,7 @@ describe('<ManageContacts />', () => {
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
-  it('should match snapshot', () => {
+  it.skip('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
