@@ -30,7 +30,7 @@ describe('Custom Message Form Container', () => {
       loadedContacts={initialState.loadedContacts}
       loadContacts={mockLoadContacts} />);
 
-    //componentDidMount
+    //componentDidMount ??
     expect(mockLoadContacts).toHaveBeenCalledTimes(1);
   });
 

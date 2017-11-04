@@ -3,7 +3,6 @@ import ManageContacts from '../components/manageContacts/ManageContacts';
 import {
   createNewContact,
   loadContacts,
-  removeFromFB
 } from '../actions/actions';
 
 const mapStateToProps = store => ({
@@ -12,14 +11,8 @@ const mapStateToProps = store => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  createNewContact: contact => {
-    dispatch(createNewContact(contact));
-  },
   loadContacts: contacts => {
     dispatch(loadContacts(contacts));
-  },
-  removeFromFB: id => {
-    dispatch(removeFromFB(id));
   },
 });
 
