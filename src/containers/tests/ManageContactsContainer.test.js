@@ -3,6 +3,7 @@ import { mount } from 'enzyme';
 import ManageContactsContainer from '../ManageContactsContainer';
 import ManageContacts from '../../components/manageContacts/ManageContacts';
 import React from 'react';
+import testSetup from '../../../__mock__/testSetup';
 
 describe('Custom Message Form Container', () => {
   const mockStore = configureStore();
@@ -32,6 +33,7 @@ describe('Custom Message Form Container', () => {
 
     const createNewContactBtn = actionWrapper.find('.save-new-contact');
 
+    wrapper.instance().loadContacts = mockLoadContacts;
     createNewContactBtn.simulate('click');
     expect(mockLoadContacts).toHaveBeenCalledTimes(1);
   });

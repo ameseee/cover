@@ -16,6 +16,10 @@
     "url": "https://github.com/turingschool-examples/react-starter-kit.git"
   },
   "jest": {
+    "testFileExtensions": [
+      "es6",
+      "js"
+    ],
     "moduleFileExtensions": [
       "js",
       "jsx"
