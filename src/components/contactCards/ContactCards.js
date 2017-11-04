@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
+import { getLatLng } from '../../utils/location';
 import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
@@ -24,28 +25,8 @@ class ContactCards extends Component {
     });
   }
 
-  locationSuccess(pos) {
-    let crd = pos.coords;
-
-    console.log(`Your current position is: Lat: ${crd.latitude}, Lng: ${crd.longitude}, More or less ${crd.accuracy} meters.`);
-  }
-
-  locationError(error) {
-    alert(`ERROR(${error.code}): ${error.message}`);
-  }
-
   getLocation() {
-    const options = {
-      enableHighAccuracy: true,
-      timeout: 5000,
-      maximumAge: 0
-    };
-
-    navigator.geolocation.getCurrentPosition(
-      this.locationSuccess,
-      this.locationError,
-      options
-    );
+    getLatLng();
   }
 
   render() {
