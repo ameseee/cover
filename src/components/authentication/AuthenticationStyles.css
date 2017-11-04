@@ -1,6 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
-.authentication-section .hidden {
-  display: none; }
+.authentication-section {
+  height: 100vh; }
+  .authentication-section .hidden {
+    display: none; }
 
 .create-account-section {
   border: 1px solid #E6E6E8;
