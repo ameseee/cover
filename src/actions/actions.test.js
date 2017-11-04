@@ -49,7 +49,18 @@ describe('actions', () => {
       expect(actions.removeFromFB('123')).toEqual(expectedAction);
     });
 
-  //loadContacts
+  it('should create an action to load contacts', () => {
+    const contacts = [
+      {name: 'Cindy', number: '3035551234'},
+      {name: 'Francy', number: '7025551234'}];
+    const expectedAction = {
+      type: 'LOAD_CONTACTS',
+      contacts
+    };
+
+    expect(actions.loadContacts(contacts))
+      .toEqual(expectedAction);
+  });
 
   it('should create an action to load all contacts', () => {
     const expectedAction = {
