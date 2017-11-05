@@ -36,12 +36,12 @@ class Main extends React.Component {
           {"You don't have any contacts saved yet!"}
         </h4>
         <button className="add-contacts-btn">
-          {/* <Link
+          <Link
             className="add-contacts-link"
             to="/contacts"
           >
             Add Contacts
-          </Link> */}
+          </Link>
         </button>
       </article>
     );
