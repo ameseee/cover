@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import {fetchScopedUsers} from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
-import ContactCards from '../../components/contactCards/ContactCards';
+import ContactCardsContainer from '../../containers/ContactCardsContainer';
 
 class Main extends React.Component {
   constructor() {
@@ -20,7 +20,7 @@ class Main extends React.Component {
 
     return loadedContacts.map((contact, index) => {
       return (
-        <ContactCards
+        <ContactCardsContainer
           key={index}
           name={contact.contactName}
         />

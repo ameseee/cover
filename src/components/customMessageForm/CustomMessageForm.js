@@ -38,7 +38,7 @@ class CustomMessageForm extends Component {
         />
         <button
           className="close-form-btn"
-          onClick={() => this.props.closeCustomForm()}
+          onClick={() => this.props.toggleCustomForm()}
         >
 
         </button>
