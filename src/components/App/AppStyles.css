@@ -6,7 +6,8 @@
   height: 25px;
   width: 25px;
   border: none;
-  background-color: #282a40; }
+  background-color: #282a40;
+  margin-right: 7.5px; }
 
 .nav-bar-brand-link {
   text-decoration: none;
