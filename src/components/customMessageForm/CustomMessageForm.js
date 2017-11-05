@@ -18,7 +18,6 @@ class CustomMessageForm extends Component {
 
   handleSend() {
     this.props.sendCustom(this.state.message, '5756441355');
-    //i need to verify the next has actually been sent before doing this :
     this.setState({
       sent: true
     });
@@ -38,7 +37,7 @@ class CustomMessageForm extends Component {
         />
         <button
           className="close-form-btn"
-          onClick={() => this.props.closeCustomForm()}
+          onClick={() => this.props.toggleCustomForm()}
         >
 
         </button>

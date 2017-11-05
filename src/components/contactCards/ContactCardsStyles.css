@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
 .contact-card {
   display: grid;
-  grid-template-columns: 1.75fr 2.25fr 2.25fr;
+  grid-template-columns: 1.75fr 2.5fr 2.5fr;
   grid-template-areas: "contactName customBtn locationBtn" "form form form";
   grid-column-gap: 25px;
   align-items: center;
@@ -23,7 +23,7 @@
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 85%;
+  font-size: 80%;
   padding: 10px;
   width: 90%;
   font-family: Lato; }
@@ -38,7 +38,7 @@
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 85%;
+  font-size: 76%;
   padding: 10px;
   width: 90%;
   font-family: Lato; }

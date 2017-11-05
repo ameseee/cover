@@ -9,31 +9,38 @@ class ContactCards extends Component {
   constructor() {
     super();
     this.state = {
-      sendingCustom: false
+      sendingCustom: false,
+      location: '',
     };
   }
 
-  openCustomForm = () => {
+  toggleCustomForm = () => {
     this.setState({
-      sendingCustom: true
+      sendingCustom: !this.state.sendingCustom
     });
   }
 
-  closeCustomForm = () => {
-    this.setState({
-      sendingCustom: false
-    });
+  shouldComponentUpdate(nextState) {
+    if (nextState !== this.state) return true;
   }
 
-  getLocation() {
-    getLatLng();
+  componentDidMount() {
+    const location = getLatLng();
+    setTimeout(() => {
+      this.setState({location: location});
+    }, 5000);
+  }
+
+  handleSend() {
+    // console.log(this.state.location);
+    this.props.sendCustom(this.state.location, '5756441355');
   }
 
   render() {
     const renderCustomForm =
       this.state.sendingCustom
         ? <CustomMessageFormContainer
-          closeCustomForm={this.closeCustomForm}
+          toggleCustomForm={this.toggleCustomForm}
         />
         : null;
 
@@ -42,14 +49,14 @@ class ContactCards extends Component {
         <h4 className="contact-card-name">{this.props.name}</h4>
         <button
           className="custom-text-btn"
-          onClick={() => this.openCustomForm()}>
+          onClick={() => this.toggleCustomForm()}>
           Send custom text
         </button>
         <button
           className="location-now-btn"
-          onClick={() => this.getLocation()}
+          onClick={() => this.handleSend()}
         >
-          Send my location NOW!!
+          Send my location NOW!
         </button>
         {renderCustomForm}
       </article>
@@ -59,6 +66,7 @@ class ContactCards extends Component {
 
 ContactCards.propTypes = {
   name: PropTypes.string,
+  sendCustom: PropTypes.func,
 };
 
 export default ContactCards;

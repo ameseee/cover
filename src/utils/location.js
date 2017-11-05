@@ -1,24 +1,10 @@
-const locationSuccess = (pos) => {
-  let crd = pos.coords;
-
-  console.log(`Your current position is: Lat: ${crd.latitude}, Lng: ${crd.longitude}, More or less ${crd.accuracy} meters.`);
-};
-
-const locationError = (error) => {
-  alert(`ERROR(${error.code}): ${error.message}`);
-};
-
 export const getLatLng = () => {
-  const options = {
-    enableHighAccuracy: true,
-    timeout: 5000,
-    maximumAge: 0
-  };
-  navigator.geolocation.getCurrentPosition(
-    locationSuccess,
-    locationError,
-    options
-  );
+  navigator.geolocation.getCurrentPosition((position) => {
+    let location = position.coords;
+
+    console.log(location.latitude, location.longitude, location.accuracy);
+    return `${location.latitude}, ${location.longitude}`;
+  });
 };
 
-// (`https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&callback=initMap`)
+// (`https://maps.googleapis.com/maps/api/js?key=${googleApiKey}&callback=initMap`);
