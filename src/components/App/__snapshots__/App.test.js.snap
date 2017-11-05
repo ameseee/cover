@@ -52,11 +52,6 @@ ShallowWrapper {
             </Link>
           </li>
           <li
-            className="nav-item-li nav-item"
-          >
-            About
-          </li>
-          <li
             className="nav-item-li"
           >
             <Link
@@ -118,11 +113,6 @@ ShallowWrapper {
               >
                 Home
               </Link>
-            </li>
-            <li
-              className="nav-item-li nav-item"
-            >
-              About
             </li>
             <li
               className="nav-item-li"
@@ -206,11 +196,6 @@ ShallowWrapper {
                 </Link>
               </li>,
               <li
-                className="nav-item-li nav-item"
-              >
-                About
-              </li>,
-              <li
                 className="nav-item-li"
               >
                 <Link
@@ -279,18 +264,6 @@ ShallowWrapper {
                 "rendered": "Home",
                 "type": [Function],
               },
-              "type": "li",
-            },
-            Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "host",
-              "props": Object {
-                "children": "About",
-                "className": "nav-item-li nav-item",
-              },
-              "ref": null,
-              "rendered": "About",
               "type": "li",
             },
             Object {
@@ -403,11 +376,6 @@ ShallowWrapper {
               </Link>
             </li>
             <li
-              className="nav-item-li nav-item"
-            >
-              About
-            </li>
-            <li
               className="nav-item-li"
             >
               <Link
@@ -469,11 +437,6 @@ ShallowWrapper {
                 >
                   Home
                 </Link>
-              </li>
-              <li
-                className="nav-item-li nav-item"
-              >
-                About
               </li>
               <li
                 className="nav-item-li"
@@ -557,11 +520,6 @@ ShallowWrapper {
                   </Link>
                 </li>,
                 <li
-                  className="nav-item-li nav-item"
-                >
-                  About
-                </li>,
-                <li
                   className="nav-item-li"
                 >
                   <Link
@@ -630,18 +588,6 @@ ShallowWrapper {
                   "rendered": "Home",
                   "type": [Function],
                 },
-                "type": "li",
-              },
-              Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "host",
-                "props": Object {
-                  "children": "About",
-                  "className": "nav-item-li nav-item",
-                },
-                "ref": null,
-                "rendered": "About",
                 "type": "li",
               },
               Object {

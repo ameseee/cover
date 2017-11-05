@@ -31,11 +31,6 @@ ShallowWrapper {
             Home
           </Link>
         </div>,
-        <div
-          className="drop-down-option"
-        >
-          About
-        </div>,
         <div>
           <Link
             className="drop-down-option"
@@ -99,18 +94,6 @@ ShallowWrapper {
           "rendered": "Home",
           "type": [Function],
         },
-        "type": "div",
-      },
-      Object {
-        "instance": null,
-        "key": null,
-        "nodeType": "host",
-        "props": Object {
-          "children": "About",
-          "className": "drop-down-option",
-        },
-        "ref": null,
-        "rendered": "About",
         "type": "div",
       },
       Object {
@@ -196,11 +179,6 @@ ShallowWrapper {
               Home
             </Link>
           </div>,
-          <div
-            className="drop-down-option"
-          >
-            About
-          </div>,
           <div>
             <Link
               className="drop-down-option"
@@ -264,18 +242,6 @@ ShallowWrapper {
             "rendered": "Home",
             "type": [Function],
           },
-          "type": "div",
-        },
-        Object {
-          "instance": null,
-          "key": null,
-          "nodeType": "host",
-          "props": Object {
-            "children": "About",
-            "className": "drop-down-option",
-          },
-          "ref": null,
-          "rendered": "About",
           "type": "div",
         },
         Object {

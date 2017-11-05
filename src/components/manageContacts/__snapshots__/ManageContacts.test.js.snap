@@ -58,12 +58,6 @@ ShallowWrapper {
                 </p>
               </div>
               <button
-                className="edit-contact-btn"
-                onClick={[Function]}
-              >
-                Edit
-              </button>
-              <button
                 className="remove-contact-btn"
                 onClick={[Function]}
               >
@@ -85,12 +79,6 @@ ShallowWrapper {
                   3035551234
                 </p>
               </div>
-              <button
-                className="edit-contact-btn"
-                onClick={[Function]}
-              >
-                Edit
-              </button>
               <button
                 className="remove-contact-btn"
                 onClick={[Function]}
@@ -174,12 +162,6 @@ ShallowWrapper {
                 </p>
               </div>
               <button
-                className="edit-contact-btn"
-                onClick={[Function]}
-              >
-                Edit
-              </button>
-              <button
                 className="remove-contact-btn"
                 onClick={[Function]}
               >
@@ -201,12 +183,6 @@ ShallowWrapper {
                   3035551234
                 </p>
               </div>
-              <button
-                className="edit-contact-btn"
-                onClick={[Function]}
-              >
-                Edit
-              </button>
               <button
                 className="remove-contact-btn"
                 onClick={[Function]}
@@ -240,12 +216,6 @@ ShallowWrapper {
                   </p>
                 </div>
                 <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
-                <button
                   className="remove-contact-btn"
                   onClick={[Function]}
                 >
@@ -267,12 +237,6 @@ ShallowWrapper {
                     3035551234
                   </p>
                 </div>
-                <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
                 <button
                   className="remove-contact-btn"
                   onClick={[Function]}
@@ -303,12 +267,6 @@ ShallowWrapper {
                       5756441355
                     </p>
                   </div>,
-                  <button
-                    className="edit-contact-btn"
-                    onClick={[Function]}
-                  >
-                    Edit
-                  </button>,
                   <button
                     className="remove-contact-btn"
                     onClick={[Function]}
@@ -372,19 +330,6 @@ ShallowWrapper {
                   "key": null,
                   "nodeType": "host",
                   "props": Object {
-                    "children": "Edit",
-                    "className": "edit-contact-btn",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Edit",
-                  "type": "button",
-                },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "host",
-                  "props": Object {
                     "children": "Remove",
                     "className": "remove-contact-btn",
                     "onClick": [Function],
@@ -414,12 +359,6 @@ ShallowWrapper {
                       3035551234
                     </p>
                   </div>,
-                  <button
-                    className="edit-contact-btn"
-                    onClick={[Function]}
-                  >
-                    Edit
-                  </button>,
                   <button
                     className="remove-contact-btn"
                     onClick={[Function]}
@@ -477,19 +416,6 @@ ShallowWrapper {
                     },
                   ],
                   "type": "div",
-                },
-                Object {
-                  "instance": null,
-                  "key": null,
-                  "nodeType": "host",
-                  "props": Object {
-                    "children": "Edit",
-                    "className": "edit-contact-btn",
-                    "onClick": [Function],
-                  },
-                  "ref": null,
-                  "rendered": "Edit",
-                  "type": "button",
                 },
                 Object {
                   "instance": null,
@@ -684,12 +610,6 @@ ShallowWrapper {
                   </p>
                 </div>
                 <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
-                <button
                   className="remove-contact-btn"
                   onClick={[Function]}
                 >
@@ -711,12 +631,6 @@ ShallowWrapper {
                     3035551234
                   </p>
                 </div>
-                <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
                 <button
                   className="remove-contact-btn"
                   onClick={[Function]}
@@ -800,12 +714,6 @@ ShallowWrapper {
                   </p>
                 </div>
                 <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
-                <button
                   className="remove-contact-btn"
                   onClick={[Function]}
                 >
@@ -827,12 +735,6 @@ ShallowWrapper {
                     3035551234
                   </p>
                 </div>
-                <button
-                  className="edit-contact-btn"
-                  onClick={[Function]}
-                >
-                  Edit
-                </button>
                 <button
                   className="remove-contact-btn"
                   onClick={[Function]}
@@ -866,12 +768,6 @@ ShallowWrapper {
                     </p>
                   </div>
                   <button
-                    className="edit-contact-btn"
-                    onClick={[Function]}
-                  >
-                    Edit
-                  </button>
-                  <button
                     className="remove-contact-btn"
                     onClick={[Function]}
                   >
@@ -893,12 +789,6 @@ ShallowWrapper {
                       3035551234
                     </p>
                   </div>
-                  <button
-                    className="edit-contact-btn"
-                    onClick={[Function]}
-                  >
-                    Edit
-                  </button>
                   <button
                     className="remove-contact-btn"
                     onClick={[Function]}
@@ -929,12 +819,6 @@ ShallowWrapper {
                         5756441355
                       </p>
                     </div>,
-                    <button
-                      className="edit-contact-btn"
-                      onClick={[Function]}
-                    >
-                      Edit
-                    </button>,
                     <button
                       className="remove-contact-btn"
                       onClick={[Function]}
@@ -998,19 +882,6 @@ ShallowWrapper {
                     "key": null,
                     "nodeType": "host",
                     "props": Object {
-                      "children": "Edit",
-                      "className": "edit-contact-btn",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "Edit",
-                    "type": "button",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": null,
-                    "nodeType": "host",
-                    "props": Object {
                       "children": "Remove",
                       "className": "remove-contact-btn",
                       "onClick": [Function],
@@ -1040,12 +911,6 @@ ShallowWrapper {
                         3035551234
                       </p>
                     </div>,
-                    <button
-                      className="edit-contact-btn"
-                      onClick={[Function]}
-                    >
-                      Edit
-                    </button>,
                     <button
                       className="remove-contact-btn"
                       onClick={[Function]}
@@ -1103,19 +968,6 @@ ShallowWrapper {
                       },
                     ],
                     "type": "div",
-                  },
-                  Object {
-                    "instance": null,
-                    "key": null,
-                    "nodeType": "host",
-                    "props": Object {
-                      "children": "Edit",
-                      "className": "edit-contact-btn",
-                      "onClick": [Function],
-                    },
-                    "ref": null,
-                    "rendered": "Edit",
-                    "type": "button",
                   },
                   Object {
                     "instance": null,

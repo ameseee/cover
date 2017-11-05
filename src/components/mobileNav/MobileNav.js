@@ -12,7 +12,6 @@ const MobileNav = ({ history }) => {
 
   return (
     <section className="drop-down">
-
       <button
         className="go-back"
         onClick={() => closeMobileNav()}>
@@ -25,9 +24,6 @@ const MobileNav = ({ history }) => {
           Home
         </Link>
       </div>
-
-      <div className="drop-down-option">About</div>
-
       <div>
         <Link
           to="/contacts"
@@ -36,7 +32,6 @@ const MobileNav = ({ history }) => {
           Contacts
         </Link>
       </div>
-
       <div>
         <Link
           to="/"
@@ -45,7 +40,6 @@ const MobileNav = ({ history }) => {
           Sign Out
         </Link>
       </div>
-
     </section>
   );
 };
