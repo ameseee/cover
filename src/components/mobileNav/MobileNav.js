@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 const MobileNav = ({ history }) => {
 
   const closeMobileNav = () => {
-    //show the hamburger!!!
     history.goBack();
   };
 
