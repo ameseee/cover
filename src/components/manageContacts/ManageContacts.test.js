@@ -93,7 +93,7 @@ describe('<ManageContacts />', () => {
   });
 
 //not passing!!! it says state is still empty WHY
-  it.only('should change state on input', () => {
+  it('should change state on input', () => {
     const contactName = wrapper.find('.new-contact-name');
     const contactNumber = wrapper.find('.new-contact-number');
 

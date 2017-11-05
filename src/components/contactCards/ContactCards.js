@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
+import { sendCustom } from '../../utils/postToServer';
 //import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
@@ -30,7 +31,7 @@ class ContactCards extends Component {
   }
 
   handleSend = () => {
-    this.props.sendCustom(this.state.location, '5756441355');
+    sendCustom(this.state.location, '5756441355');
   }
 
   render() {

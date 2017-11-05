@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
-import {fetchScopedUsers, removeContact} from './../../utils/fetchScopedUsers';
+import {
+  fetchScopedUsers,
+  removeContact
+} from './../../utils/fetchScopedUsers';
 
 class ManageContacts extends Component {
   constructor() {

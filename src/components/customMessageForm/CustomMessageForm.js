@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { sendCustom } from '../../utils/postToServer';
 
 class CustomMessageForm extends Component {
   constructor() {
@@ -17,7 +18,7 @@ class CustomMessageForm extends Component {
   }
 
   handleSend = () => {
-    this.props.sendCustom(this.state.message, '5756441355');
+    sendCustom(this.state.message, '5756441355');
     this.setState({
       sent: true
     });
@@ -39,7 +40,6 @@ class CustomMessageForm extends Component {
           className="close-form-btn"
           onClick={() => this.props.toggleCustomForm()}
         >
-
         </button>
         <article className="send-sent">
           <button
@@ -56,9 +56,7 @@ class CustomMessageForm extends Component {
 }
 
 CustomMessageForm.propTypes = {
-  sendCustom: PropTypes.func,
   toggleCustomForm: PropTypes.func,
 };
-
 
 export default CustomMessageForm;

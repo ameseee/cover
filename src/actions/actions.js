@@ -27,16 +27,3 @@ export const loadContacts = contacts => ({
   type: 'LOAD_CONTACTS',
   contacts,
 });
-
-export const sendCustom = (message, phone) => {
-  return dispatch => {
-    fetch('http://localhost:3000/api/message', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json'},
-      body: JSON.stringify({ message, phone })
-    })
-      .then(response => response.json())
-      .catch(error => console.log('THIS IS THE ALERT', error));
-  };
-
-};

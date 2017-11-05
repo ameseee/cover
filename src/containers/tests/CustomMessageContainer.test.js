@@ -1,7 +1,8 @@
 import configureStore from 'redux-mock-store';
 import { mount } from 'enzyme';
 import CustomMessageFormContainer from '../CustomMessageFormContainer';
-import CustomMessageForm from '../../components/customMessageForm/CustomMessageForm';
+import
+CustomMessageForm from '../../components/customMessageForm/CustomMessageForm';
 import React from 'react';
 import testSetup from '../../../__mock__/testSetup';
 
@@ -15,7 +16,7 @@ describe('Custom Message Form Container', () => {
   const wrapper = mount(<CustomMessageForm
     store={store}
     contacts={initialState.contacts}
-    sendCustom={mockSendCustom}/>);
+    sendCustom={mockSendCustom} />);
 
   it('should have a default state', () => {
     expect(wrapper.instance().props.contacts).toEqual([]);
@@ -25,7 +26,7 @@ describe('Custom Message Form Container', () => {
     const actionWrapper = mount(<CustomMessageForm
       store={store}
       contacts={initialState.contacts}
-      sendCustom={mockSendCustom}/>);
+      sendCustom={mockSendCustom} />);
 
     const sendCustomBtn = actionWrapper.find('.send-custom-btn');
 
