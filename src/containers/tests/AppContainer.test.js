@@ -7,7 +7,6 @@ import React from 'react';
 import testSetup from '../../../__mock__/testSetup';
 import PropTypes from 'prop-types';
 
-
 describe('App Container', () => {
   const mockStore = configureStore();
   const initialState = {
