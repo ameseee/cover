@@ -42,11 +42,6 @@ class ManageContacts extends Component {
     });
   }
 
-  handleEdit() {
-    //not in MVP
-    // open up a form so they can edit.
-  }
-
   handleRemove(contact) {
     this.removeContact(contact, firebase);
   }
@@ -64,9 +59,6 @@ class ManageContacts extends Component {
             <h4 className="existing-contact-name">{contact.contactName}</h4>
             <p className="existing-contact-number">{contact.contactNumber}</p>
           </div>
-          <button
-            className="edit-contact-btn"
-            onClick={this.handleEdit}>Edit</button>
           <button
             className="remove-contact-btn"
             onClick={() => this.handleRemove(contact)}

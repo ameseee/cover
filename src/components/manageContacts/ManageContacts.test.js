@@ -62,21 +62,6 @@ describe('<ManageContacts />', () => {
     expect(numbers.length).toEqual(2);
   });
 
-//prob take out for MVP monday
-  it('should render two edit buttons', () => {
-    const editBtn = wrapper.find('.edit-contact-btn');
-
-    expect(editBtn.length).toEqual(2);
-  });
-
-//prob take out for MVP monday
-  it.skip('should run a function to edit a contact', () => {
-    const editBtn = wrapper.find('.edit-contact-btn');
-
-    editBtn.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
-
   it('should render two remove buttons', () => {
     const removeBtn = wrapper.find('.remove-contact-btn');
 
