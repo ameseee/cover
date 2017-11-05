@@ -26,7 +26,10 @@ describe('App Container', () => {
     expect(wrapper.instance().props.currentUser).toEqual('');
   });
 
-  it.skip('should fire actions', () => {
+  it('should fire actions', () => {
+    const userState = {
+      currentUser: 'Amy',
+    };
     const actionWrapper = mount(<App
       store={store}
       currentUser={initialState.currentUser}
