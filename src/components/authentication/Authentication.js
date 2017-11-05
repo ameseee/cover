@@ -14,12 +14,6 @@ class Authentication extends Component {
     };
   }
 
-  createAccount = (newUser) => {
-    Object.entries(newUser).map(([key, value]) => {
-      Object.assign({id: key}, value);
-    });
-  }
-
   componentDidMount() {
     const createRef = firebase.database().ref('users');
 
@@ -32,6 +26,12 @@ class Authentication extends Component {
 
   handleChange(key, event) {
     this.setState({ [key]: event.target.value });
+  }
+
+  createAccount = (newUser) => {
+    Object.entries(newUser).map(([key, value]) => {
+      Object.assign({id: key}, value);
+    });
   }
 
   createAccountClick = (email, password) => {
@@ -160,9 +160,9 @@ class Authentication extends Component {
 
 Authentication.propTypes = {
   currentUser: PropTypes.string,
+  history: PropTypes.object,
   setCurrentUser: PropTypes.func,
   signIn: PropTypes.func,
-  history: PropTypes.object,
 };
 
 export default Authentication;

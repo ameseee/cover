@@ -42,5 +42,3 @@ describe('<ContactCards />', () => {
   });
 
 });
-
-//should render custom form when state is true

@@ -16,7 +16,7 @@ class CustomMessageForm extends Component {
     });
   }
 
-  handleSend() {
+  handleSend = () => {
     this.props.sendCustom(this.state.message, '5756441355');
     this.setState({
       sent: true
@@ -57,7 +57,7 @@ class CustomMessageForm extends Component {
 
 CustomMessageForm.propTypes = {
   sendCustom: PropTypes.func,
-  closeCustomForm: PropTypes.func,
+  toggleCustomForm: PropTypes.func,
 };
 
 

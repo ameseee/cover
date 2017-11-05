@@ -31,7 +31,7 @@ ShallowWrapper {
           className="location-now-btn"
           onClick={[Function]}
         >
-          Send my location NOW!!
+          Send my location NOW!
         </button>,
         null,
       ],
@@ -69,12 +69,12 @@ ShallowWrapper {
         "key": null,
         "nodeType": "host",
         "props": Object {
-          "children": "Send my location NOW!!",
+          "children": "Send my location NOW!",
           "className": "location-now-btn",
           "onClick": [Function],
         },
         "ref": null,
-        "rendered": "Send my location NOW!!",
+        "rendered": "Send my location NOW!",
         "type": "button",
       },
       null,
@@ -101,7 +101,7 @@ ShallowWrapper {
             className="location-now-btn"
             onClick={[Function]}
           >
-            Send my location NOW!!
+            Send my location NOW!
           </button>,
           null,
         ],
@@ -139,12 +139,12 @@ ShallowWrapper {
           "key": null,
           "nodeType": "host",
           "props": Object {
-            "children": "Send my location NOW!!",
+            "children": "Send my location NOW!",
             "className": "location-now-btn",
             "onClick": [Function],
           },
           "ref": null,
-          "rendered": "Send my location NOW!!",
+          "rendered": "Send my location NOW!",
           "type": "button",
         },
         null,
