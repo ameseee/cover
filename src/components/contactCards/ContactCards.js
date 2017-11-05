@@ -19,7 +19,7 @@ class ContactCards extends Component {
       sendingCustom: !this.state.sendingCustom
     });
   }
-  
+
   shouldComponentUpdate(nextState) {
     if (nextState !== this.state) return true;
   }
@@ -56,7 +56,7 @@ class ContactCards extends Component {
           className="location-now-btn"
           onClick={() => this.handleSend()}
         >
-          Send my location NOW!!
+          Send my location NOW!
         </button>
         {renderCustomForm}
       </article>
