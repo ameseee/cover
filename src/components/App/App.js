@@ -6,6 +6,7 @@ import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
 
+
 class App extends Component {
   constructor() {
     super();
@@ -102,7 +103,7 @@ class App extends Component {
 
 App.propTypes = {
   currentUser: PropTypes.string,
-  history: PropTypes.array,
+  history: PropTypes.object,
   setCurrentUser: PropTypes.func,
   signOut: PropTypes.func,
 };
