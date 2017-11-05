@@ -6,6 +6,7 @@ import App from '../../components/App/App';
 import React from 'react';
 import testSetup from '../../../__mock__/testSetup';
 import PropTypes from 'prop-types';
+import createRouterContext from 'react-router-test-context';
 
 describe('App Container', () => {
   const mockStore = configureStore();
@@ -15,15 +16,20 @@ describe('App Container', () => {
   const mockSetCurrentUser = jest.fn();
   const mockSignOut = jest.fn();
   const store = mockStore(initialState);
-  const wrapper = mount(
-    <App
-      store={store}
-      currentUser={initialState.currentUser}
-      signOut={mockSignOut}
-      setCurrentUser={mockSetCurrentUser}/>
-  );
+  const context = createRouterContext();
+
+  AppContainer.contextTypes = {
+    router: PropTypes.object
+  };
 
   it('should have a default state', () => {
+    const wrapper = mount(
+      <AppContainer
+        store={store}
+        currentUser={initialState.currentUser}
+        signOut={mockSignOut}
+        setCurrentUser={mockSetCurrentUser} />, { context });
+
     expect(wrapper.instance().props.currentUser).toEqual('');
   });
 
@@ -31,11 +37,11 @@ describe('App Container', () => {
     const userState = {
       currentUser: 'Amy',
     };
-    const actionWrapper = mount(<App
+    const actionWrapper = mount(<AppContainer
       store={store}
-      currentUser={initialState.currentUser}
+      currentUser={userState.currentUser}
       signOut={mockSignOut}
-      setCurrentUser={mockSetCurrentUser}/>);
+      setCurrentUser={mockSetCurrentUser} />, { context });
 
     const signOutBtn = actionWrapper.find('.sign-out');
 
