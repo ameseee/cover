@@ -82,21 +82,21 @@ class Authentication extends Component {
           <h3 className="create-account-title">Create Your Account</h3>
           <div>
             <input
-              className="name"
+              className="sign-up-name name"
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
             />
             <input
-              className="password"
+              className="sign-up-password password"
               type="password"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
             />
             <button
-              className="btn"
+              className="sign-up-btn btn"
               onClick={() => this.createAccountClick(
                 this.state.username,
                 this.state.password)}
@@ -113,21 +113,21 @@ class Authentication extends Component {
           <h3 className="sign-in-title">Sign In</h3>
           <div>
             <input
-              className="name"
+              className="sign-in-name name"
               type="text"
               value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
             />
             <input
-              className="password"
+              className="sign-in-password password"
               type="password"
               value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
             />
             <button
-              className="btn"
+              className="sign-in-btn btn"
               onClick={() => this.signInClick(
                 this.state.username,
                 this.state.password)}>
@@ -148,7 +148,8 @@ class Authentication extends Component {
                 : 'Don\'t have an accout yet?'}
           </h4>
           <button
-            className="other-card-btn" onClick={this.switchToOtherForm}
+            className="other-card-btn"
+            onClick={this.switchToOtherForm}
           >
             {this.state.newUser ? 'Sign In' : 'Sign Up'}
           </button>

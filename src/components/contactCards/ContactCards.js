@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
-import { getLatLng } from '../../utils/location';
 //import geoTools from 'geo-tools';
 
 class ContactCards extends Component {

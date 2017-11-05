@@ -15,7 +15,7 @@ describe('<Authentication />', () => {
     expect(wrapper).toBeDefined();
   });
 
-  it.only('should have a empty default state of username', () => {
+  it('should have a empty default state of username', () => {
     expect(wrapper.state().username).toEqual('');
   });
 
@@ -27,23 +27,21 @@ describe('<Authentication />', () => {
     expect(wrapper.state().newUser).toEqual(false);
   });
 
-
-  it('should render a title', () => {
+  it('should render a title for each form', () => {
     const title = wrapper.find('h3');
 
-    //it wants 2 bc of conditional rendering
-    expect(title.length).toEqual(1);
+    expect(title.length).toEqual(2);
   });
 
-  it('should render two inputs', () => {
+  it('should render two inputs for each form', () => {
     const input = wrapper.find('input');
 
-    expect(input.length).toEqual(2);
+    expect(input.length).toEqual(4);
   });
 
-  it.skip('should change state on input', () => {
-    const username = wrapper.find('.name');
-    const password = wrapper.find('.password');
+  it('should change state on input', () => {
+    const username = wrapper.find('.sign-in-name');
+    const password = wrapper.find('.sign-in-password');
 
     username.simulate('change', { target: { value: 'amy@gmail.com' } });
     password.simulate('change', { target: { value: 'password' } });
@@ -51,57 +49,84 @@ describe('<Authentication />', () => {
     expect(wrapper.state().password).toEqual('password');
   });
 
-  it.skip('should render a button to sign up/in', () => {
-    const button = wrapper.find('btn');
+  it('should change state on input', () => {
+    const username = wrapper.find('.sign-up-name');
+    const password = wrapper.find('.sign-up-password');
 
-    expect(button.length).toEqual(1);
+    username.simulate('change', { target: { value: 'amy@gmail.com' } });
+    password.simulate('change', { target: { value: 'password' } });
+    expect(wrapper.state().username).toEqual('amy@gmail.com');
+    expect(wrapper.state().password).toEqual('password');
   });
 
-  it.skip('should run a function to sign up/in', () => {
-    const button = wrapper.find('btn');
+  it('should render a button to sign up/in for each form', () => {
+    const button = wrapper.find('.btn');
+
+    expect(button.length).toEqual(2);
+  });
+
+  it('should run a function to sign in', () => {
+    const button = wrapper.find('.sign-in-btn');
 
     wrapper.instance().signInClick = mockFn;
     button.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
-  it.skip('should clear input and state once user signs in/up', () => {
-    const button = wrapper.find('btn');
+  it('should run a function to sign up', () => {
+    const button = wrapper.find('.sign-up-btn');
+
+    wrapper.instance().signInClick = mockFn;
+    button.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
+
+  it('should clear input and state once user signs in', () => {
+    const button = wrapper.find('.sign-in-btn');
 
     button.simulate('click');
     expect(wrapper.state().username).toEqual('');
     expect(wrapper.state().password).toEqual('');
   });
 
-  it.skip('should render a prompt to toggle forms', () => {
+  it('should clear input and state once user signs up', () => {
+    const button = wrapper.find('.sign-up-btn');
+
+    button.simulate('click');
+    expect(wrapper.state().username).toEqual('');
+    expect(wrapper.state().password).toEqual('');
+  });
+
+  it('should render a prompt to toggle forms', () => {
     const prompt = wrapper.find('h4');
 
     expect(prompt.length).toEqual(1);
   });
 
-  it.skip('should render a button to toggle sign in/up', () => {
-    const button = wrapper.find('other-card-btn');
+  it('should render a button to toggle sign in/up', () => {
+    const button = wrapper.find('.other-card-btn');
 
     expect(button.length).toEqual(1);
   });
 
+//WTF
   it.skip('should run a function to switch forms', () => {
-    const button = wrapper.find('other-card-btn');
+    const button = wrapper.find('.other-card-btn');
 
     wrapper.instance().switchToOtherForm = mockFn;
     button.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });
 
-  it.skip('should change state when other form button is clicked', () => {
-    const button = wrapper.find('other-card-btn');
+  it('should change state when other form button is clicked', () => {
+    const button = wrapper.find('.other-card-btn');
 
     expect(wrapper.state().newUser).toEqual(false);
     button.simulate('click');
     expect(wrapper.state().newUser).toEqual(true);
   });
 
-  it.skip('should match snapshot', () => {
+  it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
 

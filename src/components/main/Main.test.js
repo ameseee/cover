@@ -59,23 +59,6 @@ describe('<Main />', () => {
       expect(noContacts.length).toEqual(1);
     });
 
-  it.skip('should run a function to load contacts', () => {
-    const contactsWrapper =
-    shallow(<Main loadedContacts={
-      [{
-        contactName: 'Amy',
-        contactNumber: '5756441355'
-      }]}/>);
-
-    contactsWrapper.instance().loadContacts = mockFn;
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
-//does this no work bc its in the ternary inside the JSX? I gave it a prop of an empty array in the shallow, so IMO it should be working.
-  it.skip('should run a function if the user does have contacts', () => {
-    wrapper.instance().noContacts = mockFn;
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
-
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
   });
