@@ -109,15 +109,6 @@ describe('<Authentication />', () => {
     expect(button.length).toEqual(1);
   });
 
-//WTF
-  it.skip('should run a function to switch forms', () => {
-    const button = wrapper.find('.other-card-btn');
-
-    wrapper.instance().switchToOtherForm = mockFn;
-    button.simulate('click');
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
-
   it('should change state when other form button is clicked', () => {
     const button = wrapper.find('.other-card-btn');
 

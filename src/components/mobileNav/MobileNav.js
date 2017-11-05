@@ -1,6 +1,5 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-//import '../../index.css';
 import PropTypes from 'prop-types';
 
 const MobileNav = ({ history }) => {
@@ -45,7 +44,6 @@ const MobileNav = ({ history }) => {
 
 MobileNav.propTypes = {
   history: PropTypes.object,
-  showHamburger: PropTypes.func,
 };
 
 export default MobileNav;
