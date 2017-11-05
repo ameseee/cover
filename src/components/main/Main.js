@@ -15,7 +15,7 @@ class Main extends React.Component {
     this.fetchScopedUsers(firebase);
   }
 
-  loadContacts() {
+  loadContacts = () => {
     const { loadedContacts } = this.props;
 
     return loadedContacts.map((contact, index) => {
@@ -28,12 +28,12 @@ class Main extends React.Component {
     });
   }
 
-  noContacts(){
+  noContacts() {
     return (
       <article className="no-contacts-card">
         <h4
           className="no-contacts-text">
-          You don't have any contacts saved yet!
+          {"You don't have any contacts saved yet!"}
         </h4>
         <button className="add-contacts-btn">
           <Link

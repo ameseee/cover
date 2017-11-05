@@ -24,15 +24,4 @@ describe('Custom Message Form Container', () => {
     expect(wrapper.instance().props.loadedContacts).toEqual([]);
   });
 
-  it('should fire actions', () => {
-    const actionWrapper = mount(<Main
-      store={store}
-      currentUser={initialState.currentUser}
-      loadedContacts={initialState.loadedContacts}
-      loadContacts={mockLoadContacts} />);
-
-    //componentDidMount ??
-    expect(mockLoadContacts).toHaveBeenCalledTimes(1);
-  });
-
 });

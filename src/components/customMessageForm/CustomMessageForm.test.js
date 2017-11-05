@@ -8,7 +8,7 @@ describe('<CustomMessageForm />', () => {
   let mockFn = jest.fn();
 
   beforeEach( () => {
-    wrapper = shallow(<CustomMessageForm closeCustomForm={mockFn}/>);
+    wrapper = shallow(<CustomMessageForm toggleCustomForm={mockFn}/>);
   });
 
   it('should exist', () => {
@@ -59,7 +59,7 @@ describe('<CustomMessageForm />', () => {
   it('should run a function to close button form', () => {
     const closeBtn = wrapper.find('.close-form-btn');
 
-    wrapper.instance().closeCustomForm = mockFn;
+    wrapper.instance().toggleCustomForm = mockFn;
     closeBtn.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(2);
   });

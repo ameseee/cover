@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
-import { getLatLng } from '../../utils/location';
 //import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
@@ -14,25 +13,23 @@ class ContactCards extends Component {
     };
   }
 
+  componentDidMount() {
+    navigator.geolocation.getCurrentPosition((position) => {
+      let location = position.coords;
+
+      this.setState({
+        location: `${location.latitude}, ${location.longitude}`
+      });
+    });
+  }
+
   toggleCustomForm = () => {
     this.setState({
       sendingCustom: !this.state.sendingCustom
     });
   }
 
-  shouldComponentUpdate(nextState) {
-    if (nextState !== this.state) return true;
-  }
-
-  componentDidMount() {
-    const location = getLatLng();
-    setTimeout(() => {
-      this.setState({location: location});
-    }, 5000);
-  }
-
-  handleSend() {
-    // console.log(this.state.location);
+  handleSend = () => {
     this.props.sendCustom(this.state.location, '5756441355');
   }
 

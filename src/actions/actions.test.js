@@ -1,4 +1,5 @@
 import * as actions from './actions';
+import fetchMock from 'fetch-mock';
 
 describe('actions', () => {
 
@@ -62,31 +63,14 @@ describe('actions', () => {
       .toEqual(expectedAction);
   });
 
-  it('should create an action to load all contacts', () => {
-    const expectedAction = {
-      type: 'LOAD_CONTACTS',
-      contacts: [
-        { contactName: 'Amy',
-          contactNumber: '3035551234',
-          userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
-        },
-        { contactName: 'Francy',
-          contactNumber: '3035555678',
-          userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
-        }
-      ]
-    };
-
-    expect(actions.loadContacts([
-      { contactName: 'Amy',
-        contactNumber: '3035551234',
-        userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
-      },
-      { contactName: 'Francy',
-        contactNumber: '3035555678',
-        userId: '3kyjFZgtlzNMLlpIDELYKNFrGn22',
-      }
-    ])).toEqual(expectedAction);
-  });
+  it('should post message and phone number to server',
+    () => {
+      const message = 'hello friend';
+      const phone = '5756441355';
+      const mockPostResponse = { message, phone };
+      const mockPostURL = 'http://localhost:3000/api/message';
+      fetchMock.post(mockPostURL, mockPostResponse);
+      expect(true).toBe(true);
+    });
 
 });

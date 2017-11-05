@@ -21,22 +21,30 @@ describe('Custom Message Form Container', () => {
     signIn={mockSignIn}
     setCurrentUser={mockSetCurrentUser} />);
 
+  const actionWrapper = mount(<Authentication
+    store={store}
+    currentUser={initialState.currentUser}
+    signedInStatus={initialState.signedInStatus}
+    signIn={mockSignIn}
+    setCurrentUser={mockSetCurrentUser} />);
+
   it('should have a default state', () => {
     expect(wrapper.instance().props.currentUser).toEqual('');
     expect(wrapper.instance().props.signedInStatus).toEqual(false);
   });
 
-  it.skip('should fire actions', () => {
-    const actionWrapper = mount(<Authentication
-      store={store}
-      currentUser={initialState.currentUser}
-      signedInStatus={initialState.signedInStatus}
-      signIn={mockSignIn}
-      setCurrentUser={mockSetCurrentUser} />);
+  it('should fire an action to sign in', () => {
+    const signInBtn = actionWrapper.find('.sign-in-btn');
 
-    const signInUpBtn = actionWrapper.find('.btn');
+    signInBtn.simulate('click');
+    expect(mockSignIn).toHaveBeenCalledTimes(1);
+    expect(mockSetCurrentUser).toHaveBeenCalledTimes(1);
+  });
 
-    signInUpBtn.simulate('click');
+  it('should fire an action to sign up', () => {
+    const signUpBtn = actionWrapper.find('.sign-up-btn');
+
+    signUpBtn.simulate('click');
     expect(mockSignIn).toHaveBeenCalledTimes(1);
     expect(mockSetCurrentUser).toHaveBeenCalledTimes(1);
   });

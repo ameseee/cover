@@ -6,16 +6,16 @@ import '../../index.css';
 import PropTypes from 'prop-types';
 import firebase from '../../firebase';
 
+
 class App extends Component {
   constructor() {
     super();
     this.state = {
       mobileNav: false
     };
-    this.signOut = this.signOut.bind(this);
   }
 
-  signOut() {
+  signOut = () => {
     firebase.auth().signOut().then( () => {
     }).catch( error => {
       alert('We experienced an error:', error);
@@ -24,13 +24,13 @@ class App extends Component {
     this.props.setCurrentUser('');
   }
 
-  hideHamburger() {
+  hideHamburger = () => {
     this.setState({ mobileNav: true });
     this.props.history.push('/nav');
   }
 
   //how do i pass this function to mobilenav component???
-  showHamburger() {
+  showHamburger = () => {
     this.setState({ mobileNav: false });
   }
 
@@ -102,10 +102,10 @@ class App extends Component {
 }
 
 App.propTypes = {
-  signOut: PropTypes.func,
-  setCurrentUser: PropTypes.func,
   currentUser: PropTypes.string,
-  history: PropTypes.array,
+  history: PropTypes.object,
+  setCurrentUser: PropTypes.func,
+  signOut: PropTypes.func,
 };
 
 export default App;

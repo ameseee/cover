@@ -5,6 +5,7 @@ import StaticRouter from 'react-router';
 import App from '../../components/App/App';
 import React from 'react';
 import testSetup from '../../../__mock__/testSetup';
+import PropTypes from 'prop-types';
 
 describe('App Container', () => {
   const mockStore = configureStore();
@@ -26,7 +27,10 @@ describe('App Container', () => {
     expect(wrapper.instance().props.currentUser).toEqual('');
   });
 
-  it.skip('should fire actions', () => {
+  it('should fire actions', () => {
+    const userState = {
+      currentUser: 'Amy',
+    };
     const actionWrapper = mount(<App
       store={store}
       currentUser={initialState.currentUser}

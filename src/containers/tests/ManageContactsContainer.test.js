@@ -24,18 +24,4 @@ describe('Custom Message Form Container', () => {
     expect(wrapper.instance().props.loadedContacts).toEqual([]);
   });
 
-  it('should fire actions', () => {
-    const actionWrapper = mount(<ManageContacts
-      store={store}
-      currentUser={initialState.currentUser}
-      loadedContacts={initialState.loadedContacts}
-      loadContacts={mockLoadContacts} />);
-
-    const createNewContactBtn = actionWrapper.find('.save-new-contact');
-
-    wrapper.instance().loadContacts = mockLoadContacts;
-    createNewContactBtn.simulate('click');
-    expect(mockLoadContacts).toHaveBeenCalledTimes(1);
-  });
-
 });

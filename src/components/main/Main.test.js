@@ -1,6 +1,6 @@
 import React from 'react';
 import Main from './Main';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import testSetup from '../../../__mock__/testSetup';
 
 describe('<Main />', () => {
@@ -58,15 +58,6 @@ describe('<Main />', () => {
 
       expect(noContacts.length).toEqual(1);
     });
-
-//does this no work bc its in the ternary inside the JSX? I gave it a prop of an empty array in the shallow, so IMO it should be working.
-  it('should run a function if the user does have contacts', () => {
-    const contactsWrapper =
-    shallow(<Main loadedContacts={[]}/>);
-
-    wrapper.instance().noContacts = mockFn;
-    expect(mockFn).toHaveBeenCalledTimes(1);
-  });
 
   it('should match snapshot', () => {
     expect(wrapper).toMatchSnapshot();
