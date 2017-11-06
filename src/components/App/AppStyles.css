@@ -1,8 +1,4 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
-.app-container {
-  height: 100%;
-  border: 3px solid magenta; }
-
 .hamburger {
   display: none;
   background-image: url("../../assets/hamburger.svg");
@@ -10,8 +6,7 @@
   height: 25px;
   width: 25px;
   border: none;
-  background-color: #293E5F;
-  margin-right: 7.5px; }
+  background-color: #293E5F; }
 
 .nav-bar-brand-link {
   text-decoration: none;
@@ -76,7 +71,7 @@
   text-decoration: none; }
 
 .exit {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 10px;
   background-color: #de504b;
@@ -88,6 +83,9 @@
   color: #fff;
   font-size: 120%;
   font-family: Lato; }
+
+.exit:hover {
+  background-color: #C24642; }
 
 .google-link,
 .google-link:visited {
