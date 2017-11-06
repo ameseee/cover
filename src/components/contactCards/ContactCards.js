@@ -14,11 +14,9 @@ class ContactCards extends Component {
   }
 
   componentDidMount() {
-    navigator.geolocation.getCurrentPosition((position) => {
-      let location = position.coords;
-
+    navigator.geolocation.getCurrentPosition(({coords}) => {
       this.setState({
-        location: `${location.latitude}, ${location.longitude}`
+        location: `${coords.latitude}, ${coords.longitude}`
       });
     });
   }
