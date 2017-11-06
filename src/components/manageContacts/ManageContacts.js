@@ -87,18 +87,18 @@ class ManageContacts extends Component {
             <input
               className="new-contact-name"
               name="contactName"
-              value={this.state.contactName}
-              type="text"
-              placeholder="Contact Name"
               onChange={this.handleChange}
+              placeholder="Contact Name"
+              type="text"
+              value={this.state.contactName}
             />
             <input
               className="new-contact-number"
-              type="text"
               name="contactNumber"
-              value={this.state.contactNumber}
-              placeholder="Phone Number"
               onChange={this.handleChange}
+              placeholder="Phone Number"
+              type="text"
+              value={this.state.contactNumber}
             />
             <button
               className="save-new-contact"
