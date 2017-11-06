@@ -26,3 +26,28 @@ export const signOutFirebase = firebase => {
     alert('We experienced an error:', error);
   });
 };
+
+export const createAccount = (email, password, firebase, props) => {
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    .then(login => {
+      props.setCurrentUser(login.uid);
+      props.signIn(true);
+      props.history.push('/main');
+    })
+    .catch( error => {
+      throw new Error(error);
+    });
+};
+
+export const signIn = (email, password, firebase, props) => {
+  firebase.auth().signInWithEmailAndPassword(email, password)
+    .then(login => {
+      props.setCurrentUser(login.uid);
+      props.signIn(true);
+      props.history.push('/main');
+    })
+    .catch(error => {
+      this.props.history.push('/auth');
+      alert(error);
+    });
+};
