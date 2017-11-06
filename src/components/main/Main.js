@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import ContactCards from '../../components/contactCards/ContactCards';
-import { fetchScopedUsers } from './../../utils/fetchScopedUsers';
+import { fetchScopedUsers } from './../../utils/fireBaseUtils';
 import { sendCustom } from '../../utils/postToServer';
 import firebase from './../../firebase';
 

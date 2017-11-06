@@ -19,3 +19,10 @@ export function fetchScopedUsers(firebase) {
 export const removeContact = ({id}, firebase) => {
   firebase.database().ref(`contacts/${id}`).remove();
 };
+
+export const signOutFirebase = firebase => {
+  firebase.auth().signOut().then( () => {
+  }).catch( error => {
+    alert('We experienced an error:', error);
+  });
+};
