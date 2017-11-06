@@ -86,8 +86,11 @@ class App extends Component {
         <button
           className="exit">
           <a
+            className="google-link"
             href="https://weather.com/"
-            className="google-link">EXIT</a>
+          >
+            EXIT
+          </a>
         </button>
       </div>
     );
