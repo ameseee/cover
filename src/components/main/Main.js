@@ -61,7 +61,10 @@ class Main extends React.Component {
             <h3 className="emergency-title">Emergency</h3>
             <button
               className="emergency-btn"
-              onClick={() => this.handleSend()}>TEXT 911</button>
+              onClick={() => this.handleSend()}
+            >
+              TEXT 911
+            </button>
           </section>
           <section className="hotline-section">
             <h3 className="hotline-title">NDV Hotline</h3>
