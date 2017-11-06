@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../../index.css';
-import PropTypes from 'prop-types';
+import classnames from 'classnames';
 import firebase from '../../firebase';
 
 class App extends Component {
