@@ -23,8 +23,8 @@
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 80%;
-  padding: 10px;
+  font-size: 90%;
+  padding: 8px;
   width: 90%;
   font-family: Lato; }
 
@@ -38,8 +38,8 @@
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 76%;
-  padding: 10px;
+  font-size: 90%;
+  padding: 8px;
   width: 90%;
   font-family: Lato; }
 
@@ -59,4 +59,4 @@
   .custom-text-btn,
   .location-now-btn {
     font-size: 70%;
-    padding: 7.5px 5px; } }
+    padding: 5px 2.5px; } }

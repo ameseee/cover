@@ -39,7 +39,7 @@ describe('<Main />', () => {
     expect(emergencyBtn.length).toEqual(1);
   });
 
-  it.only('should run a function to text 911', () => {
+  it('should run a function to text 911', () => {
     const button = wrapper.find('.emergency-btn');
 
     wrapper.instance().handleSend = mockFn;
