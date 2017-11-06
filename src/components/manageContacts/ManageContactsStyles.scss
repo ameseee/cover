@@ -41,8 +41,9 @@ $charcoal-color: #1b1b1b;
   display: grid;
   grid-template-columns: 1.5fr 0.5fr;
   grid-column-gap: 20px;
-  margin: 5%;
+  margin: 5% auto;
   padding: 2.5%;
+  width: 85%;
 }
 
 .existing-contact-name,
@@ -67,7 +68,7 @@ $charcoal-color: #1b1b1b;
 .new-contact-name,
 .new-contact-number {
   padding: 7.5px;
-  width: 70%;
+  width: 85%;
   display: block;
   margin: 0 auto;
   margin-top: 4%;
@@ -79,7 +80,7 @@ $charcoal-color: #1b1b1b;
 .save-new-contact {
   background-color: $turq-color;
   color: #fff;
-  width: 70%;
+  width: 85%;
   border: none;
   padding: 7.5px;
   margin: 0 auto;
