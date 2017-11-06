@@ -1,4 +1,8 @@
 @import url(https://fonts.googleapis.com/css?family=Lato);
+.app-container {
+  height: 100%;
+  border: 3px solid magenta; }
+
 .hamburger {
   display: none;
   background-image: url("../../assets/hamburger.svg");
