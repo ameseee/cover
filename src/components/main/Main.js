@@ -54,6 +54,10 @@ class Main extends React.Component {
 
   render() {
     const { loadedContacts } = this.props;
+    const noContacts = !loadedContacts.length
+      ? this.noContacts()
+      : null;
+      
     return (
       <div className="main">
         <main>
@@ -73,9 +77,7 @@ class Main extends React.Component {
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>
             { this.loadContacts() }
-            { loadedContacts.length < 1
-              ? this.noContacts()
-              : null }
+            { noContacts }
           </section>
         </main>
       </div>
