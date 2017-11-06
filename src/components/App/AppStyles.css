@@ -30,7 +30,10 @@
   font-family: Lato; }
 
 .nav-menu {
-  margin-right: 10px; }
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center; }
 
 .nav-item {
   color: #fff;
@@ -49,10 +52,32 @@
   border-bottom: 2px solid #039fbe;
   cursor: pointer; }
 
+.sign-out {
+  background-color: #039fbe;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px 12px;
+  width: 90%;
+  font-family: Lato;
+  margin-left: 15px; }
+
+.sign-out-link {
+  color: #fff;
+  font-family: Lato;
+  text-decoration: none; }
+
 @media (max-width: 670px) {
+  .nav-menu {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 150px; }
   .nav-item-li {
     display: none; }
   .hamburger {
     display: block; }
   .hidden {
+    display: none; }
+  .sign-out {
     display: none; } }
