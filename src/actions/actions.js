@@ -18,11 +18,6 @@ export const createNewContact = contact => ({
   contact,
 });
 
-export const removeFromFB = id => ({
-  type: 'REMOVE_FROM_FB',
-  id,
-});
-
 export const loadContacts = contacts => ({
   type: 'LOAD_CONTACTS',
   contacts,
