@@ -7,7 +7,7 @@ export const currentUser = (state = '', action) => {
   }
 };
 
-export const signedInStatus = (state = '', action) => {
+export const signedInStatus = (state = false, action) => {
   switch (action.type) {
   case 'TOGGLE_SIGN_IN':
     return true;
