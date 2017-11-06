@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import '../../index.css';
 import firebase from '../../firebase';
+import { signOutFirebase } from '../../utils/fireBaseUtils';
 
 class App extends Component {
   constructor() {
@@ -13,25 +14,33 @@ class App extends Component {
   }
 
   signOut = () => {
-    firebase.auth().signOut().then( () => {
-    }).catch( error => {
-      alert('We experienced an error:', error);
-    });
+    signOutFirebase(firebase);
     this.props.signOut(false);
     this.props.setCurrentUser('');
+    this.props.history.push('/');
   }
 
-  hideHamburger = () => {
+  showMobileNav = () => {
     this.setState({ mobileNav: true });
     this.props.history.push('/nav');
   }
 
-  showHamburger = () => {
-    this.setState({ mobileNav: false });
-  }
-
   render() {
     const { currentUser } = this.props;
+    const signedIn = !currentUser
+      ? null
+      :
+      <button
+        className="sign-out"
+        onClick={this.signOut}>
+        <Link
+          className="sign-out-link"
+          to="/"
+        >
+          Sign Out
+        </Link>
+      </button>;
+
     return (
       <div className="app-container">
         <nav className="nav-bar">
@@ -46,7 +55,7 @@ class App extends Component {
           <ul className="nav-menu">
             <button
               className="hamburger"
-              onClick={() => this.hideHamburger()}
+              onClick={() => this.showMobileNav()}
             >
             </button>
             <li className="nav-item-li">
@@ -65,21 +74,7 @@ class App extends Component {
               Contacts
               </Link>
             </li>
-            {
-              currentUser === ''
-                ? null
-                :
-                <button
-                  className="sign-out"
-                  onClick={this.signOut}>
-                  <Link
-                    className="sign-out-link"
-                    to="/"
-                  >
-                    Sign Out
-                  </Link>
-                </button>
-            }
+            { signedIn }
           </ul>
         </nav>
         <button

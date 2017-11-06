@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {
   fetchScopedUsers,
   removeContact
-} from './../../utils/fetchScopedUsers';
+} from './../../utils/fireBaseUtils';
 import firebase from './../../firebase';
 
 class ManageContacts extends Component {

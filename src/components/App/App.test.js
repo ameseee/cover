@@ -71,7 +71,7 @@ describe('<App />', () => {
     const wrapper = shallow(<App {...props}/>);
     const hamburger = wrapper.find('.hamburger');
 
-    wrapper.instance().hideHamburger = mockFn;
+    wrapper.instance().showMobileNav = mockFn;
     hamburger.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
   });

@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import firebase from '../../firebase';
+import { createAccount, signIn } from '../../utils/fireBaseUtils';
 
 class Authentication extends Component {
   constructor() {
@@ -20,29 +21,12 @@ class Authentication extends Component {
 
   createAccountClick = (email, password) => {
     this.setState({ username: '', password: '' });
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      .then(login => {
-        this.props.setCurrentUser(login.uid);
-        this.props.signIn(true);
-        this.props.history.push('/main');
-      })
-      .catch( error => {
-        throw new Error(error);
-      });
+    createAccount(email, password, firebase, this.props);
   };
 
   signInClick = (email, password) => {
     this.setState({ username: '', password: '' });
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then(login => {
-        this.props.setCurrentUser(login.uid);
-        this.props.signIn(true);
-        this.props.history.push('/main');
-      })
-      .catch(error => {
-        this.props.history.push('/auth');
-        alert(error);
-      });
+    signIn(email, password, firebase, this.props);
   };
 
   switchToOtherForm = () => {
