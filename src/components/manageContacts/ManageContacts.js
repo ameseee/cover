@@ -13,7 +13,6 @@ class ManageContacts extends Component {
       contactName: '',
       contactNumber: '',
     };
-    this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.fetchScopedUsers = fetchScopedUsers.bind(this);
     this.removeContact = removeContact.bind(this);
@@ -39,7 +38,7 @@ class ManageContacts extends Component {
     });
   }
 
-  handleChange(event) {
+  handleChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value,
     });
