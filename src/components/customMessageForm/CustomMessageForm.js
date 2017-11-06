@@ -32,8 +32,8 @@ class CustomMessageForm extends Component {
     return (
       <div className="custom-message-form">
         <textarea
-          onChange={(event) => this.handleChange(event)}
           className="custom-message-input"
+          onChange={(event) => this.handleChange(event)}
           value={this.state.message}
         />
         <button

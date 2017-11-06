@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-import { fetchScopedUsers } from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
-import firebase from './../../firebase';
+import { Link } from 'react-router-dom';
 import ContactCards from '../../components/contactCards/ContactCards';
+import { fetchScopedUsers } from './../../utils/fetchScopedUsers';
 import { sendCustom } from '../../utils/postToServer';
+import firebase from './../../firebase';
 
 class Main extends React.Component {
   constructor() {
@@ -61,7 +61,10 @@ class Main extends React.Component {
             <h3 className="emergency-title">Emergency</h3>
             <button
               className="emergency-btn"
-              onClick={() => this.handleSend()}>TEXT 911</button>
+              onClick={() => this.handleSend()}
+            >
+              TEXT 911
+            </button>
           </section>
           <section className="hotline-section">
             <h3 className="hotline-title">NDV Hotline</h3>

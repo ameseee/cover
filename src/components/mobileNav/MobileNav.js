@@ -1,6 +1,6 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const MobileNav = ({ history }) => {
 
@@ -16,24 +16,24 @@ const MobileNav = ({ history }) => {
       </button>
       <div>
         <Link
-          to="/main"
           className="drop-down-option"
+          to="/main"
         >
           Home
         </Link>
       </div>
       <div>
         <Link
-          to="/contacts"
           className="drop-down-option"
+          to="/contacts"
         >
           Contacts
         </Link>
       </div>
       <div>
         <Link
-          to="/"
           className="drop-down-option"
+          to="/"
         >
           Sign Out
         </Link>

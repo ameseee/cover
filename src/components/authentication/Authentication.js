@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import classnames from 'classnames';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
+import classnames from 'classnames';
 import firebase from '../../firebase';
 
 class Authentication extends Component {
@@ -83,17 +83,17 @@ class Authentication extends Component {
           <div>
             <input
               className="sign-up-name name"
-              type="text"
-              value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
+              type="text"
+              value={this.state.username}
             />
             <input
               className="sign-up-password password"
-              type="password"
-              value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
+              type="password"
+              value={this.state.password}
             />
             <button
               className="sign-up-btn btn"
@@ -114,17 +114,17 @@ class Authentication extends Component {
           <div>
             <input
               className="sign-in-name name"
-              type="text"
-              value={this.state.username}
               onChange={this.handleChange.bind(this, 'username')}
               placeholder="Name/UserName"
+              type="text"
+              value={this.state.username}
             />
             <input
               className="sign-in-password password"
-              type="password"
-              value={this.state.password}
               onChange={this.handleChange.bind(this, 'password')}
               placeholder="Password"
+              type="password"
+              value={this.state.password}
             />
             <button
               className="sign-in-btn btn"

@@ -38,10 +38,10 @@ describe('<App />', () => {
     expect(navList.length).toEqual(1);
   });
 
-  it('should render three options on nav bar if user is signed in', () => {
+  it('should render two options on nav bar if user is signed in', () => {
     const navItems = wrapper.find('li');
 
-    expect(navItems.length).toEqual(3);
+    expect(navItems.length).toEqual(2);
   });
 
   it('should render two options on nav bar if no user', () => {
@@ -67,13 +67,19 @@ describe('<App />', () => {
   });
 
   it('should run a function on click ', () => {
-    const props = { history: [],  };
+    const props = { history: [] };
     const wrapper = shallow(<App {...props}/>);
     const hamburger = wrapper.find('.hamburger');
 
     wrapper.instance().hideHamburger = mockFn;
     hamburger.simulate('click');
     expect(mockFn).toHaveBeenCalledTimes(1);
+  });
+
+  it('should render an exit button at all times', () => {
+    const exitBtn = wrapper.find('.exit');
+
+    expect(exitBtn.length).toEqual(1);
   });
 
   it('should match snapshot', () => {
