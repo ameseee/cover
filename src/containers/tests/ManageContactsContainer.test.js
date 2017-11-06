@@ -1,20 +1,24 @@
 import configureStore from 'redux-mock-store';
+import * as actions from '../../actions/actions';
 import { mount } from 'enzyme';
 import ManageContactsContainer from '../ManageContactsContainer';
 import ManageContacts from '../../components/manageContacts/ManageContacts';
 import React from 'react';
+import thunk from 'redux-thunk';
 import testSetup from '../../../__mock__/testSetup';
 import PropTypes from 'prop-types';
 import createRouterContext from 'react-router-test-context';
 
 describe('Custom Message Form Container', () => {
+  const middlewares = [thunk];
   const mockStore = configureStore();
+  const mockLoadContacts = jest.fn();
   const initialState = {
     currentUser: '',
     loadedContacts: [],
   };
-  const mockLoadContacts = jest.fn();
-  const store = mockStore(initialState);
+  const store = mockStore(initialState, middlewares);
+  actions.loadContacts = () => ({ type: 'LOAD_CONTACTS' });
   const context = createRouterContext();
 
   ManageContactsContainer.contextTypes = {

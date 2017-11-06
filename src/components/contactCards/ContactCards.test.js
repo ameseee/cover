@@ -3,7 +3,7 @@ import ContactCards from './ContactCards';
 import { shallow } from 'enzyme';
 import testSetup from '../../../__mock__/testSetup';
 
-describe('<ContactCards />', () => {
+describe.skip('<ContactCards />', () => {
   let wrapper;
 
   beforeEach( () => {

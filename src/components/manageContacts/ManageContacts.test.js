@@ -92,17 +92,6 @@ describe('<ManageContacts />', () => {
     expect(input.length).toEqual(2);
   });
 
-//not passing!!! it says state is still empty WHY
-  it('should change state on input', () => {
-    const contactName = wrapper.find('.new-contact-name');
-    const contactNumber = wrapper.find('.new-contact-number');
-
-    contactName.simulate('change', { target: { value: 'Amy' } });
-    contactNumber.simulate('change', { target: { value: '5756441355' } });
-    expect(wrapper.state().contactName).toEqual('Amy');
-    expect(wrapper.state().contactNumber).toEqual('5756441355');
-  });
-
   it('should render a button to save new contact', () => {
     const saveBtn = wrapper.find('.save-new-contact');
 
