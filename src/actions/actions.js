@@ -22,3 +22,8 @@ export const loadContacts = contacts => ({
   type: 'LOAD_CONTACTS',
   contacts,
 });
+
+export const storeLocation = location => ({
+  type: 'STORE_LOCATION',
+  location,
+});

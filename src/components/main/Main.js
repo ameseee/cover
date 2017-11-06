@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import ContactCards from '../../components/contactCards/ContactCards';
+import ContactCardsContainer from '../../containers/ContactCardsContainer';
 import { fetchScopedUsers } from './../../utils/fireBaseUtils';
 import { sendCustom } from '../../utils/postToServer';
 import firebase from './../../firebase';
@@ -25,7 +25,7 @@ class Main extends React.Component {
 
     return loadedContacts.map((contact, index) => {
       return (
-        <ContactCards
+        <ContactCardsContainer
           key={index}
           name={contact.contactName}
         />
@@ -57,7 +57,7 @@ class Main extends React.Component {
     const noContacts = !loadedContacts.length
       ? this.noContacts()
       : null;
-      
+
     return (
       <div className="main">
         <main>

@@ -9,15 +9,13 @@ class ContactCards extends Component {
     super();
     this.state = {
       sendingCustom: false,
-      location: '',
     };
   }
 
   componentDidMount() {
     navigator.geolocation.getCurrentPosition(({coords}) => {
-      this.setState({
-        location: `${coords.latitude}, ${coords.longitude}`
-      });
+      this.props.storeLocation(
+        `${coords.latitude}, ${coords.longitude}`);
     });
   }
 
@@ -28,7 +26,7 @@ class ContactCards extends Component {
   }
 
   handleSend = () => {
-    sendCustom(this.state.location, '5756441355');
+    sendCustom(this.props.location, '5756441355');
   }
 
   render() {
@@ -60,8 +58,10 @@ class ContactCards extends Component {
 }
 
 ContactCards.propTypes = {
+  location: PropTypes.string,
   name: PropTypes.string,
   sendCustom: PropTypes.func,
+  storeLocation: PropTypes.func,
 };
 
 export default ContactCards;
