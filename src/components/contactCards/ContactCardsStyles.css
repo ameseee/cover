@@ -2,7 +2,7 @@
 .contact-card {
   display: grid;
   grid-template-columns: 1.75fr 2.5fr 2.5fr;
-  grid-template-areas: "contactName customBtn locationBtn" "form form form";
+  grid-template-areas: "contactName customBtn locationBtn" "empty form form";
   grid-column-gap: 25px;
   align-items: center;
   padding: 4% 0;
