@@ -16,24 +16,24 @@ const MobileNav = ({ history }) => {
       </button>
       <div>
         <Link
-          to="/main"
           className="drop-down-option"
+          to="/main"
         >
           Home
         </Link>
       </div>
       <div>
         <Link
-          to="/contacts"
           className="drop-down-option"
+          to="/contacts"
         >
           Contacts
         </Link>
       </div>
       <div>
         <Link
-          to="/"
           className="drop-down-option"
+          to="/"
         >
           Sign Out
         </Link>
