@@ -83,6 +83,12 @@ class App extends Component {
             }
           </ul>
         </nav>
+        <button
+          className="exit">
+          <a
+            href="https://weather.com/"
+            className="google-link">EXIT</a>
+        </button>
       </div>
     );
   }
