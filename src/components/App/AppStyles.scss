@@ -84,6 +84,10 @@ $charcoal-color: #1b1b1b;
   margin-left: 15px;
 }
 
+.sign-out:hover {
+  background-color: $turq-hover;
+}
+
 .sign-out-link {
   color: #fff;
   font-family: Lato;

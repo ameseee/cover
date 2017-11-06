@@ -63,6 +63,9 @@
   font-family: Lato;
   margin-left: 15px; }
 
+.sign-out:hover {
+  background-color: #2D9AA9; }
+
 .sign-out-link {
   color: #fff;
   font-family: Lato;
