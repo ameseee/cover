@@ -32,6 +32,20 @@ class App extends Component {
 
   render() {
     const { currentUser } = this.props;
+    const signedIn = !currentUser
+      ? null
+      :
+      <button
+        className="sign-out"
+        onClick={this.signOut}>
+        <Link
+          className="sign-out-link"
+          to="/"
+        >
+          Sign Out
+        </Link>
+      </button>;
+
     return (
       <div className="app-container">
         <nav className="nav-bar">
@@ -65,21 +79,7 @@ class App extends Component {
               Contacts
               </Link>
             </li>
-            {
-              currentUser === ''
-                ? null
-                :
-                <button
-                  className="sign-out"
-                  onClick={this.signOut}>
-                  <Link
-                    className="sign-out-link"
-                    to="/"
-                  >
-                    Sign Out
-                  </Link>
-                </button>
-            }
+            { signedIn }
           </ul>
         </nav>
         <button
