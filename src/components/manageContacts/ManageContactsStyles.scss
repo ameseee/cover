@@ -21,7 +21,7 @@ $charcoal-color: #1b1b1b;
   background-color: #fff;
   height: 100%;
   margin-top: 4%;
-  margin-bottom: 55vh;
+  margin-bottom: 4%;
 }
 
 .title,
@@ -38,7 +38,7 @@ $charcoal-color: #1b1b1b;
   border: 1px solid $grey-color;
   border-radius: 3px;
   display: grid;
-  grid-template-columns: 1.5fr 0.5fr;
+  grid-template-columns: 1.25fr 0.5fr;
   grid-column-gap: 20px;
   margin: 5% auto;
   padding: 2.5%;
@@ -113,6 +113,7 @@ $charcoal-color: #1b1b1b;
   .edit-contact-btn,
   .remove-contact-btn {
     font-size: 80%;
+    padding: 0 5px;
   }
 
   .new-contact-name,

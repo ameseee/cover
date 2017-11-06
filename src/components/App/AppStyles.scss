@@ -18,7 +18,7 @@ $charcoal-color: #1b1b1b;
   width: 25px;
   border: none;
   background-color: $navy-color;
-  margin-right: 7.5px;
+  //margin-right: 7.5px;
 }
 
 .nav-bar-brand-link {
@@ -95,7 +95,7 @@ $charcoal-color: #1b1b1b;
 }
 
 .exit {
-  position: absolute;
+  position: fixed;
   bottom: 10px;
   left: 10px;
   background-color: $red-color;
@@ -107,6 +107,10 @@ $charcoal-color: #1b1b1b;
   color: #fff;
   font-size: 120%;
   font-family: Lato;
+}
+
+.exit:hover {
+  background-color: $red-hover;
 }
 
 .google-link,

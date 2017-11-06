@@ -29,9 +29,9 @@ class Authentication extends Component {
   }
 
   createAccount = (newUser) => {
-    Object.entries(newUser).map(([key, value]) => {
-      Object.assign({id: key}, value);
-    });
+    Object.entries(newUser).map(([key, value]) =>
+      Object.assign({id: key}, value)
+    );
   }
 
   createAccountClick = (email, password) => {
