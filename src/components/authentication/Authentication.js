@@ -14,28 +14,12 @@ class Authentication extends Component {
     };
   }
 
-  componentDidMount() {
-    const createRef = firebase.database().ref('users');
-
-    createRef.on('value', (snapshot) => {
-      const newUser = snapshot.val();
-
-      if (newUser) this.createAccount(newUser);
-    });
-  }
-
   handleChange(key, event) {
     this.setState({ [key]: event.target.value });
   }
 
-  createAccount = (newUser) => {
-    Object.entries(newUser).map(([key, value]) =>
-      Object.assign({id: key}, value)
-    );
-  }
-
   createAccountClick = (email, password) => {
-    this.clearState();
+    this.setState({ username: '', password: '' });
     firebase.auth().createUserWithEmailAndPassword(email, password)
       .then(login => {
         this.props.setCurrentUser(login.uid);
@@ -48,7 +32,7 @@ class Authentication extends Component {
   };
 
   signInClick = (email, password) => {
-    this.clearState();
+    this.setState({ username: '', password: '' });
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(login => {
         this.props.setCurrentUser(login.uid);
@@ -60,13 +44,6 @@ class Authentication extends Component {
         alert(error);
       });
   };
-
-  clearState() {
-    this.setState({
-      username: '',
-      password: '',
-    });
-  }
 
   switchToOtherForm = () => {
     this.setState({ newUser: !this.state.newUser });
