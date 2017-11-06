@@ -24,7 +24,7 @@
   font-family: Lato, sans-serif; }
 
 .send-custom-btn {
-  background-color: #039fbe;
+  background-color: #47A7B4;
   border: none;
   font-family: Lato, sans-serif;
   border-radius: 3px;
@@ -45,10 +45,10 @@
   cursor: pointer; }
 
 .send-custom-btn:hover {
-  background-color: #42B7CE; }
+  background-color: #2D9AA9; }
 
 .never-mind-btn:hover {
-  background-color: #434558; }
+  background-color: #1D2C44; }
 
 .send-sent {
   display: flex;

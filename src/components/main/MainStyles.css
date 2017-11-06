@@ -23,7 +23,7 @@
   color: #1b1b1b; }
 
 .emergency-btn {
-  background-color: #dc0800;
+  background-color: #de504b;
   padding: 8px;
   width: 80%;
   margin: 0 5% 0 auto;
@@ -34,11 +34,11 @@
   font-family: Lato; }
 
 .emergency-btn:hover {
-  background-color: #E54640;
+  background-color: #C24642;
   cursor: pointer; }
 
 .hotline-btn {
-  background-color: #039fbe;
+  background-color: #2da97a;
   padding: 8px;
   width: 80%;
   margin: 0 5% 0 auto;
@@ -49,7 +49,7 @@
   font-family: Lato; }
 
 .hotline-btn:hover {
-  background-color: #42B7CE;
+  background-color: #27946B;
   cursor: pointer; }
 
 .contacts-section {
@@ -75,7 +75,7 @@
   font-family: Lato, sans-serif; }
 
 .add-contacts-btn {
-  background-color: #282a40;
+  background-color: #293E5F;
   border: none;
   border-radius: 3px;
   font-size: 85%;

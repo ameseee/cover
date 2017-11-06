@@ -36,7 +36,7 @@
   color: #1b1b1b; }
 
 .remove-contact-btn {
-  background-color: #dc0800;
+  background-color: #de504b;
   outline: none;
   border: none;
   border-radius: 3px;
@@ -44,7 +44,7 @@
   font-size: 90%; }
 
 .remove-contact-btn:hover {
-  background-color: #E54640;
+  background-color: #C24642;
   cursor: pointer; }
 
 .new-contact-name,
@@ -59,7 +59,7 @@
   font-size: 100%; }
 
 .save-new-contact {
-  background-color: #039fbe;
+  background-color: #47A7B4;
   color: #fff;
   width: 85%;
   border: none;
@@ -72,7 +72,7 @@
   text-align: center; }
 
 .save-new-contact:hover {
-  background-color: #42B7CE;
+  background-color: #2D9AA9;
   cursor: pointer; }
 
 @media (max-width: 900px) {

@@ -32,7 +32,7 @@
   font-family: Lato; }
 
 .btn {
-  background-color: #039fbe;
+  background-color: #47A7B4;
   color: #fff;
   width: 70%;
   border: none;
@@ -50,7 +50,7 @@
   font-family: Lato; }
 
 .btn:hover {
-  background-color: #42B7CE;
+  background-color: #2D9AA9;
   cursor: pointer; }
 
 .sign-in-section {
@@ -81,7 +81,7 @@
   font-family: Lato; }
 
 .btn {
-  background-color: #039fbe;
+  background-color: #47A7B4;
   color: #fff;
   width: 70%;
   border: none;
@@ -94,7 +94,7 @@
   font-family: Lato; }
 
 .btn:hover {
-  background-color: #42B7CE;
+  background-color: #2D9AA9;
   cursor: pointer; }
 
 .other-card-section {
@@ -113,7 +113,7 @@
   margin-right: 10px; }
 
 .other-card-btn {
-  background-color: #282a40;
+  background-color: #293E5F;
   color: #fff;
   border: none;
   padding: 5px 10px;

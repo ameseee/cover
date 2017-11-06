@@ -19,7 +19,7 @@
 
 .custom-text-btn {
   grid-area: customBtn;
-  background-color: #039fbe;
+  background-color: #47A7B4;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -29,12 +29,12 @@
   font-family: Lato; }
 
 .custom-text-btn:hover {
-  background-color: #42B7CE;
+  background-color: #2D9AA9;
   cursor: pointer; }
 
 .location-now-btn {
   grid-area: locationBtn;
-  background-color: #282a40;
+  background-color: #293E5F;
   color: #fff;
   border: none;
   border-radius: 3px;
@@ -44,7 +44,7 @@
   font-family: Lato; }
 
 .location-now-btn:hover {
-  background-color: #434558;
+  background-color: #1D2C44;
   cursor: pointer; }
 
 @media (max-width: 650px) {
