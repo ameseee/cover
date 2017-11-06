@@ -70,16 +70,16 @@ class App extends Component {
               currentUser === ''
                 ? null
                 :
-                <li
-                  className="nav-item-li sign-out"
+                <button
+                  className="sign-out"
                   onClick={this.signOut}>
                   <Link
-                    className="nav-item"
+                    className="sign-out-link"
                     to="/"
                   >
                     Sign Out
                   </Link>
-                </li>
+                </button>
             }
           </ul>
         </nav>

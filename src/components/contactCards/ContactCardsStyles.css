@@ -2,7 +2,7 @@
 .contact-card {
   display: grid;
   grid-template-columns: 1.75fr 2.5fr 2.5fr;
-  grid-template-areas: "contactName customBtn locationBtn" "form form form";
+  grid-template-areas: "contactName customBtn locationBtn" "empty form form";
   grid-column-gap: 25px;
   align-items: center;
   padding: 4% 0;
@@ -19,32 +19,32 @@
 
 .custom-text-btn {
   grid-area: customBtn;
-  background-color: #039fbe;
+  background-color: #47A7B4;
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 80%;
-  padding: 10px;
+  font-size: 90%;
+  padding: 8px;
   width: 90%;
   font-family: Lato; }
 
 .custom-text-btn:hover {
-  background-color: #42B7CE;
+  background-color: #2D9AA9;
   cursor: pointer; }
 
 .location-now-btn {
   grid-area: locationBtn;
-  background-color: #282a40;
+  background-color: #293E5F;
   color: #fff;
   border: none;
   border-radius: 3px;
-  font-size: 76%;
-  padding: 10px;
+  font-size: 90%;
+  padding: 8px;
   width: 90%;
   font-family: Lato; }
 
 .location-now-btn:hover {
-  background-color: #434558;
+  background-color: #1D2C44;
   cursor: pointer; }
 
 @media (max-width: 650px) {
@@ -59,4 +59,4 @@
   .custom-text-btn,
   .location-now-btn {
     font-size: 70%;
-    padding: 7.5px 5px; } }
+    padding: 5px 2.5px; } }

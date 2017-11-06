@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import
 CustomMessageFormContainer from '../../containers/CustomMessageFormContainer';
 import { sendCustom } from '../../utils/postToServer';
-//import geoTools from 'geo-tools';
 
 class ContactCards extends Component {
   constructor() {
@@ -54,7 +53,7 @@ class ContactCards extends Component {
           className="location-now-btn"
           onClick={() => this.handleSend()}
         >
-          Send my location NOW!
+          Send my location
         </button>
         {renderCustomForm}
       </article>

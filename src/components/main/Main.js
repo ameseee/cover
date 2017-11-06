@@ -4,6 +4,7 @@ import { fetchScopedUsers } from './../../utils/fetchScopedUsers';
 import PropTypes from 'prop-types';
 import firebase from './../../firebase';
 import ContactCards from '../../components/contactCards/ContactCards';
+import { sendCustom } from '../../utils/postToServer';
 
 class Main extends React.Component {
   constructor() {
@@ -13,6 +14,10 @@ class Main extends React.Component {
 
   componentDidMount() {
     this.fetchScopedUsers(firebase);
+  }
+
+  handleSend = () => {
+    sendCustom('911', '5756441355');
   }
 
   loadContacts = () => {
@@ -54,7 +59,9 @@ class Main extends React.Component {
         <main>
           <section className="emergency-section">
             <h3 className="emergency-title">Emergency</h3>
-            <button className="emergency-btn">TEXT 911</button>
+            <button
+              className="emergency-btn"
+              onClick={() => this.handleSend()}>TEXT 911</button>
           </section>
           <section className="hotline-section">
             <h3 className="hotline-title">NDV Hotline</h3>

@@ -39,6 +39,14 @@ describe('<Main />', () => {
     expect(emergencyBtn.length).toEqual(1);
   });
 
+  it('should run a function to text 911', () => {
+    const button = wrapper.find('.emergency-btn');
+
+    wrapper.instance().handleSend = mockFn;
+    button.simulate('click');
+    expect(mockFn).toHaveBeenCalledTimes(1);
+  });
+
   it('should render a hotline section', () => {
     const hotline = wrapper.find('.hotline-section');
 
