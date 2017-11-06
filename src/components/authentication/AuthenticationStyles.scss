@@ -147,6 +147,10 @@ $charcoal-color: #1b1b1b;
   font-family: Lato;
 }
 
+.other-card-btn:hover {
+  background-color: $navy-hover;
+}
+
 @media (max-width: 900px) {
 
   .sign-in-section,

@@ -121,6 +121,9 @@
   font-size: 80%;
   font-family: Lato; }
 
+.other-card-btn:hover {
+  background-color: #1D2C44; }
+
 @media (max-width: 900px) {
   .sign-in-section,
   .create-account-section {
