@@ -4,6 +4,7 @@ import MainContainer from '../containers/MainContainer';
 import AuthenticationContainer from '../containers/AuthenticationContainer';
 import ManageContactsContainer from '../containers/ManageContactsContainer';
 import MobileNav from '../components/mobileNav/MobileNav';
+import About from '../components/about/About';
 
 class Routes extends Component {
   render() {
@@ -13,6 +14,7 @@ class Routes extends Component {
         <Route exact path="/" component={ AuthenticationContainer } />
         <Route path="/contacts" component={ ManageContactsContainer } />
         <Route path="/nav" component={ MobileNav } />
+        <Route path="/about" component={ About } />
       </div>
     );
   }

@@ -68,6 +68,14 @@ class App extends Component {
               Home
               </Link>
             </li>
+            <li className="nav-item-li nav-item">
+              <Link
+                className="nav-item"
+                to="/about"
+              >
+              About
+              </Link>
+            </li>
             <li className="nav-item-li">
               <Link
                 className="nav-item"
