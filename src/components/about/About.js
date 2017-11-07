@@ -61,7 +61,7 @@ class About extends Component {
         </section>
 
         <article className="hotline-calls">
-          <p>On a typical day,</p>
+          <p className="typical-day">On a typical day,</p>
           <div className="twenty-k">
             20,000
           </div>

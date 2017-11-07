@@ -40,8 +40,6 @@ $charcoal-color: #1b1b1b;
 
 .infographic {
   grid-area: infographic;
-  // width: 80%;
-  outline: 1px solid green;
   padding: 20px;
 }
 
@@ -51,25 +49,37 @@ $charcoal-color: #1b1b1b;
 }
 
 .hotline-calls {
-  outline: 1px solid green;
-  margin: 20px;
+  width: 90%;
+  margin: 20px auto;
   background-color: $grey-color;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "top top" "left rightTop" "left rightBottom";
+}
+
+.typical-day {
+  grid-area: top;
+  font-size: 150%;
 }
 
 .twenty-k {
-  font-size: 300%;
+  font-size: 375%;
   color: $red-color;
-  outline: 1px solid orange;
   display: inline-block;
+  grid-area: left;
+  //outline: 1px solid blue;
 }
 
 .calls-second-paragraph {
   display: inline-block;
-  outline: 1px solid blue;
+  grid-area: rightTop;
+  //outline: 1px solid blue;
+  padding-top: 15px;
 }
 
 .calls-third-paragraph {
-  outline: 1px solid red;
+  grid-area: rightBottom;
+  //outline: 1px solid blue;
 }
 
 .pie-section {

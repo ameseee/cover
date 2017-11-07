@@ -24,7 +24,6 @@
 
 .infographic {
   grid-area: infographic;
-  outline: 1px solid green;
   padding: 20px; }
 
 .person-icon {
@@ -32,22 +31,30 @@
   width: 30px; }
 
 .hotline-calls {
-  outline: 1px solid green;
-  margin: 20px;
-  background-color: #E6E6E8; }
+  width: 90%;
+  margin: 20px auto;
+  background-color: #E6E6E8;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "top top" "left rightTop" "left rightBottom"; }
+
+.typical-day {
+  grid-area: top;
+  font-size: 150%; }
 
 .twenty-k {
-  font-size: 300%;
+  font-size: 375%;
   color: #de504b;
-  outline: 1px solid orange;
-  display: inline-block; }
+  display: inline-block;
+  grid-area: left; }
 
 .calls-second-paragraph {
   display: inline-block;
-  outline: 1px solid blue; }
+  grid-area: rightTop;
+  padding-top: 15px; }
 
 .calls-third-paragraph {
-  outline: 1px solid red; }
+  grid-area: rightBottom; }
 
 .pie-section {
   display: flex;
