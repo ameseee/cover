@@ -63,7 +63,7 @@ class About extends Component {
               {x: '', y: 51},
             ]}
           />
-          <h3 className="psychological-caption">About 49% of women are victims of
+          <h3 className="psychological-caption">About <span>49%</span> of women are victims of
           psychological violence by an intimate partner</h3>
         </article>
 

@@ -20,7 +20,7 @@ $charcoal-color: #1b1b1b;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   grid-template-areas: "top top" "leftTop rightTop" "leftBottom rightTop" "leftBottom rightBottom" "bottom bottom";
-  width: 80%;
+  width: 75%;
   margin: 0 auto;
 }
 
@@ -62,6 +62,7 @@ $charcoal-color: #1b1b1b;
 .psychological-pie {
   grid-area: rightTop;
   margin-left: 10px;
+  padding-bottom: 10%;
   background-color: #fff;
   border: 1px solid $grey-color;
   height: 450px;
@@ -70,6 +71,8 @@ $charcoal-color: #1b1b1b;
 
 .psychological-caption {
   background-color: #fff;
+  text-align: right;
+  margin: -20px 20px 0 20px;
 }
 
 .medical-care-pie {
