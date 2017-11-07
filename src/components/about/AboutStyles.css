@@ -46,6 +46,7 @@
   padding-bottom: 10%;
   background-color: #fff;
   border: 1px solid #E6E6E8;
+  border-radius: 3px;
   height: 450px;
   display: inline-block; }
 
@@ -55,21 +56,58 @@
   margin: -20px 20px 0 20px; }
 
 .medical-care-pie {
-  outline: 1px solid red;
   grid-area: leftBottom;
-  height: 250px;
-  background-color: #fff; }
+  height: 350px;
+  background-color: #fff;
+  padding-bottom: 30%;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px; }
 
 .medical-care-caption {
-  background-color: #fff; }
+  background-color: #fff;
+  margin: 0 20px; }
 
 .hotline-calls {
-  outline: 1px solid magenta;
   grid-area: rightBottom;
   height: 150px;
-  margin-top: 30px;
-  margin-left: 10px; }
+  margin-left: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #E6E6E8;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "top top" "left rightTop" "left rightBottom"; }
+
+.typical-day {
+  grid-area: top;
+  font-size: 150%; }
+
+.twenty-k {
+  font-size: 350%;
+  color: #de504b;
+  display: inline-block;
+  grid-area: left;
+  padding-right: 5px; }
+
+.calls-second-paragraph {
+  display: inline-block;
+  grid-area: rightTop;
+  padding-top: 15px;
+  font-size: 100%; }
+
+.calls-third-paragraph {
+  grid-area: rightBottom;
+  font-size: 100%; }
 
 .report-section {
-  outline: 1px solid green;
-  grid-area: bottom; }
+  border: 1px solid #E6E6E8;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 10px;
+  grid-area: bottom;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }

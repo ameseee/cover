@@ -65,6 +65,7 @@ $charcoal-color: #1b1b1b;
   padding-bottom: 10%;
   background-color: #fff;
   border: 1px solid $grey-color;
+  border-radius: 3px;
   height: 450px;
   display: inline-block;
 }
@@ -76,141 +77,71 @@ $charcoal-color: #1b1b1b;
 }
 
 .medical-care-pie {
-  outline: 1px solid red;
   grid-area: leftBottom;
-  height: 250px;
+  height: 350px;
   background-color: #fff;
+  padding-bottom: 30%;
+  border: 1px solid $grey-color;
+  border-radius: 3px;
 }
 
 .medical-care-caption {
   background-color: #fff;
+  margin: 0 20px;
 }
 
 .hotline-calls {
-  outline: 1px solid magenta;
   grid-area: rightBottom;
   height: 150px;
-  margin-top: 30px;
   margin-left: 10px;
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid $grey-color;
+  border-radius: 3px;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-areas: "top top" "left rightTop" "left rightBottom";
+}
 
+.typical-day {
+  grid-area: top;
+  font-size: 150%;
+}
+
+.twenty-k {
+  font-size: 350%;
+  color: $red-color;
+  display: inline-block;
+  grid-area: left;
+  padding-right: 5px;
+}
+
+.calls-second-paragraph {
+  display: inline-block;
+  grid-area: rightTop;
+  padding-top: 15px;
+  font-size: 100%;
+}
+
+.calls-third-paragraph {
+  grid-area: rightBottom;
+  font-size: 100%;
 }
 
 .report-section {
-  outline: 1px solid green;
+  border: 1px solid $grey-color;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-top: 10px;
   grid-area: bottom;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-//
-//
-// .infographic-1 {
-//   width: 40%;
-//   background-color: #fff;
-//   //outline: 1px solid red;
-// }
-//
-// .phsyical-infographic {
-//   grid-area: infographic;
-//   padding: 20px;
-//   display: flex;
-//   justify-content: center;
-// }
-//
-// .physical-person-icon {
-//   height: 50px;
-//   width: 50px;
-//   margin: 5px;
-// }
-//
-// .physical-infographic-caption {
-//   grid-area: caption;
-//   padding: 10px;
-// }
-//
-// .phsyical-caption-1 {
-//   font-size: 300%;
-//   display: block;
-// }
-//
-// .phsyical-caption-2 {
-//   font-size: 120%;
-//   line-height: 150%;
-// }
-//
-// .psychological-pie {
-//   margin-left: 10px;
-//   background-color: #fff;
-//   //outline: 1px solid magenta;
-//   height: 225px;
-//   display: inline-block;
-//   width: 60%;
-//   margin-bottom: 20px;
-// }
-//
-// .psychological-caption {
-//   background-color: #fff;
-//   text-align: center;
-//   padding: 5px;
-// }
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-// .person-icon {
-//   height: 30px;
-//   width: 30px;
-// }
-//
-// .hotline-calls {
-//   width: 90%;
-//   margin: 20px auto;
-//   background-color: $grey-color;
-//   display: grid;
-//   grid-template-columns: 1fr 3fr;
-//   grid-template-areas: "top top" "left rightTop" "left rightBottom";
-// }
-//
-// .typical-day {
-//   grid-area: top;
-//   font-size: 150%;
-// }
-//
-// .twenty-k {
-//   font-size: 375%;
-//   color: $red-color;
-//   display: inline-block;
-//   grid-area: left;
-//   //outline: 1px solid blue;
-// }
-//
-// .calls-second-paragraph {
-//   display: inline-block;
-//   grid-area: rightTop;
-//   //outline: 1px solid blue;
-//   padding-top: 15px;
-// }
-//
-// .calls-third-paragraph {
-//   grid-area: rightBottom;
-//   //outline: 1px solid blue;
-// }
-//
-// .medical-care-pie {
-//   outline: 1px solid magenta;
-//   height: 225px;
-//   display: inline-block;
-//   width: 50%;
-//   grid-area: medical-pie;
-// }
-//
-// .fourth-section {
-//   display: grid;
-//   grid-template-columns: 1fr 2fr;
-//   grid-template-areas: "medical-pie infographic";
+
+// .report-infographic {
+//   margin: 0 auto;
+//   width: 100%;
 // }

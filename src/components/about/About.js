@@ -81,21 +81,23 @@ class About extends Component {
         </article>
 
         <article className="hotline-calls">
-          <p className="typical-day">On a typical day,</p>
+          <p className="typical-day">On a typical day...</p>
           <div className="twenty-k">
             20,000
           </div>
-          <p className="calls-second-paragraph">calls are placed</p>
-          <p className="calls-third-paragraph">
-            to Domestic Violence Hotlines nationwide.
-          </p>
+          <article className="calls-paragraph-container">
+            <p className="calls-second-paragraph">calls are placed to</p>
+            <p className="calls-third-paragraph">
+              Domestic Violence Hotlines nationwide.
+            </p>
+          </article>
         </article>
 
         <article className="report-section">
-          <div className="infographic">
+          <div className="report-infographic">
             {this.reportInfographic(1, 99)}
           </div>
-          <p className="infographic-caption">Less than 1% of Domestic Violence cases are reported to police.</p>
+          <p className="report-infographic-caption">Less than 1% of Domestic Violence cases are reported to police.</p>
         </article>
 
       </div>
