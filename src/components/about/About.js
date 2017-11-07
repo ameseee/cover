@@ -3,7 +3,7 @@ import { VictoryPie, VictoryChart } from 'victory';
 
 class About extends Component {
 
-  psychologicalInfographic = (red, blue) => {
+  reportInfographic = (red, blue) => {
     let people = [];
     for (var i = 0; i < red; i++) {
       people.push(<img
@@ -22,12 +22,12 @@ class About extends Component {
     let people = [];
     for (var i = 0; i < red; i++) {
       people.push(<img
-        className="person-icon"
+        className="physical-person-icon"
         src={require("../../assets/person-red.png")} />);
     }
     for (var j = 0; j < blue; j++) {
       people.push(<img
-        className="person-icon"
+        className="physical-person-icon"
         src={require("../../assets/person-navy.png")} />);
     }
     return people;
@@ -36,29 +36,49 @@ class About extends Component {
   render() {
     return (
       <div className="about-section">
-        <article>
+        <article className="first-section">
           Every minute,
           20 people in the US are physically abused by an intimate partner.
         </article>
 
-        <section className="infographic-section">
-          <article className="individual-infographic">
-            <div className="infographic">
-              {this.physicalInfographic(33, 67)}
-            </div>
-            <p className="infographic-caption">
-              1 in 3 women are victims of physical violence by an intimate partner
-            </p>
-          </article>
+        <article className="physical-section">
+          <p className="physical-infographic-caption">
+            <span className="phsyical-caption-1">
+              1 in 3
+            </span>
+            <span className="phsyical-caption-2">women are victims of physical violence by an intimate partner</span>
+          </p>
+          <div className="phsyical-infographic">
+            {this.physicalInfographic(1, 2)}
+          </div>
+        </article>
 
-          <article className="individual-infographic">
-            <div className="infographic">
-              {this.psychologicalInfographic(49, 51)}
-            </div>
-            <p className="infographic-caption">About 49% of women are victims of
-            psychological violence by an intimate partner</p>
-          </article>
-        </section>
+        <article className="psychological-pie">
+          <VictoryPie
+            padAngle={1}
+            colorScale={["#de504b", "#293e5f"]}
+            innerRadius={100}
+            data={[
+              {x: '', y: 49},
+              {x: '', y: 51},
+            ]}
+          />
+          <h3 className="psychological-caption">About 49% of women are victims of
+          psychological violence by an intimate partner</h3>
+        </article>
+
+        <article className="medical-care-pie">
+          <VictoryPie
+            padAngle={1}
+            colorScale={["#de504b", "#293e5f"]}
+            innerRadius={100}
+            data={[
+              {x: '', y: 34},
+              {x: '', y: 66},
+            ]}
+          />
+          <h3 className="medical-care-caption">Only 34% of people who are injured by an intimate partner receive medical care for those injuries.</h3>
+        </article>
 
         <article className="hotline-calls">
           <p className="typical-day">On a typical day,</p>
@@ -71,35 +91,13 @@ class About extends Component {
           </p>
         </article>
 
-        <section className="pie-section">
-          <article className="reported-pie">
-            <VictoryPie
-              padAngle={1}
-              colorScale={["#de504b", "#293e5f"]}
-              innerRadius={100}
-              data={[
-                {x: '', y: 1},
-                {x: '', y: 99},
-              ]}
-            />
-            <h3>
-              Less than 1% of Domestic Violence cases are reported to police.
-            </h3>
-          </article>
+        <article className="report-section">
+          <div className="infographic">
+            {this.reportInfographic(1, 99)}
+          </div>
+          <p className="infographic-caption">Less than 1% of Domestic Violence cases are reported to police.</p>
+        </article>
 
-          <article className="medical-care-pie">
-            <VictoryPie
-              padAngle={1}
-              colorScale={["#de504b", "#293e5f"]}
-              innerRadius={100}
-              data={[
-                {x: '', y: 34},
-                {x: '', y: 66},
-              ]}
-            />
-            <h3>Only 34% of people who are injured by an intimate partner receive medical care for those injuries.</h3>
-          </article>
-        </section>
       </div>
     );
   }

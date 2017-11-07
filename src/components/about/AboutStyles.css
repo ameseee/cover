@@ -4,65 +4,69 @@
   font-size: 100%; }
 
 .about-section {
-  background-color: #f5f5f7; }
-
-.infographic-section {
-  display: flex;
-  flex-direction: column; }
-
-.individual-infographic {
+  background-color: #f5f5f7;
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-template-areas: "infographic caption";
-  outline: 1px solid red;
-  width: 90%;
+  grid-template-columns: 0.4fr 0.6fr;
+  grid-template-areas: "top top" "leftTop rightTop" "leftBottom rightTop" "leftBottom rightBottom" "bottom bottom";
+  width: 80%;
   margin: 0 auto; }
 
-.infographic-caption {
-  grid-area: caption;
-  outline: 1px solid blue; }
-
-.infographic {
-  grid-area: infographic;
+.first-section {
+  grid-area: top;
   padding: 20px; }
 
-.person-icon {
-  height: 30px;
-  width: 30px; }
+.physical-section {
+  border: 1px solid #E6E6E8;
+  border-radius: 3px;
+  grid-area: leftTop;
+  padding: 7.5%;
+  background-color: #fff;
+  margin-bottom: 10px; }
+
+.phsyical-caption-1 {
+  font-size: 300%; }
+
+.phsyical-caption-2 {
+  display: block;
+  font-size: 130%;
+  margin-bottom: 5%; }
+
+.phsyical-infographic {
+  display: flex;
+  flex-direction: row;
+  justify-content: center; }
+
+.physical-person-icon {
+  height: 75px;
+  width: 75px; }
+
+.psychological-pie {
+  grid-area: rightTop;
+  margin-left: 10px;
+  background-color: #fff;
+  border: 1px solid #E6E6E8;
+  height: 450px;
+  display: inline-block; }
+
+.psychological-caption {
+  background-color: #fff; }
+
+.medical-care-pie {
+  outline: 1px solid red;
+  grid-area: leftBottom;
+  height: 250px;
+  background-color: #fff; }
+
+.medical-care-caption {
+  background-color: #fff; }
 
 .hotline-calls {
-  width: 90%;
-  margin: 20px auto;
-  background-color: #E6E6E8;
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  grid-template-areas: "top top" "left rightTop" "left rightBottom"; }
-
-.typical-day {
-  grid-area: top;
-  font-size: 150%; }
-
-.twenty-k {
-  font-size: 375%;
-  color: #de504b;
-  display: inline-block;
-  grid-area: left; }
-
-.calls-second-paragraph {
-  display: inline-block;
-  grid-area: rightTop;
-  padding-top: 15px; }
-
-.calls-third-paragraph {
-  grid-area: rightBottom; }
-
-.pie-section {
-  display: flex;
-  flex-direction: row; }
-
-.reported-pie,
-.medical-care-pie {
   outline: 1px solid magenta;
-  height: 225px;
-  display: inline-block;
-  width: 50%; }
+  grid-area: rightBottom;
+  height: 150px;
+  margin-top: 30px;
+  margin-left: 10px; }
+
+.report-section {
+  outline: 1px solid green;
+  grid-area: bottom; }
