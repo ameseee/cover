@@ -27,6 +27,10 @@ $charcoal-color: #1b1b1b;
 .first-section {
   grid-area: top;
   padding: 20px;
+  border: 1px solid $grey-color;
+  border-radius: 3px;
+  background-color: #fff;
+  margin: 20px 0 10px 0;
 }
 
 .physical-section {
