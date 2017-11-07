@@ -25,9 +25,9 @@ class App extends Component {
     this.props.history.push('/nav');
   }
 
-  render() {
+  renderSignOutBn = () => {
     const { currentUser } = this.props;
-    const signedIn = !currentUser
+    return !currentUser
       ? null
       :
       <button
@@ -40,7 +40,9 @@ class App extends Component {
           Sign Out
         </Link>
       </button>;
+  }
 
+  render() {
     return (
       <div className="app-container">
         <nav className="nav-bar">
@@ -74,7 +76,7 @@ class App extends Component {
               Contacts
               </Link>
             </li>
-            { signedIn }
+            { this.renderSignOutBn() }
           </ul>
         </nav>
         <button
