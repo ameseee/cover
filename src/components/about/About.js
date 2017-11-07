@@ -35,24 +35,30 @@ class About extends Component {
 
   render() {
     return (
-      <div>
+      <div className="about-section">
         <article>
           Every minute,
           20 people in the US are physically abused by an intimate partner.
         </article>
 
-        <article>
-          About 49% of women are victims of
-          psychological violence by an intimate partner
-          <div className="infographic">
-            {this.psychologicalInfographic(49, 51)}
-          </div>
-        </article>
+        <section className="infographic-section">
+          <article className="individual-infographic">
+            <div className="infographic">
+              {this.physicalInfographic(33, 67)}
+            </div>
+            <p className="infographic-caption">
+              1 in 3 women are victims of physical violence by an intimate partner
+            </p>
+          </article>
 
-        <article>
-          1 in 3 women are victims of physical violence by an intimate partner
-          <div className="infographic">{this.physicalInfographic(33, 67)}</div>
-        </article>
+          <article className="individual-infographic">
+            <div className="infographic">
+              {this.psychologicalInfographic(49, 51)}
+            </div>
+            <p className="infographic-caption">About 49% of women are victims of
+            psychological violence by an intimate partner</p>
+          </article>
+        </section>
 
         <article className="hotline-calls">
           <p>On a typical day,</p>
@@ -60,7 +66,9 @@ class About extends Component {
             20,000
           </div>
           <p className="calls-second-paragraph">calls are placed</p>
-          <p className="calls-third-paragraph">to Domestic Violence Hotlines nationwide.</p>
+          <p className="calls-third-paragraph">
+            to Domestic Violence Hotlines nationwide.
+          </p>
         </article>
 
         <section className="pie-section">

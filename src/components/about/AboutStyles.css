@@ -3,6 +3,34 @@
   color: #1b1b1b;
   font-size: 100%; }
 
+.about-section {
+  background-color: #f5f5f7; }
+
+.infographic-section {
+  display: flex;
+  flex-direction: column; }
+
+.individual-infographic {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-areas: "infographic caption";
+  outline: 1px solid red;
+  width: 90%;
+  margin: 0 auto; }
+
+.infographic-caption {
+  grid-area: caption;
+  outline: 1px solid blue; }
+
+.infographic {
+  grid-area: infographic;
+  outline: 1px solid green;
+  padding: 20px; }
+
+.person-icon {
+  height: 30px;
+  width: 30px; }
+
 .hotline-calls {
   outline: 1px solid green;
   margin: 20px;
@@ -30,11 +58,4 @@
   outline: 1px solid magenta;
   height: 225px;
   display: inline-block;
-  width: 50%; }
-
-.person-icon {
-  height: 25px;
-  width: 25px; }
-
-.infographic {
   width: 50%; }
