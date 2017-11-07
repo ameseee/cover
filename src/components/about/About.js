@@ -1,23 +1,36 @@
 import React, { Component } from 'react';
-import { VictoryBar, VictoryChart } from 'victory';
+import { VictoryPie, VictoryChart } from 'victory';
 
 class About extends Component {
 
   render() {
-    const quarterlyData = [
-      {quarter: 1, earnings: 1300},
-      {quarter: 2, earnings: 1800},
-      {quarter: 3, earnings: 1100},
-    ];
 
     return (
-      <VictoryChart>
-        <VictoryBar
-          data={quarterlyData}
-          x="quarter"
-          y="earnings"
-        />
-      </VictoryChart>
+      <div>
+        <div className="reported-pie">
+          <VictoryPie
+            padAngle={1}
+            colorScale={["red", "blue"]}
+            innerRadius={100}
+            data={[
+              {x: "reported", y: 1},
+              {x: "not reported", y: 99},
+            ]}
+          />
+        </div>
+
+        <div className="medical-care-pie">
+          <VictoryPie
+            padAngle={1}
+            colorScale={["red", "blue"]}
+            innerRadius={100}
+            data={[
+              {x: "received medical care", y: 34},
+              {x: "did not receive medical care", y: 66},
+            ]}
+          />
+        </div>
+      </div>
     );
   }
 }
