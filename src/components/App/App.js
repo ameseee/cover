@@ -68,7 +68,7 @@ class App extends Component {
               Home
               </Link>
             </li>
-            <li className="nav-item-li nav-item">
+            <li className="nav-item-li">
               <Link
                 className="nav-item"
                 to="/about"

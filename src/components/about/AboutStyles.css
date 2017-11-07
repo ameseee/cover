@@ -1,5 +1,40 @@
+@import url(https://fonts.googleapis.com/css?family=Lato);
+* {
+  color: #1b1b1b;
+  font-size: 100%; }
+
+.hotline-calls {
+  outline: 1px solid green;
+  margin: 20px;
+  background-color: #E6E6E8; }
+
+.twenty-k {
+  font-size: 300%;
+  color: #de504b;
+  outline: 1px solid orange;
+  display: inline-block; }
+
+.calls-second-paragraph {
+  display: inline-block;
+  outline: 1px solid blue; }
+
+.calls-third-paragraph {
+  outline: 1px solid red; }
+
+.pie-section {
+  display: flex;
+  flex-direction: row; }
+
 .reported-pie,
 .medical-care-pie {
   outline: 1px solid magenta;
   height: 225px;
-  display: inline-block; }
+  display: inline-block;
+  width: 50%; }
+
+.person-icon {
+  height: 25px;
+  width: 25px; }
+
+.infographic {
+  width: 50%; }
