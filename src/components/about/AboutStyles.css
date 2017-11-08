@@ -155,13 +155,19 @@
 .call-left {
   width: 45%;
   text-align: center;
-  line-height: 110%; }
+  line-height: 110%;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-areas: "topLeft" "bottomLeft"; }
 
 .call-left-text {
-  line-height: 150%; }
+  line-height: 150%;
+  grid-area: topLeft;
+  align-self: center; }
 
 .learn-more-btn {
-  background-color: #47A7B4;
+  grid-area: bottomLeft;
+  background-color: #293E5F;
   border: none;
   border-radius: 3px;
   font-size: 90%;
@@ -171,16 +177,27 @@
   margin: 10px auto;
   display: block; }
 
+.learn-more-btn:hover {
+  background-color: #1D2C44; }
+
 .link-to-learn-more {
   color: #fff;
   text-decoration: none; }
 
 .call-right {
   width: 45%;
-  text-align: center; }
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-areas: "topRight" "bottomRight"; }
+
+.call-right-text {
+  grid-area: topRight;
+  align-self: center; }
 
 .route-to-auth-btn {
-  background-color: #47A7B4;
+  grid-area: bottomRight;
+  background-color: #293E5F;
   border: none;
   border-radius: 3px;
   font-size: 90%;
@@ -188,6 +205,9 @@
   font-family: Lato;
   margin: 10px auto;
   display: block; }
+
+.route-to-auth-btn:hover {
+  background-color: #1D2C44; }
 
 .link-to-auth-btn {
   color: #fff;

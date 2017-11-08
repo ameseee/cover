@@ -92,16 +92,24 @@ class About extends Component {
         </div>
         <article className="call-to-action">
           <section className="call-left">
-            <p className="call-left-text">If you aren't experiencing domestic abuse, it's likely that someone you know is.
-            Know the signs and be a source of support.</p>
+            <p
+              className="call-left-text">
+              If you aren't experiencing domestic abuse, it's likely that someone you know is.
+              Know the signs and be a source of support.
+            </p>
             <button className="learn-more-btn">
-              <a href="https://ncadv.org/learn-more" className="link-to-learn-more">
+              <a
+                href="https://ncadv.org/learn-more"
+                className="link-to-learn-more">
                 Learn More
               </a>
             </button>
           </section>
           <section className="call-right">
-            <p className="call-right-text">Do you need help or someone to talk to?</p>
+            <p className="call-right-text">
+              Do you need help or someone to talk to?
+            </p>
+            <p>You're not alone.</p>
             <button className="route-to-auth-btn">
               <Link
                 className="link-to-auth-btn"
