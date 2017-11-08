@@ -6,6 +6,7 @@
 @import './components/customMessageForm/CustomMessageFormStyles.css';
 @import './components/contactCards/ContactCardsStyles.css';
 @import './components/mobileNav/MobileNavStyles.css';
+@import './components/about/AboutStyles.css';
 
 $lt-grey-color: #f5f5f7;
 
@@ -21,7 +22,7 @@ $lt-grey-color: #f5f5f7;
 }
 
 .routes {
-  padding-bottom: 5%; 
+  padding-bottom: 5%;
 }
 
 .entire-app {
