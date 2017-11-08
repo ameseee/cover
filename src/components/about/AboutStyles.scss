@@ -15,6 +15,13 @@ $charcoal-color: #1b1b1b;
   font-size: 100%;
 }
 
+.about-title {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px;
+}
+
 .about-section {
   background-color: $lt-grey-color;
   display: grid;
@@ -30,7 +37,7 @@ $charcoal-color: #1b1b1b;
   border: 1px solid $grey-color;
   border-radius: 3px;
   background-color: #fff;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
 }
 
 .physical-section {
@@ -171,6 +178,10 @@ $charcoal-color: #1b1b1b;
     width: 87.5%;
   }
 
+  .about-title {
+    width: 87.5%;
+  }
+
   .psychological-caption {
     width: 85%;
     font-size: 100%;
@@ -199,10 +210,14 @@ $charcoal-color: #1b1b1b;
     grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom";
   }
 
+  .first-section {
+    margin-top: 5px;
+  }
+
   .medical-care-pie {
     padding-bottom: 25%;
   }
-  
+
   .psychological-pie {
     margin-left: 0;
     margin-bottom: 10px;
