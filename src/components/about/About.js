@@ -1,38 +1,12 @@
 import React, { Component } from 'react';
 import { VictoryPie, VictoryChart } from 'victory';
 import { Link } from 'react-router-dom';
+import {
+  reportInfographic,
+  physicalInfographic
+} from '../../utils/infographics';
 
 class About extends Component {
-
-  reportInfographic = (red, blue) => {
-    let people = [];
-    for (var i = 0; i < red; i++) {
-      people.push(<img
-        className="person-icon"
-        src={require("../../assets/person-red.png")} />);
-    }
-    for (var j = 0; j < blue; j++) {
-      people.push(<img
-        className="person-icon"
-        src={require("../../assets/person-navy.png")} />);
-    }
-    return people;
-  }
-
-  physicalInfographic = (red, blue) => {
-    let people = [];
-    for (var i = 0; i < red; i++) {
-      people.push(<img
-        className="physical-person-icon"
-        src={require("../../assets/person-red.png")} />);
-    }
-    for (var j = 0; j < blue; j++) {
-      people.push(<img
-        className="physical-person-icon"
-        src={require("../../assets/person-navy.png")} />);
-    }
-    return people;
-  }
 
   render() {
     return (
@@ -54,7 +28,7 @@ class About extends Component {
               </span>
             </p>
             <div className="phsyical-infographic">
-              {this.physicalInfographic(1, 2)}
+              {physicalInfographic(1, 2)}
             </div>
           </article>
 
@@ -108,7 +82,7 @@ class About extends Component {
 
           <article className="report-section">
             <div className="report-infographic">
-              {this.reportInfographic(1, 99)}
+              {reportInfographic(1, 99)}
             </div>
             <p className="report-infographic-caption">
               Less than 1% of Domestic Violence cases are reported to police.
