@@ -152,6 +152,8 @@
   .about-section {
     grid-template-columns: 1fr;
     grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom"; }
+  .medical-care-pie {
+    padding-bottom: 25%; }
   .psychological-pie {
     margin-left: 0;
     margin-bottom: 10px; }
@@ -160,6 +162,8 @@
   .hotline-calls {
     margin-left: 0;
     margin-top: 10px; }
+  .twenty-k {
+    padding-top: 11px; }
   .person-icon {
     height: 25px;
     width: 25px; } }

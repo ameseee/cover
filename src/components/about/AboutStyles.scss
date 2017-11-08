@@ -199,6 +199,10 @@ $charcoal-color: #1b1b1b;
     grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom";
   }
 
+  .medical-care-pie {
+    padding-bottom: 25%;
+  }
+  
   .psychological-pie {
     margin-left: 0;
     margin-bottom: 10px;
@@ -211,6 +215,10 @@ $charcoal-color: #1b1b1b;
   .hotline-calls {
     margin-left: 0;
     margin-top: 10px;
+  }
+
+  .twenty-k {
+    padding-top: 11px;
   }
 
   .person-icon {
