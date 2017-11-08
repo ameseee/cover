@@ -61,8 +61,8 @@ class About extends Component {
               colorScale={["#de504b", "#293e5f"]}
               innerRadius={100}
               data={[
-                {x: '', y: 49},
-                {x: '', y: 51},
+                {x: ' ', y: 49},
+                {x: ' ', y: 51},
               ]}
             />
             <p className="psychological-caption">About <span className="forty-nine-percent">49% of women</span> are victims of
@@ -75,8 +75,8 @@ class About extends Component {
               colorScale={["#de504b", "#293e5f"]}
               innerRadius={100}
               data={[
-                {x: '', y: 34},
-                {x: '', y: 66},
+                {x: ' ', y: 34},
+                {x: ' ', y: 66},
               ]}
             />
             <p className="medical-care-caption">Only
