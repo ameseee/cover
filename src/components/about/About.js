@@ -107,12 +107,19 @@ class About extends Component {
             <div className="report-infographic">
               {this.reportInfographic(1, 99)}
             </div>
-            <p className="report-infographic-caption">Less than 1% of Domestic Violence cases are reported to police.</p>
+            <p className="report-infographic-caption">
+              Less than 1% of Domestic Violence cases are reported to police.
+            </p>
           </article>
 
         </div>
         <article className="call-to-action">
-          this is the call to action div
+          <section className="call-left">If you aren't experiencing this, it's likely that someone you know it. Know the signs and be a source of support.
+            <button><a href="https://ncadv.org/learn-more">Learn More</a></button>
+          </section>
+          <section className="call-right">Do you need help or someone to talk to?
+            <button>Create an Account or Sign In</button>
+          </section>
         </article>
       </div>
     );
