@@ -153,35 +153,41 @@
   justify-content: space-between; }
 
 .call-left {
-  outline: 1px solid red;
-  width: 47.5%; }
+  width: 45%;
+  text-align: center;
+  line-height: 110%; }
+
+.call-left-text {
+  line-height: 150%; }
 
 .learn-more-btn {
   background-color: #47A7B4;
   border: none;
   border-radius: 3px;
   font-size: 90%;
-  padding: 8px;
-  width: 90%;
+  padding: 8px 12px;
   font-family: Lato;
-  text-decoration: none; }
+  text-decoration: none;
+  margin: 10px auto;
+  display: block; }
 
 .link-to-learn-more {
   color: #fff;
   text-decoration: none; }
 
 .call-right {
-  outline: 1px solid red;
-  width: 47.5%; }
+  width: 45%;
+  text-align: center; }
 
 .route-to-auth-btn {
   background-color: #47A7B4;
   border: none;
   border-radius: 3px;
   font-size: 90%;
-  padding: 8px;
-  width: 90%;
-  font-family: Lato; }
+  padding: 8px 12px;
+  font-family: Lato;
+  margin: 10px auto;
+  display: block; }
 
 .link-to-auth-btn {
   color: #fff;

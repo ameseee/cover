@@ -49,7 +49,9 @@ class About extends Component {
               <span className="phsyical-caption-1">
                 1 in 3
               </span>
-              <span className="phsyical-caption-2">women are victims of physical violence by an intimate partner</span>
+              <span className="phsyical-caption-2">
+                women are victims of physical violence by an intimate partner
+              </span>
             </p>
             <div className="phsyical-infographic">
               {this.physicalInfographic(1, 2)}
@@ -116,14 +118,16 @@ class About extends Component {
         </div>
         <article className="call-to-action">
           <section className="call-left">
-            If you aren't experiencing this, it's likely that someone you know it.
-            Know the signs and be a source of support.
+            <p className="call-left-text">If you aren't experiencing domestic abuse, it's likely that someone you know is.
+            Know the signs and be a source of support.</p>
             <button className="learn-more-btn">
-              <a href="https://ncadv.org/learn-more" className="link-to-learn-more">Learn More</a>
+              <a href="https://ncadv.org/learn-more" className="link-to-learn-more">
+                Learn More
+              </a>
             </button>
           </section>
           <section className="call-right">
-            Do you need help or someone to talk to?
+            <p className="call-right-text">Do you need help or someone to talk to?</p>
             <button className="route-to-auth-btn">
               <Link
                 className="link-to-auth-btn"

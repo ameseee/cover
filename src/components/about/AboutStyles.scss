@@ -187,8 +187,14 @@ $charcoal-color: #1b1b1b;
 }
 
 .call-left {
-  outline: 1px solid red;
-  width: 47.5%;
+  //outline: 1px solid red;
+  width: 45%;
+  text-align: center;
+  line-height: 110%;
+}
+
+.call-left-text {
+  line-height: 150%;
 }
 
 .learn-more-btn {
@@ -196,10 +202,11 @@ $charcoal-color: #1b1b1b;
   border: none;
   border-radius: 3px;
   font-size: 90%;
-  padding: 8px;
-  width: 90%;
+  padding: 8px 12px;
   font-family: Lato;
   text-decoration: none;
+  margin: 10px auto;
+  display: block;
 }
 
 .link-to-learn-more {
@@ -208,8 +215,13 @@ $charcoal-color: #1b1b1b;
 }
 
 .call-right {
-  outline: 1px solid red;
-  width: 47.5%;
+  //outline: 1px solid red;
+  width: 45%;
+  text-align: center;
+}
+
+.call-right-text {
+
 }
 
 .route-to-auth-btn {
@@ -217,9 +229,10 @@ $charcoal-color: #1b1b1b;
   border: none;
   border-radius: 3px;
   font-size: 90%;
-  padding: 8px;
-  width: 90%;
+  padding: 8px 12px;
   font-family: Lato;
+  margin: 10px auto;
+  display: block;
 }
 
 .link-to-auth-btn {
