@@ -38,9 +38,9 @@ class About extends Component {
         <h2 className="about-title">About</h2>
         <div className="about-section">
           <article className="first-section">
-            Every minute,
-            20 people in the US are physically abused by an intimate partner.
-            {this.state.seconds}
+            {`Since you've been on this page, `}
+            <span className="person-count">{this.state.seconds} </span>
+            people in the US have been physically abused by an intimate partner.
           </article>
 
           <article className="physical-section">
