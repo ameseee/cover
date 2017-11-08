@@ -56,8 +56,16 @@
 
 .psychological-caption {
   background-color: #fff;
+  width: 80%;
+  float: right;
   text-align: right;
-  margin: -20px 20px 0 20px; }
+  margin: -25px 20px 0 20px;
+  font-size: 110%; }
+
+.forty-nine-percent {
+  font-size: 140%;
+  padding: 0 4px;
+  color: #293E5F; }
 
 .medical-care-pie {
   grid-area: leftBottom;
@@ -69,7 +77,16 @@
 
 .medical-care-caption {
   background-color: #fff;
-  margin: 0 20px; }
+  margin: 0 20px;
+  width: 84%;
+  font-size: 105%; }
+
+.thirty-four-percent {
+  font-size: 125%;
+  color: #de504b; }
+
+.red-text {
+  color: #de504b; }
 
 .hotline-calls {
   grid-area: rightBottom;
@@ -115,3 +132,23 @@
   flex-direction: column;
   align-items: center;
   justify-content: center; }
+
+@media (max-width: 1100px) {
+  .about-section {
+    width: 87.5%; }
+  .psychological-caption {
+    width: 85%;
+    font-size: 100%; }
+  .medical-care-caption {
+    width: 90%;
+    font-size: 90%; }
+  .twenty-k {
+    font-size: 300%; }
+  .calls-second-paragraph,
+  .calls-third-paragraph {
+    font-size: 90%; } }
+
+@media (max-width: 850px) {
+  .about-section {
+    grid-template-columns: 1fr;
+    grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom"; } }

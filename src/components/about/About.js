@@ -63,8 +63,8 @@ class About extends Component {
               {x: '', y: 51},
             ]}
           />
-          <h3 className="psychological-caption">About <span>49%</span> of women are victims of
-          psychological violence by an intimate partner</h3>
+          <p className="psychological-caption">About <span className="forty-nine-percent">49% of women</span> are victims of
+          psychological violence by an intimate partner</p>
         </article>
 
         <article className="medical-care-pie">
@@ -77,7 +77,13 @@ class About extends Component {
               {x: '', y: 66},
             ]}
           />
-          <h3 className="medical-care-caption">Only 34% of people who are injured by an intimate partner receive medical care for those injuries.</h3>
+          <p className="medical-care-caption">Only
+
+            <span className="red-text">
+              <span className="thirty-four-percent"> 34% </span>of people
+            </span> who are injured by an intimate partner
+            <span className="red-text"> receive medical care </span>
+            for those injuries.</p>
         </article>
 
         <article className="hotline-calls">
