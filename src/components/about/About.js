@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { VictoryPie, VictoryChart } from 'victory';
+import { VictoryPie } from 'victory';
 import { Link } from 'react-router-dom';
 import {
   reportInfographic,
@@ -108,8 +108,8 @@ class About extends Component {
           <section className="call-right">
             <p className="call-right-text">
               Do you need help or someone to talk to?
+              <span className="not-alone-text">You're not alone. Create an account or login to get started.</span>
             </p>
-            <p>You're not alone.</p>
             <button className="route-to-auth-btn">
               <Link
                 className="link-to-auth-btn"

@@ -213,6 +213,7 @@ $charcoal-color: #1b1b1b;
   text-decoration: none;
   margin: 10px auto;
   display: block;
+  width: 60%;
 }
 
 .learn-more-btn:hover {
@@ -237,6 +238,10 @@ $charcoal-color: #1b1b1b;
   align-self: center;
 }
 
+.not-alone-text {
+  display: block;
+}
+
 .route-to-auth-btn {
   grid-area: bottomRight;
   background-color: $navy-color;
@@ -247,6 +252,7 @@ $charcoal-color: #1b1b1b;
   font-family: Lato;
   margin: 10px auto;
   display: block;
+  width: 60%;
 }
 
 .route-to-auth-btn:hover {

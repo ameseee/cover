@@ -175,7 +175,8 @@
   font-family: Lato;
   text-decoration: none;
   margin: 10px auto;
-  display: block; }
+  display: block;
+  width: 60%; }
 
 .learn-more-btn:hover {
   background-color: #1D2C44; }
@@ -195,6 +196,9 @@
   grid-area: topRight;
   align-self: center; }
 
+.not-alone-text {
+  display: block; }
+
 .route-to-auth-btn {
   grid-area: bottomRight;
   background-color: #293E5F;
@@ -204,7 +208,8 @@
   padding: 8px 12px;
   font-family: Lato;
   margin: 10px auto;
-  display: block; }
+  display: block;
+  width: 60%; }
 
 .route-to-auth-btn:hover {
   background-color: #1D2C44; }
