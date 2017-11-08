@@ -65,8 +65,10 @@ class About extends Component {
                 {x: ' ', y: 51},
               ]}
             />
-            <p className="psychological-caption">About <span className="forty-nine-percent">49% of women</span> are victims of
-            psychological violence by an intimate partner</p>
+            <p className="psychological-caption">
+              About
+              <span className="forty-nine-percent"> 49% of women </span>
+              are victims of psychological violence by an intimate partner</p>
           </article>
 
           <article className="medical-care-pie">
@@ -109,6 +111,9 @@ class About extends Component {
           </article>
 
         </div>
+        <article className="call-to-action">
+          this is the call to action div
+        </article>
       </div>
     );
   }
