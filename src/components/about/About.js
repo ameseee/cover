@@ -94,8 +94,9 @@ class About extends Component {
           <section className="call-left">
             <p
               className="call-left-text">
-              If you aren't experiencing domestic abuse, it's likely that someone you know is.
-              Know the signs and be a source of support.
+              {`If you aren't experiencing domestic abuse,
+              it's likely that someone you know is.
+              Know the signs and be a source of support.`}
             </p>
             <button className="learn-more-btn">
               <a
@@ -108,7 +109,9 @@ class About extends Component {
           <section className="call-right">
             <p className="call-right-text">
               Do you need help or someone to talk to?
-              <span className="not-alone-text">You're not alone. Create an account or login to get started.</span>
+              <span className="not-alone-text">
+                {`You're not alone. Create an account or login to get started.`}
+              </span>
             </p>
             <button className="route-to-auth-btn">
               <Link

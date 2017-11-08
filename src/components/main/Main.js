@@ -38,7 +38,7 @@ class Main extends React.Component {
       <article className="no-contacts-card">
         <h4
           className="no-contacts-text">
-          {"You don't have any contacts saved yet!"}
+          {`You don't have any contacts saved yet!`}
         </h4>
         <button className="add-contacts-btn">
           <Link
