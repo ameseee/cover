@@ -7,6 +7,30 @@ import {
 } from '../../utils/infographics';
 
 class About extends Component {
+  constructor() {
+    super();
+    this.state = {
+      seconds: 0
+    };
+  }
+
+  componentDidMount() {
+    this.countSeconds();
+  }
+
+  shouldComponentUpdate(nextState) {
+    if (nextState !== this.state) {
+      this.countSeconds();
+      return true;
+    }
+  }
+
+  countSeconds = () => {
+    const updatedSeconds = this.state.seconds + 3;
+    setTimeout( () => {
+      this.setState({ seconds: updatedSeconds });
+    }, 3000);
+  }
 
   render() {
     return (
@@ -16,6 +40,7 @@ class About extends Component {
           <article className="first-section">
             Every minute,
             20 people in the US are physically abused by an intimate partner.
+            {this.state.seconds}
           </article>
 
           <article className="physical-section">
