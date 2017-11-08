@@ -190,9 +190,41 @@ $charcoal-color: #1b1b1b;
   outline: 1px solid red;
   width: 47.5%;
 }
+
+.learn-more-btn {
+  background-color: $turq-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px;
+  width: 90%;
+  font-family: Lato;
+  text-decoration: none;
+}
+
+.link-to-learn-more {
+  color: #fff;
+  text-decoration: none;
+}
+
 .call-right {
   outline: 1px solid red;
   width: 47.5%;
+}
+
+.route-to-auth-btn {
+  background-color: $turq-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px;
+  width: 90%;
+  font-family: Lato;
+}
+
+.link-to-auth-btn {
+  color: #fff;
+  text-decoration: none;
 }
 
 @media (max-width: 1100px) {

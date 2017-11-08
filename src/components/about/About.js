@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { VictoryPie, VictoryChart } from 'victory';
+import { Link } from 'react-router-dom';
 
 class About extends Component {
 
@@ -114,11 +115,23 @@ class About extends Component {
 
         </div>
         <article className="call-to-action">
-          <section className="call-left">If you aren't experiencing this, it's likely that someone you know it. Know the signs and be a source of support.
-            <button><a href="https://ncadv.org/learn-more">Learn More</a></button>
+          <section className="call-left">
+            If you aren't experiencing this, it's likely that someone you know it.
+            Know the signs and be a source of support.
+            <button className="learn-more-btn">
+              <a href="https://ncadv.org/learn-more" className="link-to-learn-more">Learn More</a>
+            </button>
           </section>
-          <section className="call-right">Do you need help or someone to talk to?
-            <button>Create an Account or Sign In</button>
+          <section className="call-right">
+            Do you need help or someone to talk to?
+            <button className="route-to-auth-btn">
+              <Link
+                className="link-to-auth-btn"
+                to="/auth"
+              >
+                Create an Account or Sign In
+              </Link>
+            </button>
           </section>
         </article>
       </div>
