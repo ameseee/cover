@@ -302,6 +302,11 @@ $charcoal-color: #1b1b1b;
     width: 87.5%;
   }
 
+  .call-left-text,
+  .call-right-text {
+    font-size: 90%;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -339,6 +344,21 @@ $charcoal-color: #1b1b1b;
   .person-icon {
     height: 25px;
     width: 25px;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .call-left,
+  .call-right {
+    width: 100%;
+  }
+
+  .route-to-auth-btn,
+  .learn-more-btn {
+    margin-top: 0;
   }
 
 }

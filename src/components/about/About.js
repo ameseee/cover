@@ -143,7 +143,7 @@ class About extends Component {
                 className="link-to-auth-btn"
                 to="/auth"
               >
-                Create an Account or Sign In
+                Sign In
               </Link>
             </button>
           </section>
