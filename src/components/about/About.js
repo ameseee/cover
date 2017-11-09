@@ -141,7 +141,7 @@ class About extends Component {
             <button className="route-to-auth-btn">
               <Link
                 className="link-to-auth-btn"
-                to="/auth"
+                to="/"
               >
                 Sign In
               </Link>

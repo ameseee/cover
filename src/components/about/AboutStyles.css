@@ -256,15 +256,19 @@
     grid-template-columns: 1fr;
     grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom"; }
   .first-section {
-    margin-top: 5px; }
+    margin-top: 5px;
+    font-size: 125%;
+    line-height: 130%; }
   .medical-care-pie {
     padding-bottom: 25%; }
   .psychological-pie {
     margin-left: 0;
-    margin-bottom: 10px;
-    height: 80%; }
+    height: 90%; }
   .psychological-caption {
-    margin-top: -50px; }
+    margin-top: -50px;
+    padding: 9px; }
+  .physical-section {
+    margin-top: -30px; }
   .hotline-calls {
     margin-left: 0;
     margin-top: 10px; }
