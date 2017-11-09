@@ -30,13 +30,13 @@ main {
   margin-left: 5%;
   font-family: Lato;
   font-size: 120%;
-  width: 200%;
+  width: 125%;
   color: #1b1b1b; }
 
 .emergency-btn {
   background-color: #de4b78;
   padding: 8px;
-  width: 80%;
+  width: 90%;
   margin: 0 5% 0 auto;
   border: none;
   border-radius: 3px;
@@ -51,7 +51,7 @@ main {
 .hotline-btn {
   background-color: #2da97a;
   padding: 8px;
-  width: 80%;
+  width: 90%;
   margin: 0 5% 0 auto;
   border: none;
   border-radius: 3px;
@@ -107,7 +107,11 @@ main {
   .hotline-section {
     width: 75%; }
   .nav-item {
-    font-size: 90%; } }
+    font-size: 90%; }
+  .hotline-title {
+    font-size: 110%; }
+  .hotline-btn {
+    font-size: 100%; } }
 
 @media (max-width: 650px) {
   .contacts-section {

@@ -38,17 +38,17 @@ describe('<App />', () => {
     expect(navList.length).toEqual(1);
   });
 
-  it('should render two options on nav bar if user is signed in', () => {
+  it('should render three options on nav bar if user is signed in', () => {
     const navItems = wrapper.find('li');
 
-    expect(navItems.length).toEqual(2);
+    expect(navItems.length).toEqual(3);
   });
 
   it('should render two options on nav bar if no user', () => {
     const noUserWrapper = shallow(<App currentUser=""/>);
     const navItems = noUserWrapper.find('li');
 
-    expect(navItems.length).toEqual(2);
+    expect(navItems.length).toEqual(3);
   });
 
   it('should render a sign out link if user is signed in', () => {

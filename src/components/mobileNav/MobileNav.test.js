@@ -21,10 +21,10 @@ describe('<MobileNav />', () => {
     expect(goBackBtn.length).toEqual(1);
   });
 
-  it('should render a three drop down option links', () => {
+  it('should render a four drop down option links', () => {
     const option = wrapper.find('.drop-down-option');
 
-    expect(option.length).toEqual(3);
+    expect(option.length).toEqual(4);
   });
 
   it('should match snapshot', () => {

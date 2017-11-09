@@ -35,6 +35,15 @@ ShallowWrapper {
           <Link
             className="drop-down-option"
             replace={false}
+            to="/about"
+          >
+            About
+          </Link>
+        </div>,
+        <div>
+          <Link
+            className="drop-down-option"
+            replace={false}
             to="/contacts"
           >
             Contacts
@@ -92,6 +101,36 @@ ShallowWrapper {
           },
           "ref": null,
           "rendered": "Home",
+          "type": [Function],
+        },
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": null,
+        "nodeType": "host",
+        "props": Object {
+          "children": <Link
+            className="drop-down-option"
+            replace={false}
+            to="/about"
+          >
+            About
+          </Link>,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "class",
+          "props": Object {
+            "children": "About",
+            "className": "drop-down-option",
+            "replace": false,
+            "to": "/about",
+          },
+          "ref": null,
+          "rendered": "About",
           "type": [Function],
         },
         "type": "div",
@@ -183,6 +222,15 @@ ShallowWrapper {
             <Link
               className="drop-down-option"
               replace={false}
+              to="/about"
+            >
+              About
+            </Link>
+          </div>,
+          <div>
+            <Link
+              className="drop-down-option"
+              replace={false}
               to="/contacts"
             >
               Contacts
@@ -240,6 +288,36 @@ ShallowWrapper {
             },
             "ref": null,
             "rendered": "Home",
+            "type": [Function],
+          },
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": null,
+          "nodeType": "host",
+          "props": Object {
+            "children": <Link
+              className="drop-down-option"
+              replace={false}
+              to="/about"
+            >
+              About
+            </Link>,
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": null,
+            "nodeType": "class",
+            "props": Object {
+              "children": "About",
+              "className": "drop-down-option",
+              "replace": false,
+              "to": "/about",
+            },
+            "ref": null,
+            "rendered": "About",
             "type": [Function],
           },
           "type": "div",

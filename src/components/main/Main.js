@@ -72,8 +72,10 @@ class Main extends React.Component {
             </button>
           </section>
           <section className="hotline-section">
-            <h3 className="hotline-title">NDV Hotline</h3>
-            <button className="hotline-btn">Call Hotline</button>
+            <h3 className="hotline-title">
+              National Domestic Violence Hotline
+            </h3>
+            <button className="hotline-btn">Connect with Hotline</button>
           </section>
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>
