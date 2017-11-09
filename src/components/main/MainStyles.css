@@ -112,10 +112,10 @@ main {
 @media (max-width: 650px) {
   .contacts-section {
     width: 90%; }
+  .home-title {
+    width: 90%; }
   .emergency-section,
   .hotline-section {
-    width: 90%; }
-  .home-title {
     width: 90%; }
   .cover-title {
     font-size: 170%; }
