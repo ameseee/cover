@@ -144,6 +144,9 @@
   align-items: center;
   justify-content: center; }
 
+.report-person-icon {
+  width: 21px; }
+
 .call-to-action {
   border: 1px solid #E6E6E8;
   border-radius: 3px;
@@ -263,9 +266,8 @@
     margin-top: 10px; }
   .twenty-k {
     padding-top: 11px; }
-  .person-icon {
-    height: 25px;
-    width: 25px; }
+  .report-person-icon {
+    width: 15px; }
   .call-to-action {
     flex-direction: column;
     margin-bottom: 50px; }

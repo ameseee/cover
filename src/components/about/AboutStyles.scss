@@ -178,6 +178,10 @@ $charcoal-color: #1b1b1b;
   justify-content: center;
 }
 
+.report-person-icon {
+  width: 21px;
+}
+
 .call-to-action {
   border: 1px solid $grey-color;
   border-radius: 3px;
@@ -341,9 +345,8 @@ $charcoal-color: #1b1b1b;
     padding-top: 11px;
   }
 
-  .person-icon {
-    height: 25px;
-    width: 25px;
+  .report-person-icon {
+    width: 15px;
   }
 
   .call-to-action {
