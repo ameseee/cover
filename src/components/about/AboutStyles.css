@@ -147,6 +147,10 @@
 .report-person-icon {
   width: 21px; }
 
+.report-infographic-caption {
+  padding: 5px;
+  font-size: 110%; }
+
 .call-to-action {
   border: 1px solid #E6E6E8;
   border-radius: 3px;
@@ -276,6 +280,8 @@
     padding-top: 11px; }
   .report-person-icon {
     width: 15px; }
+  .report-infographic-caption {
+    font-size: 100%; }
   .call-to-action {
     flex-direction: column;
     margin-bottom: 50px; }

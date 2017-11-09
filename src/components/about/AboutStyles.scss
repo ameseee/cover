@@ -182,6 +182,11 @@ $charcoal-color: #1b1b1b;
   width: 21px;
 }
 
+.report-infographic-caption {
+  padding: 5px;
+  font-size: 110%;
+}
+
 .call-to-action {
   border: 1px solid $grey-color;
   border-radius: 3px;
@@ -334,7 +339,6 @@ $charcoal-color: #1b1b1b;
 
   .psychological-pie {
     margin-left: 0;
-    //margin-bottom: 0;
     height: 90%;
   }
 
@@ -360,6 +364,10 @@ $charcoal-color: #1b1b1b;
     width: 15px;
   }
 
+  .report-infographic-caption {
+    font-size: 100%;
+  }
+  
   .call-to-action {
     flex-direction: column;
     margin-bottom: 50px;
