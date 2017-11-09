@@ -72,6 +72,7 @@ class Authentication extends Component {
             this.state.newUser ? 'hidden' : '')}
         >
           <h3 className="sign-in-title">Sign In</h3>
+          <div className="cover-logo-auth"></div>
           <div>
             <input
               className="sign-in-name name"

@@ -60,7 +60,7 @@ class About extends Component {
           <article className="psychological-pie">
             <VictoryPie
               padAngle={1}
-              colorScale={["#de504b", "#293e5f"]}
+              colorScale={["#de504b", "#B4B4B4"]}
               innerRadius={100}
               data={[
                 {x: ' ', y: 49},
@@ -76,7 +76,7 @@ class About extends Component {
           <article className="medical-care-pie">
             <VictoryPie
               padAngle={1}
-              colorScale={["#de504b", "#293e5f"]}
+              colorScale={["#293e5f", "#B4B4B4"]}
               innerRadius={100}
               data={[
                 {x: ' ', y: 34},
@@ -85,10 +85,10 @@ class About extends Component {
             />
             <p className="medical-care-caption">Only
 
-              <span className="red-text">
+              <span className="turq-text">
                 <span className="thirty-four-percent"> 34% </span>of people
               </span> who are injured by an intimate partner
-              <span className="red-text"> receive medical care </span>
+              <span className="turq-text"> receive medical care </span>
               for those injuries.</p>
           </article>
 

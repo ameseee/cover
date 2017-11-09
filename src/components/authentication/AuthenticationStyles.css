@@ -68,6 +68,13 @@
   font-size: 130%;
   font-family: Lato; }
 
+.cover-logo-auth {
+  background-image: url("../../assets/cover-logo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px; }
+
 .name,
 .password {
   padding: 7.5px;

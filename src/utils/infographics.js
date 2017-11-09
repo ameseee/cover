@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const reportInfographic = (red, blue) => {
+export const reportInfographic = (red, grey) => {
   let people = [];
   for (var i = 0; i < red; i++) {
     people.push(<img
       alt="red person icon"
       className="report-person-icon"
-      src={require("../assets/person-red.svg")} />);
+      src={require("../assets/person-turq.svg")} />);
   }
-  for (var j = 0; j < blue; j++) {
+  for (var j = 0; j < grey; j++) {
     people.push(<img
       alt="blue person icon"
       className="report-person-icon"
@@ -17,15 +17,15 @@ export const reportInfographic = (red, blue) => {
   return people;
 };
 
-export const physicalInfographic = (red, blue) => {
+export const physicalInfographic = (red, grey) => {
   let people = [];
   for (var i = 0; i < red; i++) {
     people.push(<img
       alt="red person icon"
       className="physical-person-icon"
-      src={require("../assets/person-red.svg")} />);
+      src={require("../assets/person-turq.svg")} />);
   }
-  for (var j = 0; j < blue; j++) {
+  for (var j = 0; j < grey; j++) {
     people.push(<img
       alt="blue person icon"
       className="physical-person-icon"

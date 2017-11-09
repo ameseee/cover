@@ -88,6 +88,15 @@ $charcoal-color: #1b1b1b;
   font-family: Lato;
 }
 
+.cover-logo-auth {
+  background-image: url('../../assets/cover-logo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px;
+  
+}
+
 .name,
 .password {
   padding: 7.5px;
@@ -172,7 +181,7 @@ $charcoal-color: #1b1b1b;
     width: 85%;
     padding: 30px 0px;
   }
-  
+
   .nav-item {
     margin: 5px 10px;
     padding: 4px;

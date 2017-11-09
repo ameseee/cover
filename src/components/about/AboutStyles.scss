@@ -120,11 +120,11 @@ $charcoal-color: #1b1b1b;
 
 .thirty-four-percent {
   font-size: 125%;
-  color: $red-color;
+  color: $turq-color;
 }
 
-.red-text {
-  color: $red-color;
+.turq-text {
+  color: $turq-color;
 }
 
 .hotline-calls {
@@ -227,6 +227,7 @@ $charcoal-color: #1b1b1b;
 
 .learn-more-btn:hover {
   background-color: $navy-hover;
+  cursor: pointer;
 }
 
 .link-to-learn-more {
@@ -266,6 +267,7 @@ $charcoal-color: #1b1b1b;
 
 .route-to-auth-btn:hover {
   background-color: $navy-hover;
+  cursor: pointer;
 }
 
 .link-to-auth-btn {
@@ -330,6 +332,7 @@ $charcoal-color: #1b1b1b;
   .psychological-pie {
     margin-left: 0;
     margin-bottom: 10px;
+    height: 80%;
   }
 
   .psychological-caption {
