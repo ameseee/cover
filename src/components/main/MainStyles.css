@@ -3,12 +3,19 @@ main {
   height: 100%;
   background-color: #f5f5f7; }
 
+.home-title {
+  color: #1b1b1b;
+  width: 55%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px; }
+
 .emergency-section,
 .hotline-section {
   width: 55%;
   margin: 0 auto;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -94,6 +101,8 @@ main {
 @media (max-width: 900px) {
   .contacts-section {
     width: 75%; }
+  .home-title {
+    width: 75%; }
   .emergency-section,
   .hotline-section {
     width: 75%; }
@@ -105,6 +114,8 @@ main {
     width: 90%; }
   .emergency-section,
   .hotline-section {
+    width: 90%; }
+  .home-title {
     width: 90%; }
   .cover-title {
     font-size: 170%; }

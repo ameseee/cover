@@ -60,6 +60,7 @@ class Main extends React.Component {
 
     return (
       <div className="main">
+        <h2 className="home-title">Home</h2>
         <main>
           <section className="emergency-section">
             <h3 className="emergency-title">Emergency</h3>

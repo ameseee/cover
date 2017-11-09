@@ -15,12 +15,20 @@ main {
   background-color: $lt-grey-color;
 }
 
+.home-title {
+  color: $charcoal-color;
+  width: 55%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px;
+}
+
 .emergency-section,
 .hotline-section {
   width: 55%;
   margin: 0 auto;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -121,6 +129,11 @@ main {
     width: 75%;
   }
 
+  .home-title {
+    width: 75%;
+  }
+
+
   .emergency-section,
   .hotline-section {
     width: 75%;
@@ -140,6 +153,10 @@ main {
 
   .emergency-section,
   .hotline-section {
+    width: 90%;
+  }
+
+  .home-title {
     width: 90%;
   }
 

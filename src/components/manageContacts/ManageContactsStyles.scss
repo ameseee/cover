@@ -12,6 +12,14 @@ $charcoal-color: #1b1b1b;
   font-family: Lato, sans-serif;
 }
 
+.contacts-title {
+  color: $charcoal-color;
+  width: 55%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px;
+}
+
 .manage-contacts-section {
   border: 1px solid $grey-color;
   border-radius: 3px;
@@ -20,7 +28,7 @@ $charcoal-color: #1b1b1b;
   padding: 4%;
   background-color: #fff;
   height: 100%;
-  margin-top: 4%;
+  margin-top: 2%;
   margin-bottom: 4%;
 }
 
@@ -102,11 +110,19 @@ $charcoal-color: #1b1b1b;
     width: 75%;
   }
 
+  .contacts-title {
+    width: 75%;
+  }
+
 }
 
 @media (max-width: 650px) {
 
   .manage-contacts-section {
+    width: 90%;
+  }
+
+  .contacts-title {
     width: 90%;
   }
 
