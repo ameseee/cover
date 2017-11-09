@@ -32,7 +32,7 @@ class App extends Component {
       :
       <button
         className="sign-out"
-        onClick={this.signOut}>
+        onClick={ this.signOut }>
         <Link
           className="sign-out-link"
           to="/"
@@ -57,7 +57,7 @@ class App extends Component {
           <ul className="nav-menu">
             <button
               className="hamburger"
-              onClick={() => this.showMobileNav()}
+              onClick={ () => this.showMobileNav() }
             >
             </button>
             <li className="nav-item-li">
