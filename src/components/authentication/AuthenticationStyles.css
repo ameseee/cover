@@ -1,8 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato");
-.authentication-section {
-  height: 100vh; }
-  .authentication-section .hidden {
-    display: none; }
+.authentication-section .hidden {
+  display: none; }
 
 .create-account-section {
   border: 1px solid #E6E6E8;
@@ -67,6 +65,13 @@
   text-align: center;
   font-size: 130%;
   font-family: Lato; }
+
+.cover-logo-auth {
+  background-image: url("../../assets/cover-logo.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 20px;
+  width: 20px; }
 
 .name,
 .password {
@@ -137,8 +142,6 @@
   .create-account-section {
     width: 85%;
     padding: 30px 0px; }
-  .cover-title {
-    font-size: 170%; }
   .nav-item {
     margin: 5px 10px;
     padding: 4px;

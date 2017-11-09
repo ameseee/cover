@@ -15,12 +15,20 @@ main {
   background-color: $lt-grey-color;
 }
 
+.home-title {
+  color: $charcoal-color;
+  width: 55%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px;
+}
+
 .emergency-section,
 .hotline-section {
   width: 55%;
   margin: 0 auto;
   margin-bottom: 30px;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -36,14 +44,14 @@ main {
   margin-left: 5%;
   font-family: Lato;
   font-size: 120%;
-  width: 200%;
+  width: 125%;
   color: $charcoal-color;
 }
 
 .emergency-btn {
   background-color: #de4b78;
   padding: 8px;
-  width: 80%;
+  width: 90%;
   margin: 0 5% 0 auto;
   border: none;
   border-radius: 3px;
@@ -60,7 +68,7 @@ main {
 .hotline-btn {
   background-color: #2da97a;
   padding: 8px;
-  width: 80%;
+  width: 90%;
   margin: 0 5% 0 auto;
   border: none;
   border-radius: 3px;
@@ -121,6 +129,10 @@ main {
     width: 75%;
   }
 
+  .home-title {
+    width: 75%;
+  }
+
   .emergency-section,
   .hotline-section {
     width: 75%;
@@ -128,6 +140,14 @@ main {
 
   .nav-item {
     font-size: 90%;
+  }
+
+  .hotline-title  {
+    font-size: 110%;
+  }
+
+  .hotline-btn {
+    font-size: 100%;
   }
 
 }
@@ -138,13 +158,13 @@ main {
     width: 90%;
   }
 
-  .emergency-section,
-  .hotline-section {
+  .home-title {
     width: 90%;
   }
 
-  .cover-title {
-    font-size: 170%;
+  .emergency-section,
+  .hotline-section {
+    width: 90%;
   }
 
   .nav-item {

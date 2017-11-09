@@ -72,41 +72,44 @@ class ManageContacts extends Component {
     });
 
     return (
-      <div className="manage-contacts-section">
-        <h3 className="section-title">Manage Contacts</h3>
-        <section className="current-contacts">
-          <article className="all-contacts">
-            { mappedContacts }
-          </article>
-        </section>
+      <div>
+        <h2 className="contacts-title">Contacts</h2>
+        <div className="manage-contacts-section">
+          <h3 className="section-title">Manage Contacts</h3>
+          <section className="current-contacts">
+            <article className="all-contacts">
+              { mappedContacts }
+            </article>
+          </section>
 
-        <section className="create-contact-form">
-          <h3 className="title add">Add Contacts</h3>
-          <form>
-            <input
-              className="new-contact-name"
-              name="contactName"
-              onChange={this.handleChange}
-              placeholder="Contact Name"
-              type="text"
-              value={this.state.contactName}
-            />
-            <input
-              className="new-contact-number"
-              name="contactNumber"
-              onChange={this.handleChange}
-              placeholder="Phone Number"
-              type="text"
-              value={this.state.contactNumber}
-            />
-            <button
-              className="save-new-contact"
-              onClick={this.handleSubmit}
-            >
-              Save Contact
-            </button>
-          </form>
-        </section>
+          <section className="create-contact-form">
+            <h3 className="title add">Add Contacts</h3>
+            <form>
+              <input
+                className="new-contact-name"
+                name="contactName"
+                onChange={this.handleChange}
+                placeholder="Contact Name"
+                type="text"
+                value={this.state.contactName}
+              />
+              <input
+                className="new-contact-number"
+                name="contactNumber"
+                onChange={this.handleChange}
+                placeholder="Phone Number"
+                type="text"
+                value={this.state.contactNumber}
+              />
+              <button
+                className="save-new-contact"
+                onClick={this.handleSubmit}
+              >
+                Save Contact
+              </button>
+            </form>
+          </section>
+        </div>
       </div>
     );
   }

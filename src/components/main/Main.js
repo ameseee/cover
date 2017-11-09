@@ -38,7 +38,7 @@ class Main extends React.Component {
       <article className="no-contacts-card">
         <h4
           className="no-contacts-text">
-          {"You don't have any contacts saved yet!"}
+          {`You don't have any contacts saved yet!`}
         </h4>
         <button className="add-contacts-btn">
           <Link
@@ -60,6 +60,7 @@ class Main extends React.Component {
 
     return (
       <div className="main">
+        <h2 className="home-title">Home</h2>
         <main>
           <section className="emergency-section">
             <h3 className="emergency-title">Emergency</h3>
@@ -71,8 +72,10 @@ class Main extends React.Component {
             </button>
           </section>
           <section className="hotline-section">
-            <h3 className="hotline-title">NDV Hotline</h3>
-            <button className="hotline-btn">Call Hotline</button>
+            <h3 className="hotline-title">
+              National Domestic Violence Hotline
+            </h3>
+            <button className="hotline-btn">Connect with Hotline</button>
           </section>
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>

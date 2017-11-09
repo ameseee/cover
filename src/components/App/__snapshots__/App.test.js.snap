@@ -26,13 +26,13 @@ ShallowWrapper {
           <h1
             className="cover-title"
           >
-            <Link
-              className="nav-bar-brand-link"
-              replace={false}
-              to="/main"
+            c
+            <span
+              className="brand-o"
             >
-              Cover
-            </Link>
+              o
+            </span>
+            ver
           </h1>
           <ul
             className="nav-menu"
@@ -50,6 +50,17 @@ ShallowWrapper {
                 to="/main"
               >
                 Home
+              </Link>
+            </li>
+            <li
+              className="nav-item-li"
+            >
+              <Link
+                className="nav-item"
+                replace={false}
+                to="/about"
+              >
+                About
               </Link>
             </li>
             <li
@@ -101,13 +112,13 @@ ShallowWrapper {
             <h1
               className="cover-title"
             >
-              <Link
-                className="nav-bar-brand-link"
-                replace={false}
-                to="/main"
+              c
+              <span
+                className="brand-o"
               >
-                Cover
-              </Link>
+                o
+              </span>
+              ver
             </h1>,
             <ul
               className="nav-menu"
@@ -125,6 +136,17 @@ ShallowWrapper {
                   to="/main"
                 >
                   Home
+                </Link>
+              </li>
+              <li
+                className="nav-item-li"
+              >
+                <Link
+                  className="nav-item"
+                  replace={false}
+                  to="/about"
+                >
+                  About
                 </Link>
               </li>
               <li
@@ -161,30 +183,34 @@ ShallowWrapper {
             "key": null,
             "nodeType": "host",
             "props": Object {
-              "children": <Link
-                className="nav-bar-brand-link"
-                replace={false}
-                to="/main"
-              >
-                Cover
-              </Link>,
+              "children": Array [
+                "c",
+                <span
+                  className="brand-o"
+                >
+                  o
+                </span>,
+                "ver",
+              ],
               "className": "cover-title",
             },
             "ref": null,
-            "rendered": Object {
-              "instance": null,
-              "key": null,
-              "nodeType": "class",
-              "props": Object {
-                "children": "Cover",
-                "className": "nav-bar-brand-link",
-                "replace": false,
-                "to": "/main",
+            "rendered": Array [
+              "c",
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "o",
+                  "className": "brand-o",
+                },
+                "ref": null,
+                "rendered": "o",
+                "type": "span",
               },
-              "ref": null,
-              "rendered": "Cover",
-              "type": [Function],
-            },
+              "ver",
+            ],
             "type": "h1",
           },
           Object {
@@ -206,6 +232,17 @@ ShallowWrapper {
                     to="/main"
                   >
                     Home
+                  </Link>
+                </li>,
+                <li
+                  className="nav-item-li"
+                >
+                  <Link
+                    className="nav-item"
+                    replace={false}
+                    to="/about"
+                  >
+                    About
                   </Link>
                 </li>,
                 <li
@@ -275,6 +312,37 @@ ShallowWrapper {
                   },
                   "ref": null,
                   "rendered": "Home",
+                  "type": [Function],
+                },
+                "type": "li",
+              },
+              Object {
+                "instance": null,
+                "key": null,
+                "nodeType": "host",
+                "props": Object {
+                  "children": <Link
+                    className="nav-item"
+                    replace={false}
+                    to="/about"
+                  >
+                    About
+                  </Link>,
+                  "className": "nav-item-li",
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "About",
+                    "className": "nav-item",
+                    "replace": false,
+                    "to": "/about",
+                  },
+                  "ref": null,
+                  "rendered": "About",
                   "type": [Function],
                 },
                 "type": "li",
@@ -393,13 +461,13 @@ ShallowWrapper {
             <h1
               className="cover-title"
             >
-              <Link
-                className="nav-bar-brand-link"
-                replace={false}
-                to="/main"
+              c
+              <span
+                className="brand-o"
               >
-                Cover
-              </Link>
+                o
+              </span>
+              ver
             </h1>
             <ul
               className="nav-menu"
@@ -417,6 +485,17 @@ ShallowWrapper {
                   to="/main"
                 >
                   Home
+                </Link>
+              </li>
+              <li
+                className="nav-item-li"
+              >
+                <Link
+                  className="nav-item"
+                  replace={false}
+                  to="/about"
+                >
+                  About
                 </Link>
               </li>
               <li
@@ -468,13 +547,13 @@ ShallowWrapper {
               <h1
                 className="cover-title"
               >
-                <Link
-                  className="nav-bar-brand-link"
-                  replace={false}
-                  to="/main"
+                c
+                <span
+                  className="brand-o"
                 >
-                  Cover
-                </Link>
+                  o
+                </span>
+                ver
               </h1>,
               <ul
                 className="nav-menu"
@@ -492,6 +571,17 @@ ShallowWrapper {
                     to="/main"
                   >
                     Home
+                  </Link>
+                </li>
+                <li
+                  className="nav-item-li"
+                >
+                  <Link
+                    className="nav-item"
+                    replace={false}
+                    to="/about"
+                  >
+                    About
                   </Link>
                 </li>
                 <li
@@ -528,30 +618,34 @@ ShallowWrapper {
               "key": null,
               "nodeType": "host",
               "props": Object {
-                "children": <Link
-                  className="nav-bar-brand-link"
-                  replace={false}
-                  to="/main"
-                >
-                  Cover
-                </Link>,
+                "children": Array [
+                  "c",
+                  <span
+                    className="brand-o"
+                  >
+                    o
+                  </span>,
+                  "ver",
+                ],
                 "className": "cover-title",
               },
               "ref": null,
-              "rendered": Object {
-                "instance": null,
-                "key": null,
-                "nodeType": "class",
-                "props": Object {
-                  "children": "Cover",
-                  "className": "nav-bar-brand-link",
-                  "replace": false,
-                  "to": "/main",
+              "rendered": Array [
+                "c",
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "o",
+                    "className": "brand-o",
+                  },
+                  "ref": null,
+                  "rendered": "o",
+                  "type": "span",
                 },
-                "ref": null,
-                "rendered": "Cover",
-                "type": [Function],
-              },
+                "ver",
+              ],
               "type": "h1",
             },
             Object {
@@ -573,6 +667,17 @@ ShallowWrapper {
                       to="/main"
                     >
                       Home
+                    </Link>
+                  </li>,
+                  <li
+                    className="nav-item-li"
+                  >
+                    <Link
+                      className="nav-item"
+                      replace={false}
+                      to="/about"
+                    >
+                      About
                     </Link>
                   </li>,
                   <li
@@ -642,6 +747,37 @@ ShallowWrapper {
                     },
                     "ref": null,
                     "rendered": "Home",
+                    "type": [Function],
+                  },
+                  "type": "li",
+                },
+                Object {
+                  "instance": null,
+                  "key": null,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": <Link
+                      className="nav-item"
+                      replace={false}
+                      to="/about"
+                    >
+                      About
+                    </Link>,
+                    "className": "nav-item-li",
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": null,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": "About",
+                      "className": "nav-item",
+                      "replace": false,
+                      "to": "/about",
+                    },
+                    "ref": null,
+                    "rendered": "About",
                     "type": [Function],
                   },
                   "type": "li",

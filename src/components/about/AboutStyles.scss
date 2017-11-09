@@ -15,6 +15,13 @@ $charcoal-color: #1b1b1b;
   font-size: 100%;
 }
 
+.about-title {
+  width: 75%;
+  margin: 0 auto;
+  font-size: 150%;
+  padding-top: 25px;
+}
+
 .about-section {
   background-color: $lt-grey-color;
   display: grid;
@@ -30,7 +37,13 @@ $charcoal-color: #1b1b1b;
   border: 1px solid $grey-color;
   border-radius: 3px;
   background-color: #fff;
-  margin: 20px 0 10px 0;
+  margin: 10px 0 10px 0;
+  font-size: 105%;
+}
+
+.person-count {
+  color: $red-color;
+  font-size: 150%;
 }
 
 .physical-section {
@@ -107,11 +120,11 @@ $charcoal-color: #1b1b1b;
 
 .thirty-four-percent {
   font-size: 125%;
-  color: $red-color;
+  color: $turq-color;
 }
 
-.red-text {
-  color: $red-color;
+.turq-text {
+  color: $turq-color;
 }
 
 .hotline-calls {
@@ -165,9 +178,117 @@ $charcoal-color: #1b1b1b;
   justify-content: center;
 }
 
+.report-person-icon {
+  width: 21px;
+}
+
+.report-infographic-caption {
+  padding: 5px;
+  font-size: 110%;
+}
+
+.call-to-action {
+  border: 1px solid $grey-color;
+  border-radius: 3px;
+  background-color: #fff;
+  width: 75%;
+  margin: 0 auto;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.call-left {
+  width: 45%;
+  text-align: center;
+  line-height: 110%;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-areas: "topLeft" "bottomLeft";
+}
+
+.call-left-text {
+  line-height: 150%;
+  grid-area: topLeft;
+  align-self: center;
+}
+
+.learn-more-btn {
+  grid-area: bottomLeft;
+  background-color: $navy-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px 12px;
+  font-family: Lato;
+  text-decoration: none;
+  margin: 10px auto;
+  display: block;
+  width: 60%;
+}
+
+.learn-more-btn:hover {
+  background-color: $navy-hover;
+  cursor: pointer;
+}
+
+.link-to-learn-more {
+  color: #fff;
+  text-decoration: none;
+}
+
+.call-right {
+  width: 45%;
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1.5fr 1fr;
+  grid-template-areas: "topRight" "bottomRight";
+}
+
+.call-right-text {
+  line-height: 150%;
+  grid-area: topRight;
+  align-self: center;
+}
+
+.not-alone-text {
+  display: block;
+}
+
+.route-to-auth-btn {
+  grid-area: bottomRight;
+  background-color: $navy-color;
+  border: none;
+  border-radius: 3px;
+  font-size: 90%;
+  padding: 8px 12px;
+  font-family: Lato;
+  margin: 10px auto;
+  display: block;
+  width: 60%;
+}
+
+.route-to-auth-btn:hover {
+  background-color: $navy-hover;
+  cursor: pointer;
+}
+
+.link-to-auth-btn {
+  color: #fff;
+  text-decoration: none;
+}
+
 @media (max-width: 1100px) {
 
   .about-section {
+    width: 87.5%;
+  }
+
+  .about-title {
     width: 87.5%;
   }
 
@@ -175,7 +296,6 @@ $charcoal-color: #1b1b1b;
     width: 85%;
     font-size: 100%;
   }
-  //works until 892
 
   .medical-care-caption {
     width: 90%;
@@ -191,6 +311,15 @@ $charcoal-color: #1b1b1b;
     font-size: 90%;
   }
 
+  .call-to-action {
+    width: 87.5%;
+  }
+
+  .call-left-text,
+  .call-right-text {
+    font-size: 90%;
+  }
+
 }
 
 @media (max-width: 850px) {
@@ -199,17 +328,28 @@ $charcoal-color: #1b1b1b;
     grid-template-areas: "top" "rightTop" "leftTop" "leftBottom" "rightBottom" "bottom";
   }
 
+  .first-section {
+    margin-top: 5px;
+    font-size: 125%;
+    line-height: 130%;
+  }
+
   .medical-care-pie {
     padding-bottom: 25%;
   }
-  
+
   .psychological-pie {
     margin-left: 0;
-    margin-bottom: 10px;
+    height: 90%;
   }
 
   .psychological-caption {
     margin-top: -50px;
+    padding: 9px;
+  }
+
+  .physical-section {
+    margin-top: -30px;
   }
 
   .hotline-calls {
@@ -221,9 +361,33 @@ $charcoal-color: #1b1b1b;
     padding-top: 11px;
   }
 
-  .person-icon {
-    height: 25px;
-    width: 25px;
+  .report-person-icon {
+    width: 15px;
+  }
+
+  .report-infographic-caption {
+    font-size: 100%;
+  }
+
+  .call-to-action {
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+
+  .call-left,
+  .call-right {
+    width: 100%;
+  }
+
+  .call-left-text,
+  .call-right-text {
+    line-height: 120%;
+  }
+
+  .route-to-auth-btn,
+  .learn-more-btn {
+    margin-top: 0;
+    width: 50%;
   }
 
 }

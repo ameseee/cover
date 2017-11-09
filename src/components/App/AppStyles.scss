@@ -20,10 +20,17 @@ $charcoal-color: #1b1b1b;
   background-color: $navy-color;
 }
 
-.nav-bar-brand-link {
+.cover-title {
   text-decoration: none;
   color: $lt-grey-color;
   font-family: Lato;
+  letter-spacing: 4px;
+  padding: 10px 0 15px 15px;
+  font-size: 200%;
+}
+
+.brand-o {
+  color: #8CC8D0;
 }
 
 .nav-bar {
@@ -31,13 +38,6 @@ $charcoal-color: #1b1b1b;
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
-
-.cover-title {
-  font-size: 170%;
-  color: #fff;
-  padding: 10px;
-  font-family: Lato;
 }
 
 .nav-menu {
