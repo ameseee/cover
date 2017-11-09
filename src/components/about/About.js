@@ -39,8 +39,8 @@ class About extends Component {
         <div className="about-section">
           <article className="first-section">
             {`Since you've been on this page, `}
-            <span className="person-count">{this.state.seconds} </span>
-            people in the US have been physically abused by an intimate partner.
+            <span className="person-count">{this.state.seconds} people </span>
+            in the US have been physically abused by an intimate partner.
           </article>
 
           <article className="physical-section">

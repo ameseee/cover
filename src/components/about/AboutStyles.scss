@@ -38,6 +38,12 @@ $charcoal-color: #1b1b1b;
   border-radius: 3px;
   background-color: #fff;
   margin: 10px 0 10px 0;
+  font-size: 105%;
+}
+
+.person-count {
+  color: $red-color;
+  font-size: 150%;
 }
 
 .physical-section {
@@ -187,7 +193,6 @@ $charcoal-color: #1b1b1b;
 }
 
 .call-left {
-  //outline: 1px solid red;
   width: 45%;
   text-align: center;
   line-height: 110%;
