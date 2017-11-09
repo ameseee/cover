@@ -244,6 +244,7 @@ $charcoal-color: #1b1b1b;
 }
 
 .call-right-text {
+  line-height: 150%;
   grid-area: topRight;
   align-self: center;
 }
@@ -362,9 +363,15 @@ $charcoal-color: #1b1b1b;
     width: 100%;
   }
 
+  .call-left-text,
+  .call-right-text {
+    line-height: 120%;
+  }
+
   .route-to-auth-btn,
   .learn-more-btn {
     margin-top: 0;
+    width: 50%;
   }
 
 }
