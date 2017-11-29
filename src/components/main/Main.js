@@ -75,7 +75,9 @@ class Main extends React.Component {
             <h3 className="hotline-title">
               National Domestic Violence Hotline
             </h3>
-            <button className="hotline-btn">Connect with Hotline</button>
+            <a className="hotline-link" target="_blank" href="http://www.thehotline.org/">
+              <button className="hotline-btn">Hotline</button>
+            </a>
           </section>
           <section className="contacts-section">
             <h3 className="section-title">Contacts</h3>

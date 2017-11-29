@@ -48,20 +48,31 @@ main {
   background-color: #c24269;
   cursor: pointer; }
 
-.hotline-btn {
+.hotline-link {
   background-color: #2da97a;
   padding: 8px;
   width: 90%;
   margin: 0 5% 0 auto;
   border: none;
   border-radius: 3px;
-  color: #fff;
   font-size: 120%;
-  font-family: Lato; }
+  font-family: Lato;
+  text-decoration: none; }
 
-.hotline-btn:hover {
+.hotline-btn {
+  background-color: #2da97a;
+  border: none;
+  color: #fff;
+  margin: 0 auto;
+  display: block;
+  width: 100%; }
+
+.hotline-link:hover {
   background-color: #27946B;
   cursor: pointer; }
+
+.hotline-btn:hover {
+  background-color: #27946B; }
 
 .contacts-section {
   width: 55%;
@@ -129,11 +140,17 @@ main {
     grid-column-gap: 5px; }
   .contact-card-name {
     font-size: 90%; }
-  .emergency-btn,
-  .hotline-btn {
+  .emergency-btn {
     font-size: 100%;
     width: 110%;
     padding: 7.5px 5px; }
+  .hotline-title {
+    font-size: 100%; }
+  .hotline-btn {
+    font-size: 80%;
+    padding: 0; }
+  .hotline-link {
+    width: 110%; }
   .custom-text-btn,
   .location-now-btn {
     font-size: 70%;
