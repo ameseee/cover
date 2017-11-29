@@ -18,7 +18,8 @@
   border-radius: 3px;
   border: 1px solid #E6E6E8;
   font-size: 100%;
-  color: #1b1b1b; }
+  color: #1b1b1b;
+  padding: 3px; }
 
 .custom-form-heading {
   font-family: Lato, sans-serif; }
