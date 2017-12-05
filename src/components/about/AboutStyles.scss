@@ -16,7 +16,7 @@ $charcoal-color: #1b1b1b;
 }
 
 .about-title {
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
   font-size: 150%;
   padding-top: 25px;
@@ -27,7 +27,7 @@ $charcoal-color: #1b1b1b;
   display: grid;
   grid-template-columns: 0.4fr 0.6fr;
   grid-template-areas: "top top" "leftTop rightTop" "leftBottom rightTop" "leftBottom rightBottom" "bottom bottom";
-  width: 50%;
+  width: 75%;
   margin: 0 auto;
 }
 
