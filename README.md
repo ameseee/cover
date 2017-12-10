@@ -13,6 +13,7 @@ Statistics from National Coalition Against Domestic Violence: https://ncadv.org/
 - Redux
 - Firebase
 - Node.js
+- D3/Victory
 
 #### APIs:
 - Twilio
